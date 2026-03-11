@@ -436,28 +436,36 @@ const REVIEWS = [
 // ── FAQ data (accordion) ──
 const FAQS = [
   {
-    q: "Thuốc Samurai dạng gì? Dùng có khó không?",
-    a: "Bột khô, mở nắp là rắc được.\nKhông cần pha chế hay dụng cụ.\nAi cũng tự làm được tại nhà.\nTiết kiệm tiền so với gọi thợ.",
+    q: "PestShield xịt 1 lần sao hiệu lực được 6 tháng?",
+    a: "Hoạt chất PestShield bám chắc vào bề mặt sau khi xịt, không bay hơi, không bị nước trôi.\nMuỗi, gián, kiến bò qua vùng xịt là bị tê liệt ngay — không cần xịt trúng từng con.\nHiệu lực duy trì liên tục suốt 6 tháng mà không cần xịt lại.",
   },
   {
-    q: "Sau khi rắc thuốc xong thì làm gì tiếp?",
-    a: "Chờ 3 - 7 ngày mối mắc bệnh lây lan cho cả tổ và mối chúa.\nQuét dọn xong – không mùi.\nĐơn giản, không phức tạp.",
+    q: "PestShield có an toàn cho trẻ nhỏ và thú cưng không?",
+    a: "Hoàn toàn an toàn. Chiết xuất thực vật thiên nhiên 100%, khô hoàn toàn sau 30 phút, không mùi.\nSau 30 phút xịt, trẻ nhỏ bò sàn, thú cưng đi lại bình thường — không ảnh hưởng gì.",
   },
   {
-    q: "Giao hàng mất bao lâu? Có tốn phí ship không?",
-    a: "Giao 3–5 ngày, toàn quốc.\nMiễn phí giao hàng 100%, không tốn phí.\nĐặt hôm nay, nhà bạn sớm sạch.",
+    q: "PestShield diệt được những loại côn trùng nào?",
+    a: "Diệt muỗi, gián, kiến, ruồi, bọ chét và hầu hết côn trùng bò trong nhà.\n1 chai xắt xử lý được tất cả — không cần mua riêng từng loại.",
   },
   {
-    q: "Tôi được kiểm tra hàng trước khi trả tiền không?",
-    a: "Có, mở hộp kiểm tra trước.\nChỉ trả tiền khi hài lòng.\nCOD – kiểm tra trước thanh toán.",
+    q: "Xịt như thế nào? Có cần kinh nghiệm không?",
+    a: "Không cần kinh nghiệm. Cầm chai xịt vào chân tường, góc nhà, gầm bếp, cửa ra vào.\nGiữ cách bề mặt 20cm, xịt 1 lượt mỏng là xong.\nRa ngoài 30 phút cho khô, về nhà sinh hoạt bình thường.",
   },
   {
-    q: "Thuốc có an toàn cho trẻ nhỏ và thú cưng không?",
-    a: "Tiêu chuẩn Nhật Bản, an toàn sử dụng.\nKhông mùi, không độc hại.\nGia đình sinh hoạt bình thường.\nTrẻ em & thú cưng không bị ảnh hưởng.",
+    q: "Giao hàng toàn quốc không? Có mất phí ship không?",
+    a: "Giao 63 tỉnh thành toàn quốc, miễn phí ship 100%.\nNội thành TP.HCM 1–2 ngày, tỉnh khác 2–4 ngày.\nCOD — kiểm tra hàng thực tế trước khi trả tiền.",
   },
   {
-    q: "Một lọ dùng được bao nhiêu? Nhà tôi cần mấy lọ?",
-    a: "1 lọ (7g) = 1–2 điểm mối.\nCombo rẻ hơn 50% lẻ.\nChọn Combo Gia Đình tiết kiệm.",
+    q: "PestShield rẻ hơn thuê dịch vụ phun bao nhiêu?",
+    a: "Rẻ hơn 10 lần. Chi phí cả năm chỉ 298.000đ (combo 2 chai) thay vì 3–9 triệu nếu thuê dịch vụ phun.\nHiệu quả gấp 20+ lần nhang và chai xịt thường mua ở siêu thị.",
+  },
+  {
+    q: "Nên chọn gói 1 chai hay 2 chai?",
+    a: "Gói 1 chai (209.000đ): phù hợp nhà ≤50m² hoặc dùng thử.\nGói 2 chai (298.000đ): phù hợp nhà 50–120m², xịt 1 lần 6 tháng, 2 chai dùng đủ cả năm — được chọn nhiều nhất vì tiết kiệm hơn.",
+  },
+  {
+    q: "Đặt hàng lần đầu, nếu không hài lòng thì sao?",
+    a: "Thanh toán COD — bạn kiểm tra hàng tận tay trước khi trả tiền.\nThấy hàng không đúng hoặc bị lỗi, từ chối ngay, không mất đồng nào.\nĐổi mới miễn phí nếu chai bị lỗi từ nhà sản xuất.",
   },
 ];
 
@@ -1729,7 +1737,7 @@ export default function App() {
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 md:mb-10">
               <p className="text-sm font-bold text-emerald-700 uppercase tracking-widest mb-2">Giải đáp thắc mắc</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Câu hỏi thường gặp</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Câu Hỏi Thường Gặp Về PestShield</h2>
             </div>
             <div className="space-y-2.5">
               {FAQS.map((item, idx) => (
