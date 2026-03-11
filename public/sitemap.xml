@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://thuocxitmuoi.com/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://thuocxitmuoi.com/herodesktop.webp</image:loc>
+      <image:title>Chai xịt muỗi và côn trùng PestShield – xịt 1 lần hiệu lực 6 tháng</image:title>
+      <image:caption>Thuốc xịt muỗi PestShield – thiên nhiên 100%, an toàn cho trẻ em và thú cưng</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://thuocxitmuoi.com/baovetoanbo.webp</image:loc>
+      <image:title>PestShield Bảo Vệ Toàn Bộ Không Gian Sống</image:title>
+      <image:caption>Xịt 1 lần bảo vệ khắp nhà suốt 6 tháng – không cần xịt lại</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://thuocxitmuoi.com/card1.webp</image:loc>
+      <image:title>Muỗi Trong Phòng Ngủ – Vấn Đề Cần Xử Lý Người</image:title>
+      <image:caption>Xịt hoài không hết – PestShield giải quyết tận gốc</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://thuocxitmuoi.com/pslogo.webp</image:loc>
+      <image:title>Logo Thuốc Xịt Muỗi PestShield</image:title>
+      <image:caption>PestShield – Giải Pháp Diệt Côn Trùng Thiên Nhiên</image:caption>
+    </image:image>
+  </url>
+</urlset>
+  <url>
     <loc>https://thuocdietmoinhatban.com/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>

@@ -257,4 +257,4 @@ Disallow: /
 # ========================================
 # SITEMAPS
 # ========================================
-Sitemap: https://thuocdietmoinhatban.com/sitemap.xml
+Sitemap: https://thuocxitmuoi.com/sitemap.xml
