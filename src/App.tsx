@@ -866,10 +866,10 @@ export default function App() {
                   <div className="relative">
                     <div className="absolute -inset-4 rounded-[40px] blur-3xl" style={{ backgroundColor: 'rgba(76, 175, 80, 0.1)' }}></div>
                     <img
-                      src="/heroimgmin.webp"
-                      srcSet="/heroimg400mobile.webp 400w, /heroimgmin.webp 1024w"
+                      src="/heromobile.webp"
+                      srcSet="/heromobile.webp 400w, /heroimgdesktop.webp 1024w"
                       sizes="(max-width: 640px) 100vw, 384px"
-                      alt="Thuốc Diệt Mối Nhật Bản Samurai"
+                      alt="Thuốc Xịt Muỗi PestShield"
                       className="relative rounded-3xl shadow-2xl border-4 border-white object-cover w-full max-w-sm mx-auto aspect-square"
                       style={{objectPosition: 'center center'}}
                       loading="eager"
@@ -877,18 +877,15 @@ export default function App() {
                       width={1024}
                       height={1024}
                     />
-                    {/* Badge cảnh báo – góc trên phải, bên trong ảnh */}
-                    <div className="absolute top-3 right-3 bg-orange-500 px-3 py-2 rounded-2xl shadow-xl flex items-center gap-2 z-10">
-                      <AlertTriangle className="w-5 h-5 text-yellow-300 flex-shrink-0" />
-                      <span className="text-white font-black text-sm leading-tight">MỐI ĂN RỖNG GỖ<br />TỪ BÊN TRONG</span>
+                    {/* Badge trên – góc trên trái */}
+                    <div className="absolute top-3 left-3 bg-white px-3 py-2 rounded-2xl shadow-xl border-l-4 border-emerald-500 z-10">
+                      <p className="font-black text-sm leading-tight text-emerald-700">🛡️ Thiên Nhiên 100%</p>
+                      <p className="font-medium text-xs text-slate-500 leading-tight">An toàn cho trẻ em &amp; thú cưng</p>
                     </div>
-                    {/* Badge trust – góc dưới trái, bên trong ảnh */}
-                    <div className="absolute bottom-3 left-3 bg-white px-4 py-3 rounded-2xl shadow-xl border-l-4 flex items-center gap-3" style={{ borderColor: '#1E6B52' }}>
-                      <ShieldCheck className="w-7 h-7 flex-shrink-0" style={{ color: '#1E6B52' }} />
-                      <div>
-                        <p className="font-black text-sm leading-tight" style={{ color: '#1E6B52' }}>XỬ LÝ NGAY</p>
-                        <p className="font-bold text-xs text-slate-500 leading-tight">Bảo vệ ngôi nhà bạn</p>
-                      </div>
+                    {/* Badge dưới – góc dưới phải */}
+                    <div className="absolute bottom-3 right-3 bg-orange-500 px-3 py-2 rounded-2xl shadow-xl z-10">
+                      <p className="text-white font-black text-sm leading-tight">⚡ Hiệu Lực 6 Tháng</p>
+                      <p className="text-yellow-100 font-medium text-xs leading-tight">Xịt 1 lần — không làm lại</p>
                     </div>
                   </div>
                 </div>
@@ -966,10 +963,10 @@ export default function App() {
               >
                 <div className="absolute -inset-4 rounded-[40px] blur-3xl" style={{ backgroundColor: 'rgba(76, 175, 80, 0.1)' }}></div>
                 <img
-                  src="/heroimgmin.webp"
-                  srcSet="/heroimg400mobile.webp 400w, /heroimgmin.webp 1024w"
+                  src="/heroimgdesktop.webp"
+                  srcSet="/heromobile.webp 400w, /heroimgdesktop.webp 1024w"
                   sizes="(max-width: 1024px) 400px, 512px"
-                  alt="Thuốc Diệt Mối Nhật Bản Samurai"
+                  alt="Thuốc Xịt Muỗi PestShield"
                   className="relative rounded-3xl shadow-2xl border-4 border-white object-cover w-full max-w-lg mx-auto aspect-square"
                   style={{objectPosition: 'center center'}}
                   loading="eager"
@@ -977,18 +974,15 @@ export default function App() {
                   width={1024}
                   height={1024}
                 />
-                {/* Badge cảnh báo – góc trên phải, bên trong ảnh */}
-                <div className="absolute top-4 right-4 bg-orange-500 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 z-10">
-                  <AlertTriangle className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-                  <span className="text-white font-black text-sm leading-tight">MỐI ĂN RỖNG GỖ<br />TỪ BÊN TRONG</span>
+                {/* Badge trên – góc trên trái */}
+                <div className="absolute top-4 left-4 bg-white px-4 py-3 rounded-2xl shadow-xl border-l-4 border-emerald-500 z-10">
+                  <p className="font-black text-base leading-tight text-emerald-700">🛡️ Thiên Nhiên 100%</p>
+                  <p className="font-medium text-sm text-slate-500 leading-tight">An toàn cho trẻ em &amp; thú cưng</p>
                 </div>
-                {/* Badge trust – góc dưới trái, bên trong ảnh */}
-                <div className="absolute bottom-4 left-4 bg-white px-5 py-4 rounded-2xl shadow-xl border-l-4 flex items-center gap-3" style={{ borderColor: '#1E6B52' }}>
-                  <ShieldCheck className="w-8 h-8 flex-shrink-0" style={{ color: '#1E6B52' }} />
-                  <div>
-                    <p className="font-black text-base leading-tight" style={{ color: '#1E6B52' }}>XỬ LÝ NGAY</p>
-                    <p className="font-bold text-sm text-slate-500 leading-tight">Bảo vệ ngôi nhà bạn</p>
-                  </div>
+                {/* Badge dưới – góc dưới phải */}
+                <div className="absolute bottom-4 right-4 bg-orange-500 px-4 py-3 rounded-2xl shadow-xl z-10">
+                  <p className="text-white font-black text-base leading-tight">⚡ Hiệu Lực 6 Tháng</p>
+                  <p className="text-yellow-100 font-medium text-sm leading-tight">Xịt 1 lần — không làm lại</p>
                 </div>
               </motion.div>
             </div>
