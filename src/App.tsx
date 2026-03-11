@@ -1352,7 +1352,7 @@ export default function App() {
                   num: "1",
                   time: "2 phút",
                   title: "Xác định điểm xịt",
-                  desc: "Chân tường, góc nhà, gầm bếp, cửa ra vào — nơi côn trùng hay bò qua.",
+                  desc: "Chân tường, góc nhà, gầm bếp, cửa ra vào — nơi Muỗi và côn trùng hay xuất hiện.",
                   icon: "🔍",
                 },
                 {
@@ -1360,7 +1360,7 @@ export default function App() {
                   time: "3 phút",
                   title: "Xịt đều vào các điểm",
                   desc: "Giữ chai cách bề mặt 20cm, xịt 1 lượt mỏng. Không cần xịt nhiều.",
-                  icon: "🧴",
+                  icon: "💦",
                 },
                 {
                   num: "3",
