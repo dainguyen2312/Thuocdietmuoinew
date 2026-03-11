@@ -1159,15 +1159,15 @@ export default function App() {
                     <th className="p-5 font-black text-center bg-emerald-700 text-white text-base w-[26%] relative overflow-hidden">
                       <div className="absolute top-0 right-0 bg-yellow-400 text-emerald-800 text-xs px-2 py-0.5 font-bold uppercase -rotate-45 translate-x-4 translate-y-2">✓ Nên chọn</div>
                       🛡️ PESTSHIELD
-                      <div className="text-white/70 font-normal text-xs mt-1">298.000đ — 2 chai</div>
+                      <div className="text-white/70 font-normal text-xs mt-1">209.000đ — 1 chai</div>
                     </th>
                     <th className="p-5 font-bold text-center bg-orange-900/90 text-orange-100 text-base w-[26%]">
-                      🔧 Thuê dịch vụ phun
+                      🧑‍🔧 Thuê dịch vụ phun
                       <div className="text-orange-300/80 font-normal text-xs mt-1">500k–1.5tr/lần</div>
                     </th>
                     <th className="p-5 font-bold text-center bg-slate-700 text-slate-200 text-base w-[26%]">
-                      🕯️ Nhang & chai xịt thường
-                      <div className="text-slate-400 font-normal text-xs mt-1">50–100k/tháng</div>
+                      🦟 Nhang & chai xịt thường
+                      <div className="text-slate-400 font-normal text-xs mt-1">200k/tháng</div>
                     </th>
                   </tr>
                 </thead>
@@ -1175,9 +1175,9 @@ export default function App() {
                   {[
                     {
                       label: "Chi phí",
-                      samurai: "298.000đ — 2 chai",
+                      samurai: "209.000đ — 1 chai",
                       service: "500k–1.5tr/lần",
-                      normal: "50–100k/tháng",
+                      normal: "200k/tháng",
                     },
                     {
                       label: "Hiệu lực",
@@ -1205,9 +1205,9 @@ export default function App() {
                     },
                     {
                       label: "Chi phí 1 năm",
-                      samurai: "~298.000đ",
+                      samurai: "~209.000đ",
                       service: "3–9 triệu",
-                      normal: "600k–1.2 triệu",
+                      normal: "2.4 triệu",
                       highlight: true,
                     },
                   ].map((row, i) => (
@@ -1259,7 +1259,7 @@ export default function App() {
                   <div className="bg-slate-800 p-3" />
                   <div className="bg-emerald-600 py-3 px-2 text-center border-l border-emerald-500">
                     <p className="text-white font-black text-sm leading-tight">🛡️ PESTSHIELD</p>
-                    <p className="text-emerald-100 text-xs mt-0.5">298.000đ</p>
+                    <p className="text-emerald-100 text-xs mt-0.5">209.000đ</p>
                   </div>
                   <div className="bg-slate-600 py-3 px-2 text-center border-l border-slate-500">
                     <p className="text-slate-100 font-bold text-sm leading-tight">🔧 Cách khác</p>
@@ -1268,11 +1268,11 @@ export default function App() {
                 </div>
 
                 {[
-                  { icon: "💸", label: "Chi phí", samurai: "298.000đ", bad: "500k–1.5tr" },
+                  { icon: "💸", label: "Chi phí", samurai: "209.000đ", bad: "200k/th–1.5tr" },
                   { icon: "⏱️", label: "Hiệu lực", samurai: "6 tháng", bad: "Vài ngày–tháng" },
                   { icon: "🔁", label: "Làm lại?", samurai: "Không cần", bad: "Liên tục" },
                   { icon: "🌿", label: "An toàn", samurai: "Thiên nhiên", bad: "Hóa chất" },
-                  { icon: "💰", label: "1 năm", samurai: "~298.000đ", bad: "1.2–9 triệu", highlight: true },
+                  { icon: "💰", label: "1 năm", samurai: "~209.000đ", bad: "2.4–9 triệu", highlight: true },
                 ].map((row, i) => (
                   <div key={i} className={cn("grid grid-cols-[90px_1fr_1fr] border-t border-slate-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-slate-50/40")}>
                     <div className="p-3 flex flex-col justify-center bg-slate-50 border-r border-slate-100">
