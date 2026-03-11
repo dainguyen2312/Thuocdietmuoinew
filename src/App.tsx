@@ -998,13 +998,13 @@ export default function App() {
                 {
                   title: "Xịt hoài không hết — tốn tiền không thấy đâu",
                   line1: "Chai xịt thường, nhang muỗi, dịch vụ phun —",
-                  line2: "mua đi mua lại mà côn trùng vẫn quay lại sau vài ngày.",
+                  line2: "mua đi mua lại mà Muỗi và côn trùng vẫn quay lại sau vài ngày.",
                   img: "/muoitrongphongngudesktop.webp", imgW: 1409, imgH: 769,
                   highlight: false
                 },
                 {
                   title: "Muỗi đốt ban đêm — cả nhà mất ngủ, lo bệnh",
-                  line1: "Sốt xuất huyết, tay chân miệng — muỗi là nguồn",
+                  line1: "Sốt xuất huyết, virus zika — muỗi là nguồn",
                   line2: "lây chính. Một đêm bị đốt là một đêm không yên.",
                   img: "/muoidotbedesktop.webp", imgW: 771, imgH: 461,
                   highlight: true
