@@ -999,31 +999,37 @@ export default function App() {
                   title: "Xịt hoài không hết — tốn tiền không thấy đâu",
                   line1: "Chai xịt thường, nhang muỗi, dịch vụ phun —",
                   line2: "mua đi mua lại mà côn trùng vẫn quay lại sau vài ngày.",
+                  img: "/muoitrongphongngudesktop.webp", imgW: 1409, imgH: 769,
                   highlight: false
                 },
                 {
                   title: "Muỗi đốt ban đêm — cả nhà mất ngủ, lo bệnh",
                   line1: "Sốt xuất huyết, tay chân miệng — muỗi là nguồn",
                   line2: "lây chính. Một đêm bị đốt là một đêm không yên.",
+                  img: "/muoidotbedesktop.webp", imgW: 771, imgH: 461,
                   highlight: true
                 },
                 {
                   title: "Gián, kiến bò vào bếp — mất vệ sinh, khó chịu",
                   line1: "Thức ăn bị nhiễm, trẻ con bò sàn —",
                   line2: "không xử lý tận gốc thì không bao giờ hết hẳn.",
+                  img: "/giantubepdesktop.webp", imgW: 1001, imgH: 501,
                   highlight: false
                 }
               ].map((item, idx) => (
-                <div key={idx} className={`rounded-2xl shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
+                <div key={idx} className={`rounded-2xl overflow-hidden shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
                   item.highlight
                     ? 'bg-orange-50 border-orange-300 ring-2 ring-orange-400 ring-offset-2'
                     : 'bg-white border-slate-100'
                 }`}>
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="overflow-hidden aspect-video">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform" loading="lazy" decoding="async" width={item.imgW} height={item.imgH} />
+                  </div>
+                  <div className="p-5 md:p-6 flex flex-col flex-grow">
                     {item.highlight && (
                       <span className="inline-block mb-3 text-xs font-bold uppercase tracking-widest text-orange-600 bg-orange-100 px-2 py-1 rounded-full w-fit">Quan trọng nhất</span>
                     )}
-                    <h3 className={`text-lg md:text-xl font-bold mb-4 flex items-start gap-2 ${item.highlight ? 'text-orange-700' : ''}`}>
+                    <h3 className={`text-lg md:text-xl font-bold mb-3 flex items-start gap-2 ${item.highlight ? 'text-orange-700' : ''}`}>
                       <AlertTriangle className={`w-5 h-5 flex-shrink-0 mt-0.5 ${item.highlight ? 'text-orange-600' : 'text-orange-400'}`} />
                       {item.title}
                     </h3>
