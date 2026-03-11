@@ -1005,8 +1005,8 @@ export default function App() {
                 },
                 {
                   title: "Muỗi đốt ban đêm — cả nhà mất ngủ, lo bệnh",
-                  line1: "Sốt xuất huyết, virus zika —",
-                  line2: "muỗi là nguồn lây chính. Một đêm bị đốt là một đêm không yên.",
+                  line1: "Sốt xuất huyết, virus zika — muỗi là nguồn lây chính.",
+                  line2: "Một đêm bị đốt là một đêm không yên.",
                   img: "/muoidotbedesktop.webp", imgW: 771, imgH: 461,
                   highlight: true
                 },
@@ -1052,7 +1052,7 @@ export default function App() {
                 <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
                 Xử Lý Ngay Hôm Nay
               </button>
-              <span className="text-xs text-slate-500 font-medium">Giao hàng toàn quốc · Dùng được ngay · Không cần thợ</span>
+              <span className="text-xs text-slate-500 font-medium">Giao hàng toàn quốc · Dùng được ngay · Bảo vệ lâu dài</span>
             </div>
           </div>
         </section>
