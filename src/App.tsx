@@ -902,33 +902,21 @@ export default function App() {
 
                 {/* Benefits List */}
                 <div className="flex flex-col gap-3 max-w-md mx-auto lg:mx-0 mb-8">
-                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-base font-bold text-slate-800">Xịt 1 lần — bảo vệ 6 tháng, không làm lại</p>
-                      <p className="text-sm text-slate-500 mt-0.5">Không phải xịt mỗi tối. Không phải mua thêm giữa chừng.</p>
-                    </div>
+                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+                    <p className="text-base font-bold text-slate-800">Xịt 1 lần — bảo vệ 6 tháng, không làm lại</p>
                   </div>
-                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-base font-bold text-slate-800">Côn trùng bò qua tự chết — không cần xịt trúng</p>
-                      <p className="text-sm text-slate-500 mt-0.5">Xịt vào góc nhà, chân tường, cửa ra vào — xong. Để đó nó tự làm việc.</p>
-                    </div>
+                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+                    <p className="text-base font-bold text-slate-800">Côn trùng bò qua tự chết — không cần xịt trúng</p>
                   </div>
-                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-base font-bold text-slate-800">Diệt hết: muỗi, gián, kiến, ruồi — 1 chai thay 4 loại</p>
-                      <p className="text-sm text-slate-500 mt-0.5">Raid cho gián, nhang cho muỗi, bẫy cho kiến — bỏ hết. 1 thứ xử lý tất.</p>
-                    </div>
+                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+                    <p className="text-base font-bold text-slate-800">Diệt hết: muỗi, gián, kiến, ruồi — 1 chai thay 4 loại</p>
                   </div>
-                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-base font-bold text-slate-800">Thiên nhiên, không mùi — xịt xong người ở nhà bình thường</p>
-                      <p className="text-sm text-slate-500 mt-0.5">Không phải đợi thoáng khí, không phải đuổi người ra ngoài trước khi xịt.</p>
-                    </div>
+                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+                    <p className="text-base font-bold text-slate-800">Thiên nhiên, không mùi — xịt xong người ở nhà bình thường</p>
                   </div>
                 </div>
 
