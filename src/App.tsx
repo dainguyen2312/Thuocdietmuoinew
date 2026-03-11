@@ -1083,12 +1083,12 @@ export default function App() {
                 <div className="absolute -inset-4 bg-emerald-100 rounded-[40px] blur-2xl opacity-50"></div>
                 <div className="relative rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
                   <img
-                    src="/baovetoanbo.webp"
-                    alt="Thuốc xịt muỗi PestShield – bảo vệ toàn bộ không gian sống"
+                    src="/6thangtuduc.webp"
+                    alt="Tại sao PestShield xịt 1 lần hiệu lực 6 tháng – hoạt chất bám dính bề mặt"
                     className="w-full h-auto block"
                     loading="lazy"
-                    width={1501}
-                    height={1501}
+                    width={1500}
+                    height={1500}
                   />
                 </div>
               </div>
@@ -1100,12 +1100,12 @@ export default function App() {
                   <div className="absolute -inset-3 bg-emerald-100 rounded-3xl blur-2xl opacity-40"></div>
                   <div className="relative rounded-3xl shadow-xl w-full max-w-sm mx-auto overflow-hidden">
                     <img
-                      src="/baovetoanbo.webp"
-                      alt="Thuốc xịt muỗi PestShield – bảo vệ toàn bộ không gian sống"
+                      src="/6thangtuduc.webp"
+                      alt="Tại sao PestShield xịt 1 lần hiệu lực 6 tháng – hoạt chất bám dính bề mặt"
                       className="w-full h-auto block"
                       loading="lazy"
-                      width={1501}
-                      height={1501}
+                      width={1500}
+                      height={1500}
                     />
                   </div>
                 </div>
