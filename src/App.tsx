@@ -921,7 +921,7 @@ export default function App() {
                   >
                     <ShoppingCart className="w-6 h-6 flex-shrink-0" />
                     <span className="block leading-snug text-left">
-                      <span className="block text-xl font-black tracking-tight">Đặt Combo 2 Chai — Xử Lý &amp; Bảo Vệ 1 Năm</span>
+                      <span className="block text-xl font-black tracking-tight">Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
                       <small className="block text-sm font-medium text-yellow-100 mt-0.5">Tiết kiệm 120.000đ · Xịt 1 lần · Không lo 6 tháng</small>
                     </span>
                     <ChevronRight className="w-6 h-6 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
