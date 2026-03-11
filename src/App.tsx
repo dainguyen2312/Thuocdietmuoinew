@@ -1183,7 +1183,7 @@ export default function App() {
                       label: "Hiệu lực",
                       samurai: "6 tháng/lần xịt",
                       service: "1–2 tháng tái phát",
-                      normal: "1–3 ngày hết tác dụng",
+                      normal: "2–4 giờ hết tác dụng",
                     },
                     {
                       label: "Phải làm lại?",
@@ -1199,13 +1199,13 @@ export default function App() {
                     },
                     {
                       label: "An toàn trẻ em",
-                      samurai: "✅ Thiên nhiên 100%",
+                      samurai: "Thiên nhiên 100%",
                       service: "⚠️ Hóa chất công nghiệp",
                       normal: "⚠️ Không khuyến nghị",
                     },
                     {
                       label: "Chi phí 1 năm",
-                      samurai: "~209.000đ",
+                      samurai: "298.000đ",
                       service: "3–9 triệu",
                       normal: "2.4 triệu",
                       highlight: true,
