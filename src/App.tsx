@@ -891,26 +891,26 @@ export default function App() {
                 </div>
                 {/* Main Subtitle */}
                 <p className="text-base sm:text-lg text-slate-600 mb-5 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Muỗi, gián, kiến, ruồi — xử lý 1 lần, không làm lại.
+                  Muỗi, gián, kiến, ruồi — 1 chai xử lý hết, an toàn cho cả nhà.
                 </p>
 
                 {/* Benefits List */}
                 <div className="flex flex-col gap-2.5 max-w-md mx-auto lg:mx-0 mb-6">
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Xịt 1 lần — hiệu lực 6 tháng</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Côn trùng bò qua tự biến — không cần xịt trúng từng con</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Côn trùng bò qua tự biến mất</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Xịt 1 lần duy nhất — không làm lại suốt 6 tháng</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">1 chai thay hết: muỗi, gián, kiến, ruồi</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Không mùi, không hóa chất — xịt xong sinh hoạt bình thường</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Thiên nhiên, không mùi — an toàn cả nhà</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">1 chai thay hết dịch vụ phun, chai xịt thường — tiết kiệm cả năm</p>
                   </div>
                 </div>
 
