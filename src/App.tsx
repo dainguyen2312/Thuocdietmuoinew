@@ -990,54 +990,52 @@ export default function App() {
         <section id="benefits" className="py-10 md:py-20 bg-emerald-50/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-              <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Mối có thể gây thiệt hại lớn trước khi bạn kịp nhận ra</h2>
-              <p className="text-slate-600 text-base md:text-lg">Mối thường phá hoại âm thầm bên trong tường, sàn và nền móng. Khi phát hiện, chi phí sửa chữa có thể đã rất tốn kém.</p>
+              <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Muỗi, Gián, Kiến Trong Nhà — Tưởng Nhỏ, Hậu Quả Không Nhỏ</h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 items-stretch">
               {[
                 {
-                  title: "Làm hỏng nội thất giá trị cao",
-                  desc: "Bàn ghế, tủ bếp, giường gỗ tự nhiên có thể bị rỗng ruột từ bên trong dù bề mặt vẫn còn nguyên.",
-                  img: "/w1min.webp", imgW: 1024, imgH: 1024,
+                  title: "Xịt hoài không hết — tốn tiền không thấy đâu",
+                  line1: "Chai xịt thường, nhang muỗi, dịch vụ phun —",
+                  line2: "mua đi mua lại mà côn trùng vẫn quay lại sau vài ngày.",
                   highlight: false
                 },
                 {
-                  title: "Âm thầm làm yếu kết cấu nhà",
-                  desc: "Mối làm tổ dưới nền và trong tường, lâu ngày có thể gây nứt tường, sụt lún và phát sinh chi phí sửa chữa lớn.",
-                  img: "/w2min.webp", imgW: 800, imgH: 516,
+                  title: "Muỗi đốt ban đêm — cả nhà mất ngủ, lo bệnh",
+                  line1: "Sốt xuất huyết, tay chân miệng — muỗi là nguồn",
+                  line2: "lây chính. Một đêm bị đốt là một đêm không yên.",
                   highlight: true
                 },
                 {
-                  title: "Gây mất vệ sinh không gian sống",
-                  desc: "Đường hầm đất và bụi gỗ rơi vãi khiến nhà ở ẩm, bẩn và kém thẩm mỹ.",
-                  img: "/w3min.webp", imgW: 800, imgH: 533,
+                  title: "Gián, kiến bò vào bếp — mất vệ sinh, khó chịu",
+                  line1: "Thức ăn bị nhiễm, trẻ con bò sàn —",
+                  line2: "không xử lý tận gốc thì không bao giờ hết hẳn.",
                   highlight: false
                 }
               ].map((item, idx) => (
-                <div key={idx} className={`rounded-2xl overflow-hidden shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
+                <div key={idx} className={`rounded-2xl shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
                   item.highlight
                     ? 'bg-orange-50 border-orange-300 ring-2 ring-orange-400 ring-offset-2'
                     : 'bg-white border-slate-100'
                 }`}>
-                  <div className="overflow-hidden aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3]">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform" loading="lazy" decoding="async" width={item.imgW} height={item.imgH} />
-                  </div>
                   <div className="p-6 flex flex-col flex-grow">
                     {item.highlight && (
-                      <span className="inline-block mb-2 text-xs font-bold uppercase tracking-widest text-orange-600 bg-orange-100 px-2 py-1 rounded-full w-fit">Quan trọng nhất</span>
+                      <span className="inline-block mb-3 text-xs font-bold uppercase tracking-widest text-orange-600 bg-orange-100 px-2 py-1 rounded-full w-fit">Quan trọng nhất</span>
                     )}
-                    <h3 className={`text-xl font-bold mb-3 flex items-center gap-2 ${item.highlight ? 'text-orange-700' : ''}`}>
-                      <AlertTriangle className={`w-5 h-5 flex-shrink-0 ${item.highlight ? 'text-orange-600' : 'text-orange-400'}`} />
+                    <h3 className={`text-lg md:text-xl font-bold mb-4 flex items-start gap-2 ${item.highlight ? 'text-orange-700' : ''}`}>
+                      <AlertTriangle className={`w-5 h-5 flex-shrink-0 mt-0.5 ${item.highlight ? 'text-orange-600' : 'text-orange-400'}`} />
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-base leading-relaxed flex-grow">{item.desc}</p>
+                    <p className="text-slate-600 text-base leading-relaxed flex-grow">
+                      {item.line1}<br />{item.line2}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
             <p className="text-center mt-10 text-base md:text-lg font-semibold text-slate-700 max-w-2xl mx-auto">
-              Càng phát hiện sớm, thiệt hại và chi phí xử lý càng được kiểm soát tốt hơn.
+              Xử lý đúng cách từ đầu — tiết kiệm tiền, bảo vệ sức khoẻ cả nhà.
             </p>
             <div className="flex flex-col items-center mt-6 gap-2">
               <button
