@@ -1,0 +1,182 @@
+═══════════════════════════════════════════════════════════════════
+SEO OPTIMIZATION CHECKLIST - Samurai Diệt Mối
+═══════════════════════════════════════════════════════════════════
+
+✅ COMPLETED:
+
+1. ROBOTS.TXT (public/robots.txt)
+   ✓ Allow: Google Ads bot (AdsBot-Google)
+   ✓ Allow: Google Search (Googlebot)
+   ✓ Allow: Google Images (Googlebot-Image)
+   ✓ Allow: Google Videos (Googlebot-Video)
+   ✓ Allow: Facebook (facebookexternalhit, Facebot)
+   ✓ Allow: Bing/Microsoft (Bingbot, msnbot)
+   ✓ Allow: DuckDuckGo, Yahoo, LinkedIn, Twitter, Pinterest, Baidu
+   ✓ BLOCK: Spam bots (Ahrefs, Semrush, DotBot, etc.)
+   ✓ Sitemap path: /sitemap.xml
+
+2. META TAGS (index.html)
+   ✓ Title: Optimized for keywords
+   ✓ Description: Compelling with CTA
+   ✓ Keywords: Relevant 8 keywords
+   ✓ Robots meta: index, follow, max-image-preview:large
+   ✓ Canonical URL: https://samurai-diiet-moi.pages.dev/
+   ✓ Alternate hreflang: Vietnamese + x-default
+
+3. OPEN GRAPH (Facebook, Pinterest)
+   ✓ og:type: website
+   ✓ og:title: Engaging title
+   ✓ og:description: Clear description
+   ✓ og:image: Logo (1200x630px recommended)
+   ✓ og:url: Proper canonical URL
+
+4. TWITTER / X CARDS
+   ✓ twitter:card: summary_large_image
+   ✓ twitter:title: Optimized
+   ✓ twitter:description: Clear
+   ✓ twitter:image: Logo
+
+5. STRUCTURED DATA (JSON-LD)
+   ✓ LocalBusiness schema
+   ✓ Product schema
+   ✓ AggregateRating
+   ✓ Proper formatting
+
+6. CLOUDFLARE PAGES HEADERS (_headers)
+   ✓ Cache-Control for different content types
+   ✓ X-Robots-Tag: index, follow (allows crawling)
+   ✓ No blocking headers for bots
+   ✓ Access-Control-Allow-Origin: * (allows bots)
+   ✓ robots.txt and sitemap.xml cacheable
+
+7. CLOUDFLARE REDIRECTS (_redirects)
+   ✓ SPA routing (404 → index.html)
+   ✓ Ready for www/non-www redirect if needed
+
+8. SITEMAP (public/sitemap.xml)
+   ✓ Updated URL: samurai-diiet-moi.pages.dev
+   ✓ Updated lastmod: 2026-03-01
+   ✓ Priority: 1.0 (highest)
+   ✓ Changefreq: weekly
+
+═══════════════════════════════════════════════════════════════════
+CLOUDFLARE PAGES SETTINGS - TO VERIFY:
+═══════════════════════════════════════════════════════════════════
+
+1. Access Cloudflare Dashboard → Pages → Your Project
+
+2. Settings → Build & Deployments
+   ✓ Build command: npm run build (if needed)
+   ✓ Build output directory: dist
+
+3. SEO & Bot Management
+   ✓ Do NOT block bots in security settings
+   ✓ Check Bot Fight Mode: Should be "Challenged" or "Disabled"
+     (Too aggressive = blocks Googlebot)
+   ✓ Do NOT use Workers to block User-Agents
+
+4. Caching Rules (Optional optimization)
+   ✓ Cache HTML: 3600 seconds (1 hour)
+   ✓ Cache Images: 86400 seconds (1 day)
+   ✓ Cache Static: 31536000 seconds (1 year)
+
+═══════════════════════════════════════════════════════════════════
+GOOGLE SEARCH CONSOLE SETUP (MUST DO):
+═══════════════════════════════════════════════════════════════════
+
+1. Go to: https://search.google.com/search-console
+2. Add property: samurai-diiet-moi.pages.dev
+3. Verify ownership (DNS or HTML tag)
+4. Submit sitemap: https://samurai-diiet-moi.pages.dev/sitemap.xml
+5. Request indexing for homepage
+6. Monitor crawl errors and coverage
+
+═══════════════════════════════════════════════════════════════════
+FACEBOOK / META BUSINESS SUITE (FOR FACEBOOK ADS):
+═══════════════════════════════════════════════════════════════════
+
+1. Go to: https://business.facebook.com
+2. Add domain: samurai-diiet-moi.pages.dev
+3. Verify domain ownership
+4. Use Meta Pixel for tracking conversions
+5. OG meta tags will auto-populate when sharing
+
+═══════════════════════════════════════════════════════════════════
+BING WEBMASTER TOOLS (Optional):
+═══════════════════════════════════════════════════════════════════
+
+1. Go to: https://www.bing.com/webmasters
+2. Add site: samurai-diiet-moi.pages.dev
+3. Verify ownership
+4. Submit sitemap
+
+═══════════════════════════════════════════════════════════════════
+TESTING BOTS CRAWL ACCESS:
+═══════════════════════════════════════════════════════════════════
+
+1. Test robots.txt parsing:
+   https://www.google.com/robots.txt
+   https://search.google.com/test/robots-txt
+
+2. Test meta tags & OG tags:
+   Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/og/object
+   Google Mobile-Friendly: https://search.google.com/test/mobile-friendly
+
+3. Check structured data:
+   Google Rich Results Test: https://search.google.com/test/rich-results
+
+═══════════════════════════════════════════════════════════════════
+IMPORTANT BOT DETAILS:
+═══════════════════════════════════════════════════════════════════
+
+✅ GOOD BOTS (ALLOWED):
+- Googlebot, Googlebot-Mobile, AdsBot-Google, Googlebot-Image, Googlebot-Video
+- facebookexternalhit, Facebot (Facebook crawling)
+- Bingbot, msnbot, msnbot-media, BingPreview
+- DuckDuckBot, YandexBot, Slurp (Yahoo)
+- LinkedInBot, TwitterBot, PinterestBot, Applebot
+
+❌ BLOCKED SPAM BOTS:
+- AhrefsBot (aggressive backlink checker)
+- SemrushBot (aggressive SEO tool)
+- DotBot, MJ12bot (excessive crawling)
+- CCBot, DataForSeoBot, Gigabot (spam scrapers)
+- And 20+ other aggressive bots
+
+═══════════════════════════════════════════════════════════════════
+URL TO UPDATE IN CODE:
+═══════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT: Replace all hardcoded URLs:
+   OLD: https://ais-pre-gayinky223m7aag5sxqjyt-43590720056.asia-east1.run.app
+   NEW: https://samurai-diiet-moi.pages.dev
+
+Check files:
+- index.html (canonical URL) - ✅ UPDATED
+- public/robots.txt - ✅ UPDATED
+- public/sitemap.xml - ✅ UPDATED
+- Any other hardcoded URLs in React components
+
+═══════════════════════════════════════════════════════════════════
+CRAWL DELAY & RATE LIMITING:
+═══════════════════════════════════════════════════════════════════
+
+Default: Crawl-delay: 1 second (reasonable)
+Google/Facebook: Crawl-delay: 0 (unlimited, let them crawl freely)
+Bing/Others: Crawl-delay: 1 second
+
+This is very permissive - bots won't be throttled.
+
+═══════════════════════════════════════════════════════════════════
+NEXT STEPS:
+═══════════════════════════════════════════════════════════════════
+
+1. ✅ Commit and push these files
+2. ✅ Wait for Cloudflare Pages to deploy
+3. ✅ Test robots.txt & meta tags (links above)
+4. ✅ Add site to Google Search Console
+5. ✅ Monitor search traffic in GSC after 1-2 weeks
+6. ✅ Update og:image with real product photo (not logo)
+7. ✅ Add telephone number to LocalBusiness schema
+
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,260 @@
+# ========================================
+# SEO-Optimized robots.txt - Cloudflare Pages
+# Allow: Good bots (Google, Facebook, Bing...)
+# Block: Spam/aggressive bots only
+# ========================================
+
+# DEFAULT: Allow all good bots to crawl
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git
+Disallow: /.env*
+Crawl-delay: 1
+
+# ========================================
+# GOOGLE BOTS - Full Access
+# ========================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 0
+
+User-agent: AdsBot-Google
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Video
+Allow: /
+Crawl-delay: 0
+
+# ========================================
+# FACEBOOK - Full Access
+# ========================================
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 0
+
+User-agent: Facebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: facebook
+Allow: /
+Crawl-delay: 0
+
+# ========================================
+# BING / MICROSOFT - Full Access
+# ========================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot-media
+Allow: /
+Crawl-delay: 1
+
+User-agent: BingPreview
+Allow: /
+Crawl-delay: 0
+
+# ========================================
+# OTHER GOOD BOTS - Full Access
+# ========================================
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yahoo! Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: TwitterBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: PinterestBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YisouSpider
+Allow: /
+Crawl-delay: 1
+
+User-agent: Sogou spider
+Allow: /
+Crawl-delay: 1
+
+User-agent: SeznamBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Qwantify
+Allow: /
+Crawl-delay: 1
+
+# ========================================
+# AI BOTS - Full Access (ChatGPT, Claude, Perplexity, Google AI...)
+# ========================================
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: OAI-SearchBot
+Allow: /
+Crawl-delay: 1
+
+# Anthropic / Claude
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# Google AI Overviews / Gemini
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 0
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+Crawl-delay: 1
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+Crawl-delay: 1
+
+# TikTok / Bytedance
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 1
+
+# CommonCrawl (dùng cho AI training data)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+# Wayback Machine (lưu trữ, giúp AI indexing lịch sử)
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 2
+
+# ========================================
+# BLOCK SPAM / AGGRESSIVE BOTS
+# ========================================
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SemrushBot-SiteAudit
+Disallow: /
+
+User-agent: megaIndex.ru
+Disallow: /
+
+User-agent: Neevabot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: AspiegelBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: BUbiNG
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Gigabot
+Disallow: /
+
+User-agent: Grapeshot
+Disallow: /
+
+User-agent: ISC Systems iRc Search 2.1
+Disallow: /
+
+User-agent: Nuclei
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: WhatIsMyBrowser
+Disallow: /
+
+User-agent: ZoomBot
+Disallow: /
+
+# ========================================
+# SITEMAPS
+# ========================================
+Sitemap: https://thuocdietmoinhatban.com/sitemap.xml

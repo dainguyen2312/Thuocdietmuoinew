@@ -1,0 +1,59 @@
+# =====================================================
+# Cloudflare Pages – Security + Performance Headers
+# =====================================================
+
+# Default: tất cả routes
+/*
+  # Security
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer-when-downgrade
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # SEO: Cho phép tất cả bot crawl
+  X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+
+  # Performance
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Vite build output – immutable assets (hash in filename)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# Ảnh – cache 1 ngày + stale-while-revalidate
+/*.jpg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.jpeg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.png
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.webp
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.svg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML – luôn revalidate để content mới nhất
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: text/html; charset=utf-8
+  X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+
+# robots.txt + sitemap – bot truy cập tự do
+/robots.txt
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: noindex
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+# API – không cache, không index, CORS giới hạn
+/api/*
+  Cache-Control: no-store, no-cache
+  X-Robots-Tag: noindex, nofollow
+  Access-Control-Allow-Origin: https://thuocdietmoinhatban.com
+  Access-Control-Allow-Methods: POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type

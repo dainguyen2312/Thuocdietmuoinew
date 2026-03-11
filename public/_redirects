@@ -1,0 +1,11 @@
+# Cloudflare Pages Redirects
+# SEO-friendly redirect configuration
+
+# Remove trailing slashes (optional - comment out if you prefer trailing slashes)
+# /path/ /path 301
+
+# Redirect www to non-www (if you want to enforce one)
+# https://www.samurai-diiet-moi.pages.dev/* https://samurai-diiet-moi.pages.dev/:splat 301
+
+# Keep SPA routing - send 404s to index.html
+/* /index.html 200
