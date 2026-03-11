@@ -853,9 +853,9 @@ export default function App() {
                 transition={{ duration: 0.6 }}
                 className="text-center lg:text-left order-1 lg:order-1"
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold uppercase tracking-widest mb-5 bg-emerald-50 border-emerald-500 text-emerald-800">
-                  <span className="flex h-2 w-2 rounded-full animate-pulse bg-emerald-500"></span>
-                  �🇪 Giải pháp bảo vệ gia đình khỏi Muỗi từ Đức
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold uppercase tracking-widest mb-5 bg-orange-50 border-orange-400 text-orange-700">
+                  <span className="flex h-2 w-2 rounded-full animate-pulse bg-orange-400"></span>
+                  Giải pháp bảo vệ gia đình khỏi Muỗi từ Đức
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 tracking-tight">
                   Xịt Hoài Vẫn Còn Muỗi?<br />
