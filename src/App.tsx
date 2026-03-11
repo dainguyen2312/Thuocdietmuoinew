@@ -1007,6 +1007,7 @@ export default function App() {
                   title: "Muỗi đốt ban đêm — cả nhà mất ngủ, lo bệnh",
                   line1: "Sốt xuất huyết, virus zika — muỗi là nguồn lây chính.",
                   line2: "Một đêm bị đốt là một đêm không yên.",
+                  mobileBreak: true,
                   img: "/muoidotbedesktop.webp", imgW: 771, imgH: 461,
                   highlight: true
                 },
@@ -1035,7 +1036,7 @@ export default function App() {
                       {item.title}
                     </h3>
                     <p className="text-slate-600 text-base leading-relaxed flex-grow">
-                      {item.line1}<br />{item.line2}
+                      {item.line1}{item.mobileBreak ? <br className="sm:hidden" /> : <br />}{item.line2}
                     </p>
                   </div>
                 </div>
