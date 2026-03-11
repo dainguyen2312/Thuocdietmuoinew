@@ -38,9 +38,9 @@ function cn(...inputs: ClassValue[]) {
 // Combo name mapping
 const getComboName = (comboId: string): string => {
   const comboMap: { [key: string]: string } = {
-    combo1: 'Gói Nhà Nhỏ (3 lọ)',
-    combo2: 'Gói Gia Đình (6 lọ)',
-    combo3: 'Gói Nhà Lớn (9 lọ)',
+    combo1: '1 Chai PestShield',
+    combo2: 'Combo 2 Chai PestShield',
+    combo3: 'Combo 3 Chai PestShield',
   };
   return comboMap[comboId] || 'Combo không xác định';
 };
@@ -55,25 +55,23 @@ const COMBO_SUCCESS_DETAILS: Record<string, {
 }> = {
   combo1: {
     emoji: '🏠',
-    name: 'Gói Nhà Nhỏ',
-    quantity: '3 lọ · phù hợp nhà ≤50m²',
-    price: '249.000đ',
+    name: '1 Chai PestShield',
+    quantity: '1 chai 500ml · nhà ≤50m²',
+    price: '209.000đ',
   },
   combo2: {
     emoji: '👨‍👩‍👧',
-    name: 'Gói Gia Đình',
-    quantity: '6 lọ · phù hợp nhà 50–100m²',
-    price: '328.000đ',
-    originalPrice: '498.000đ',
-    savings: 'Tiết kiệm 170.000đ',
+    name: 'Combo 2 Chai PestShield',
+    quantity: '2 chai 500ml · nhà 50–100m²',
+    price: '298.000đ',
+    originalPrice: '418.000đ',
+    savings: 'Tiết kiệm 120.000đ',
   },
   combo3: {
     emoji: '🏢',
-    name: 'Gói Nhà Lớn',
-    quantity: '9 lọ · phù hợp nhà >100m²',
-    price: '497.000đ',
-    originalPrice: '747.000đ',
-    savings: 'Tiết kiệm 250.000đ',
+    name: 'Combo 3 Chai PestShield',
+    quantity: '3 chai 500ml · nhà >100m²',
+    price: '397.000đ',
   },
 };
 
@@ -1447,72 +1445,53 @@ export default function App() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-10 md:py-14 bg-slate-900 text-white overflow-hidden">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="pricing" className="py-10 md:py-16 bg-slate-900 text-white overflow-hidden">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
-            <div className="text-center mb-8 md:mb-10">
-              <p className="text-amber-400 font-bold uppercase tracking-widest text-sm mb-2">📦 Giao hàng toàn quốc · COD tận nơi</p>
-              <h2 className="text-2xl md:text-4xl font-black mb-2 leading-tight">Đặt Hàng Ngay</h2>
-              <p className="text-amber-300 text-xl md:text-2xl font-bold mb-3">Giao Tận Nhà – Thanh Toán Khi Nhận Hàng</p>
-              <p className="text-slate-400 text-sm md:text-base">Miễn phí giao hàng toàn quốc · Kiểm tra hàng trước khi thanh toán · Miễn phí đổi trả</p>
+            <div className="text-center mb-10 md:mb-12">
+              <p className="text-amber-400 font-bold uppercase tracking-widest text-sm mb-3">📦 Giao hàng toàn quốc · COD tận nơi</p>
+              <h2 className="text-2xl md:text-4xl font-black mb-3 leading-tight">Chọn Gói Phù Hợp — Xịt 1 Lần, Không Lo Cả Năm</h2>
+              <p className="text-slate-400 text-sm md:text-base">Miễn phí giao hàng · Kiểm tra hàng trước khi thanh toán · COD toàn quốc</p>
             </div>
 
             {/* Cards grid */}
-            <div className="flex flex-col md:grid md:grid-cols-3 md:items-stretch gap-4 md:gap-4">
+            <div className="flex flex-col md:grid md:grid-cols-3 md:items-stretch gap-4">
 
-              {/* ── GÓI GIA ĐÌNH HERO – mobile: top, desktop: middle ── */}
+              {/* ── COMBO 2 CHAI HERO – mobile: top, desktop: middle ── */}
               <div className="order-first md:order-2 relative flex flex-col">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
                   <span className="bg-amber-400 text-slate-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                    🏆 Phổ biến nhất – Nên chọn
+                    🔥 PHỔ BIẾN NHẤT – NÊN CHỌN
                   </span>
                 </div>
                 <div className="bg-gradient-to-b from-emerald-700 to-teal-900 rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-xl shadow-emerald-950/70 mt-5 flex flex-col flex-1">
-
-                  {/* Title */}
-                  <div className="mb-1">
-                    <h3 className="text-xl font-black text-white tracking-tight">GÓI GIA ĐÌNH</h3>
-                    {/* Badge tồn kho động – giảm dần theo giờ VN */}
-                    <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
-                      <span className="inline-flex items-center gap-1.5 bg-red-500/25 text-white text-xs font-black px-2.5 py-1 rounded-md border border-red-400/50">
-                        <span className="relative flex h-2 w-2 flex-shrink-0">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                        </span>
-                        🔥 Còn {stockRemaining} suất hôm nay
-                      </span>
-                      <span className="text-amber-300/80 text-[11px] font-semibold whitespace-nowrap">
-                        ⏰ Hết lúc 12h đêm{countdownToMidnight ? ` (còn ${countdownToMidnight})` : ''}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-emerald-200 text-sm mb-1 font-medium">6 lọ Samurai · Nhà 50–100m²</p>
-                  <p className="text-emerald-300/80 text-xs mb-4">Xử lý 7–10 vị trí mối · Đủ cho cả nhà</p>
+                  <h3 className="text-xl font-black text-white tracking-tight mb-0.5">COMBO 2 CHAI</h3>
+                  <p className="text-emerald-200 text-sm mb-1 font-medium">Nhà phố · 50–100m²</p>
 
                   {/* Price block */}
-                  <div className="bg-black/25 rounded-xl px-4 py-3 mb-4">
-                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">498.000đ</span></p>
+                  <div className="bg-black/25 rounded-xl px-4 py-3 mb-4 mt-2">
+                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">418.000đ</span></p>
                     <div className="flex items-baseline gap-2 mb-1.5">
-                      <span className="text-4xl font-black text-white">328.000đ</span>
+                      <span className="text-4xl font-black text-white">298.000đ</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 170K</span>
-                      <span className="text-amber-300 text-xs font-bold">Số lượng có hạn</span>
+                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
                     </div>
                   </div>
 
                   {/* Benefits */}
                   <ul className="space-y-2 mb-5 flex-1">
                     {[
-                      { text: "6 lọ Samurai Nhật Bản chính hãng", star: true },
-                      { text: "Xử lý được 7–10 vị trí mối" },
-                      { text: "Đủ dùng cả nhà + biếu người thân" },
-                      { text: "Miễn phí giao hàng toàn quốc" },
-                      { text: "Kiểm tra hàng trước khi nhận" },
+                      { text: '2 chai PestShield 500ml', star: true },
+                      { text: 'Bảo vệ đủ nhà 50–100m²' },
+                      { text: 'Dùng 1 năm không mua thêm' },
+                      { text: 'Đủ dùng 2 tầng hoặc tặng người thân' },
+                      { text: 'Miễn phí giao hàng toàn quốc' },
+                      { text: 'Kiểm tra hàng trước khi nhận' },
                     ].map((item, i) => (
-                      <li key={i} className={cn("flex items-center gap-2.5", item.star ? "text-sm font-black text-amber-300" : "text-sm text-white/80")}>
-                        <CheckCircle2 className={cn("flex-shrink-0", item.star ? "w-4 h-4 text-amber-300" : "w-4 h-4 text-white/40")} />
+                      <li key={i} className={cn('flex items-center gap-2.5', item.star ? 'text-sm font-black text-amber-300' : 'text-sm text-white/80')}>
+                        <CheckCircle2 className={cn('flex-shrink-0', item.star ? 'w-4 h-4 text-amber-300' : 'w-4 h-4 text-white/40')} />
                         {item.text}
                       </li>
                     ))}
@@ -1522,11 +1501,8 @@ export default function App() {
                     onClick={() => scrollToOrderWithCombo('combo2')}
                     className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-lg hover:bg-amber-300 transition-all active:scale-95 shadow-md"
                   >
-                    CHỌN GÓI NÀY – 328.000Đ
+                    CHỌN GÓI NÀY →
                   </button>
-                  <p className="text-center text-emerald-300/70 text-xs mt-2 font-semibold">
-                    ⚠️ Chỉ còn <span className="text-amber-300 font-black">{stockRemaining} suất</span> – Hết giá này lúc 12h đêm nay
-                  </p>
                 </div>
               </div>
 
@@ -1562,22 +1538,24 @@ export default function App() {
                 </div>
               </div>
 
-              {/* ── GÓI NHÀ LỚN – mobile: 3rd, desktop: right ── */}
+              {/* ── COMBO 3 CHAI – mobile: 3rd, desktop: right ── */}
               <div className="order-3 md:order-3 flex flex-col">
                 <div className="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 flex flex-col flex-1">
-                  <h3 className="text-lg font-black text-slate-100 mb-0.5">GÓI NHÀ LỚN</h3>
-                  <p className="text-slate-300 text-sm mb-1 font-medium">9 lọ Samurai · Nhà &gt; 100m²</p>
-                  <p className="text-slate-500 text-xs mb-4">Xử lý 15–20 vị trí · Nhà lớn, nhiều tầng, nhiều tổ mối lâu năm</p>
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <h3 className="text-lg font-black text-slate-100">COMBO 3 CHAI</h3>
+                    <span className="text-[10px] bg-emerald-600 text-white font-black px-2 py-0.5 rounded-full whitespace-nowrap">Tiết kiệm nhất</span>
+                  </div>
+                  <p className="text-slate-300 text-sm mb-3 font-medium">Nhà rộng · &gt; 100m²</p>
                   <div className="mb-4">
-                    <span className="text-3xl font-black text-white">497.000đ</span>
+                    <span className="text-3xl font-black text-white">397.000đ</span>
                   </div>
                   <ul className="space-y-2 mb-5 flex-1">
                     {[
-                      "9 lọ Samurai Nhật Bản",
-                      "Xử lý 15–20 vị trí mối",
-                      "Nhà lớn, nhiều tầng, nhiều tổ mối",
-                      "Miễn phí giao hàng",
-                      "Kiểm tra hàng trước khi nhận",
+                      '3 chai PestShield 500ml',
+                      'Bảo vệ nhà > 100m² hoặc nhiều tầng',
+                      'Mua chung gia đình — chia 3 nhà',
+                      'Miễn phí giao hàng toàn quốc',
+                      'Kiểm tra hàng trước khi nhận',
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2.5 text-sm text-slate-300">
                         <CheckCircle2 className="w-4 h-4 text-slate-500 flex-shrink-0" />
