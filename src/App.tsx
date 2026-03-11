@@ -999,7 +999,7 @@ export default function App() {
                   title: "Xịt hoài không hết — tốn tiền không thấy đâu",
                   line1: "Chai xịt thường, nhang muỗi, dịch vụ phun —",
                   line2: "mua đi mua lại mà Muỗi và côn trùng vẫn quay lại sau vài ngày.",
-                  img: "/muoitrongphongngudesktop.webp", imgW: 1409, imgH: 769,
+                  img: "/card1.webp", imgW: 1377, imgH: 769,
                   highlight: false
                 },
                 {
