@@ -322,13 +322,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       title: "Chính sách bảo mật thông tin",
       body: (
         <div className="space-y-4 text-sm text-slate-600">
-          <p>Chào mừng bạn đến với Samurai Japan. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
+          <p>Chào mừng bạn đến với <strong>Chaixitmuoi.com</strong> — website chính thức của sản phẩm xịt muỗi &amp; côn trùng PestShield. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
           <h5 className="font-bold text-slate-900">1. Thu thập thông tin</h5>
-          <p>Chúng tôi thu thập thông tin cá nhân (tên, số điện thoại, địa chỉ) chỉ nhằm mục đích xử lý đơn hàng và hỗ trợ khách hàng.</p>
-          <h5 className="font-bold text-slate-900">2. Công nghệ theo dõi</h5>
-          <p>Trang web sử dụng Google Tag Manager, GA4 và Meta Pixel để phân tích hành vi người dùng và tối ưu hóa quảng cáo. Dữ liệu này là ẩn danh và không chứa thông tin nhận dạng cá nhân trực tiếp.</p>
-          <h5 className="font-bold text-slate-900">3. Bảo mật</h5>
-          <p>Thông tin của bạn được lưu trữ an toàn và không bao giờ được chia sẻ với bên thứ ba cho mục đích thương mại.</p>
+          <p>Chúng tôi chỉ thu thập thông tin cá nhân (họ tên, số điện thoại, địa chỉ giao hàng) khi bạn đặt hàng, nhằm mục đích xử lý đơn hàng và hỗ trợ sau mua.</p>
+          <h5 className="font-bold text-slate-900">2. Sử dụng thông tin</h5>
+          <p>Thông tin của bạn chỉ được dùng để xác nhận và giao đơn hàng PestShield. Chúng tôi không bán, trao đổi hay chia sẻ dữ liệu cá nhân cho bất kỳ bên thứ ba nào vì mục đích thương mại.</p>
+          <h5 className="font-bold text-slate-900">3. Công nghệ theo dõi</h5>
+          <p>Website <strong>chaixitmuoi.com</strong> sử dụng Google Analytics và Meta Pixel để phân tích hành vi truy cập và tối ưu quảng cáo. Dữ liệu này được thu thập dưới dạng ẩn danh, không chứa thông tin định danh cá nhân trực tiếp.</p>
+          <h5 className="font-bold text-slate-900">4. Bảo mật dữ liệu</h5>
+          <p>Toàn bộ thông tin khách hàng được lưu trữ trên hệ thống bảo mật. Mọi thắc mắc về quyền riêng tư, vui lòng liên hệ: <strong>lienhe@chaixitmuoi.com</strong>.</p>
         </div>
       )
     },
@@ -336,13 +338,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       title: "Điều khoản dịch vụ",
       body: (
         <div className="space-y-4 text-sm text-slate-600">
-          <p>Bằng việc đặt hàng tại website, bạn đồng ý với các điều khoản sau:</p>
-          <h5 className="font-bold text-slate-900">1. Đặt hàng</h5>
-          <p>Thông tin đặt hàng phải chính xác để đảm bảo việc giao hàng không bị gián đoạn.</p>
-          <h5 className="font-bold text-slate-900">2. Hiệu quả sản phẩm</h5>
-          <p>Hiệu quả của thuốc Samurai phụ thuộc vào việc sử dụng đúng hướng dẫn kỹ thuật. Chúng tôi cam kết cung cấp sản phẩm chính hãng với nồng độ hoạt chất tiêu chuẩn Nhật Bản để đạt kết quả tối ưu nhất khi được sử dụng đúng cách.</p>
+          <p>Bằng việc đặt hàng tại <strong>chaixitmuoi.com</strong>, bạn xác nhận đã đọc và đồng ý với các điều khoản sau:</p>
+          <h5 className="font-bold text-slate-900">1. Thông tin đặt hàng</h5>
+          <p>Bạn cam kết cung cấp thông tin chính xác (họ tên, số điện thoại, địa chỉ) để đảm bảo đơn hàng được giao đúng nơi, đúng người.</p>
+          <h5 className="font-bold text-slate-900">2. Hiệu quả sản phẩm PestShield</h5>
+          <p>PestShield là dung dịch xịt muỗi &amp; côn trùng từ hoạt chất thiên nhiên, hiệu lực bảo vệ lên đến 6 tháng khi sử dụng đúng hướng dẫn. Hiệu quả thực tế phụ thuộc vào điều kiện môi trường và tần suất thông gió của không gian sử dụng.</p>
           <h5 className="font-bold text-slate-900">3. Trách nhiệm người dùng</h5>
-          <p>Người dùng cần đọc kỹ hướng dẫn sử dụng và tuân thủ các quy tắc an toàn sinh học được in trên bao bì.</p>
+          <p>Người dùng cần đọc kỹ hướng dẫn in trên bao bì trước khi dùng, không xịt trực tiếp vào thực phẩm, đồ chơi trẻ em, hoặc nơi nuôi cá/chim cảnh.</p>
+          <h5 className="font-bold text-slate-900">4. Giới hạn trách nhiệm</h5>
+          <p>Chaixitmuoi.com không chịu trách nhiệm với các thiệt hại phát sinh do sử dụng sai hướng dẫn hoặc phối hợp với hóa chất khác mà chưa được tư vấn.</p>
         </div>
       )
     },
@@ -351,14 +355,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       body: (
         <div className="space-y-4 text-sm text-slate-600">
           <h5 className="font-bold text-slate-900">1. Cam kết chất lượng</h5>
-          <p>Chúng tôi cam kết sản phẩm Samurai là hàng chính hãng công nghệ Nhật Bản, đạt tiêu chuẩn kiểm định nghiêm ngặt. Hiệu quả diệt mối đã được chứng minh qua hàng ngàn khách hàng trên toàn quốc.</p>
+          <p><strong>PestShield</strong> là sản phẩm xịt muỗi &amp; côn trùng từ hoạt chất gốc thiên nhiên, được kiểm định về độ an toàn cho người và vật nuôi. Mỗi chai xuất xưởng đều đạt chuẩn nồng độ hoạt chất quy định, đảm bảo hiệu lực bảo vệ đúng như công bố.</p>
           <h5 className="font-bold text-slate-900">2. Chính sách đổi trả</h5>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Hỗ trợ đổi mới 100% nếu sản phẩm bị lỗi do nhà sản xuất hoặc hư hỏng trong quá trình vận chuyển.</li>
-            <li>Khách hàng được kiểm tra hàng trước khi thanh toán để đảm bảo quyền lợi tuyệt đối.</li>
+            <li>Đổi mới 100% nếu chai bị lỗi, hư hỏng, hoặc rò rỉ do lỗi sản xuất / vận chuyển.</li>
+            <li>Khách hàng được kiểm tra hàng thực tế trước khi thanh toán (COD).</li>
+            <li>Không hỗ trợ đổi trả nếu sản phẩm đã qua sử dụng và không có lỗi từ nhà sản xuất.</li>
           </ul>
-          <h5 className="font-bold text-slate-900">3. Hỗ trợ kỹ thuật</h5>
-          <p>Đội ngũ chuyên gia luôn sẵn sàng hướng dẫn bạn cách xịt thuốc sao cho đạt hiệu quả diệt tận gốc cao nhất. Chúng tôi đồng hành cùng bạn cho đến khi tổ mối bị tiêu diệt hoàn toàn.</p>
+          <h5 className="font-bold text-slate-900">3. Hỗ trợ sau mua</h5>
+          <p>Đội ngũ hỗ trợ của Chaixitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline/Zalo <strong>084 271 7266</strong> hoặc email <strong>lienhe@chaixitmuoi.com</strong>.</p>
         </div>
       )
     },
@@ -366,15 +371,19 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       title: "Chính sách vận chuyển",
       body: (
         <div className="space-y-4 text-sm text-slate-600">
-          <h5 className="font-bold text-slate-900">1. Thời gian giao hàng</h5>
+          <h5 className="font-bold text-slate-900">1. Phạm vi giao hàng</h5>
+          <p>Chaixitmuoi.com giao hàng toàn quốc — tất cả 63 tỉnh thành Việt Nam, thông qua các đơn vị vận chuyển uy tín (GHTK, GHN, J&amp;T).</p>
+          <h5 className="font-bold text-slate-900">2. Thời gian giao hàng</h5>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Nội thành TP. HCM:</strong> 2 - 3 ngày làm việc kể từ khi xác nhận đơn hàng thành công.</li>
-            <li><strong>Các tỉnh thành khác:</strong> 3 - 5 ngày làm việc tùy vào khu vực địa lý.</li>
+            <li><strong>Nội thành TP. HCM:</strong> 1 – 2 ngày làm việc.</li>
+            <li><strong>Tỉnh thành khác:</strong> 2 – 4 ngày làm việc tùy khu vực.</li>
           </ul>
-          <h5 className="font-bold text-slate-900">2. Phí vận chuyển</h5>
-          <p>Chúng tôi áp dụng chính sách <strong>Miễn phí vận chuyển (Free Ship)</strong> cho tất cả các đơn hàng trên toàn quốc.</p>
-          <h5 className="font-bold text-slate-900">3. Theo dõi đơn hàng</h5>
-          <p>Sau khi gửi hàng, nhân viên tư vấn sẽ liên hệ thông báo mã vận đơn để bạn tiện theo dõi hành trình đơn hàng.</p>
+          <h5 className="font-bold text-slate-900">3. Phí vận chuyển</h5>
+          <p>Áp dụng <strong>Miễn phí vận chuyển (Free Ship)</strong> cho tất cả đơn hàng PestShield trên toàn quốc. Không phụ thu thêm bất kỳ khoản nào.</p>
+          <h5 className="font-bold text-slate-900">4. Hình thức thanh toán</h5>
+          <p>Thanh toán khi nhận hàng (<strong>COD</strong>) — kiểm tra hàng trước, hài lòng mới trả tiền.</p>
+          <h5 className="font-bold text-slate-900">5. Theo dõi đơn hàng</h5>
+          <p>Sau khi đơn được gửi đi, nhân viên sẽ nhắn mã vận đơn qua Zalo/SMS để bạn tra cứu trạng thái giao hàng trực tiếp trên app của đơn vị vận chuyển.</p>
         </div>
       )
     }
@@ -2159,11 +2168,11 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <img src="/logovuongsamuraimin.webp" alt="Samurai Japan Logo" className="h-10 w-10 object-contain rounded-lg" loading="lazy" width={40} height={40} />
-                <span className="text-xl font-bold tracking-tighter text-white">Thuốc Diệt Mối <span className="text-emerald-400">Nhật Bản</span></span>
+                <img src="/pslogo.webp" alt="PestShield Logo" className="h-10 w-10 object-contain rounded-lg" loading="lazy" width={40} height={40} />
+                <span className="text-xl font-bold tracking-tighter text-white">Chai Xịt Muỗi <span className="text-emerald-400">PestShield</span></span>
               </div>
               <p className="text-sm leading-relaxed">
-                Đơn vị phân phối độc quyền thuốc diệt mối sinh học Samurai công nghệ Nhật Bản tại Việt Nam. Bảo vệ ngôi nhà Việt khỏi hiểm họa mối mọt.
+                Chaixitmuoi.com — chai xịt muỗi &amp; côn trùng PestShield từ hoạt chất thiên nhiên. Xịt 1 lần, bảo vệ cả nhà suốt 6 tháng. An toàn cho trẻ nhỏ &amp; vật nuôi.
               </p>
             </div>
             <div>
@@ -2181,8 +2190,8 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <a href="mailto:dietmoinhatban@gmail.com" className="hover:text-white transition-colors">
-                    dietmoinhatban@gmail.com
+                  <a href="mailto:lienhe@chaixitmuoi.com" className="hover:text-white transition-colors">
+                    lienhe@chaixitmuoi.com
                   </a>
                 </li>
               </ul>
@@ -2198,7 +2207,7 @@ export default function App() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-800 text-center text-xs">
-            <p>© 2026 - Bản quyền thuộc về Thuốc diệt Mối Nhật Bản</p>
+            <p>© 2026 - Bản quyền thuộc về Chaixitmuoi.com - PestShield</p>
           </div>
         </div>
       </footer>
