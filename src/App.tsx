@@ -31,24 +31,7 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// ── GTM helper ───────────────────────────────────────────────────────────────
-declare global { interface Window { dataLayer: any[]; } }
-const pushGtm = (event: string, params?: Record<string, unknown>) => {
-  if (typeof window === 'undefined') return;
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event, ...params });
-};
-
-// ── Enhanced Conversions – SHA256 phone hash ──────────────────────────────────
-const hashPhone = async (raw: string): Promise<string> => {
-  // Chuẩn hóa: loại khoảng trắng/dấu chấm/gạch, đổi đầu 0 → +84
-  const clean = raw.replace(/[\s.\-()]/g, '').replace(/^0/, '+84');
-  const msgBuffer = new TextEncoder().encode(clean);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-  return Array.from(new Uint8Array(hashBuffer))
-    .map(b => b.toString(16).padStart(2, '0'))
-    .join('');
-};
+// ── Combo name helper ────────────────────────────────────────────────────────
 
 // ─── Success Modal ────────────────────────────────────────────────────────────
 // Combo name mapping
@@ -207,7 +190,6 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
               href="https://zalo.me/0842717266"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => pushGtm('zalo_click', { location: 'success_modal' })}
               className="flex items-center justify-center gap-1.5 w-full py-3 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 active:scale-95 transition-all text-slate-600 font-semibold text-base"
             >
               💬 Nhắn Zalo hỗ trợ
@@ -484,7 +466,6 @@ export default function App() {
   const [countdownToMidnight, setCountdownToMidnight] = useState('');
   const [midnightCountdownSecs, setMidnightCountdownSecs] = useState(0);
   const [upsellApplied, setUpsellApplied] = useState(false);
-  const formStartedRef = useRef(false); // theo dõi form_start GTM (chỉ bắn 1 lần)
   // Capture UTM params – fallback sessionStorage phòng redirect drop UTM (www ↔ non-www)
   const _rawSource   = new URLSearchParams(window.location.search).get('utm_source')   ?? '';
   const _rawCampaign = new URLSearchParams(window.location.search).get('utm_campaign') ?? '';
@@ -571,49 +552,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ── GTM: Scroll depth + section visibility ───────────────────────────────
-  useEffect(() => {
-    const reached = new Set<number>();
-    const onScroll = () => {
-      const docH = document.documentElement.scrollHeight - window.innerHeight;
-      if (docH <= 0) return;
-      const pct = Math.round((window.scrollY / docH) * 100);
-      [25, 50, 75].forEach(m => {
-        if (pct >= m && !reached.has(m)) {
-          reached.add(m);
-          pushGtm('scroll_depth', { depth_percent: m });
-        }
-      });
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    // IntersectionObserver cho từng section quan trọng
-    const SECTIONS = [
-      { id: 'pricing',       event: 'view_pricing'     },
-      { id: 'reviews',       event: 'view_reviews'     },
-      { id: 'faq',           event: 'view_faq'         },
-      { id: 'order-section', event: 'view_order_form'  },
-    ];
-    const observers: IntersectionObserver[] = [];
-    SECTIONS.forEach(({ id, event }) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) { pushGtm(event); obs.disconnect(); } },
-        { threshold: 0.25 }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      observers.forEach(o => o.disconnect());
-    };
-  }, []);
-
   const onSubmit = async (data: any) => {
-    pushGtm('form_submit_attempt', { combo: data.combo });
 
     // Tạo đơn ngay với trạng thái Mới (status: 0) trước khi hiện modal
     setSubmitStatus('loading');
@@ -630,14 +569,11 @@ export default function App() {
         setPendingOrderId(result.orderId);
         setSubmitStatus('idle');
         setShowConfirmModal(true);
-        pushGtm('begin_checkout'); // đơn Mới đã tạo trên Pancake, modal hiện – có thể gọi lại nếu lưỡng lự
       } else {
-        pushGtm('order_error', { reason: result.message || 'api_error' });
         setSubmitError(result.message || 'Lỗi không xác định, vui lòng thử lại.');
         setSubmitStatus('error');
       }
     } catch {
-      pushGtm('order_error', { reason: 'network_error' });
       setSubmitError('Không thể kết nối, vui lòng kiểm tra mạng và thử lại.');
       setSubmitStatus('error');
     }
@@ -667,47 +603,21 @@ export default function App() {
         setSubmitStatus('success');
         setOrderCustomerName(data.name || '');
         setShowSuccessModal(true);
-        // Gửi sự kiện cho Google Tag Manager
-        if (typeof window !== 'undefined' && window.dataLayer) {
-          // Hash phone TRƯỚC khi bắn order_success để user_data có sẵn trong cùng 1 push
-          // → GTM tag Enhanced Conversions trigger on order_success sẽ bắt được ngay
-          let hashedPhone = '';
-          try { hashedPhone = await hashPhone(data.phone); } catch (e) { console.warn('hashPhone failed:', e); }
-
-          window.dataLayer.push({
-            event: 'order_success',
-            order_status: 'success',
-            // user_data đi kèm order_success để GTM đọc được khi tag trigger
-            ...(hashedPhone ? { user_data: { phone_number: hashedPhone } } : {}),
-          });
-          // Giữ lại enhanced_conversion riêng để tương thích với setup GTM cũ
-          if (hashedPhone) {
-            window.dataLayer.push({
-              event: 'enhanced_conversion',
-              user_data: { phone_number: hashedPhone },
-            });
-          }
-        }
       } else {
-        pushGtm('order_error', { reason: result.message || 'api_error' });
         setSubmitError(result.message || 'Lỗi không xác định, vui lòng thử lại.');
         setSubmitStatus('error');
       }
     } catch {
-      pushGtm('order_error', { reason: 'network_error' });
       setSubmitError('Không thể kết nối, vui lòng kiểm tra mạng và thử lại.');
       setSubmitStatus('error');
     }
   };
 
   const scrollToOrder = () => {
-    pushGtm('cta_click', { button_location: 'page_cta' });
     document.getElementById('order-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToOrderWithCombo = (comboValue: string) => {
-    pushGtm('cta_click', { button_location: 'pricing_card', combo: comboValue });
-    pushGtm('combo_selected', { combo: comboValue, combo_name: getComboName(comboValue) });
     setSelectedCombo(comboValue);
     setValue('combo', comboValue);
     setTimeout(() => {
@@ -720,7 +630,6 @@ export default function App() {
   };
 
   const scrollToComparison = () => {
-    pushGtm('cta_click', { button_location: 'hero_comparison' });
     document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -1820,7 +1729,7 @@ export default function App() {
                   )}
                 >
                   <button
-                    onClick={() => { const next = openFaq === idx ? null : idx; if (next !== null) pushGtm('faq_open', { question_index: next, question: FAQS[next].q }); setOpenFaq(next); }}
+                    onClick={() => { setOpenFaq(openFaq === idx ? null : idx); }}
                     className="w-full flex items-center justify-between gap-3 px-5 py-4 text-left"
                   >
                     <span className={cn(
@@ -1912,7 +1821,7 @@ export default function App() {
                           {...register("combo", { required: true })}
                           value={item.value}
                           checked={selectedCombo === item.value}
-                          onChange={(e) => { setSelectedCombo(e.target.value); setValue('combo', e.target.value); pushGtm('combo_selected', { combo: e.target.value, combo_name: getComboName(e.target.value) }); }}
+                          onChange={(e) => { setSelectedCombo(e.target.value); setValue('combo', e.target.value); }}
                           className="sr-only"
                         />
                         {item.recommended && (
@@ -2030,12 +1939,7 @@ export default function App() {
                       placeholder="Ví dụ: Nguyễn Văn A"
                       autoComplete="name"
                       name="name"
-                      onFocus={() => {
-                        if (!formStartedRef.current) {
-                          formStartedRef.current = true;
-                          pushGtm('form_start');
-                        }
-                      }}
+
                       className={cn(
                         "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.name && "border-red-400 bg-red-50"
@@ -2268,7 +2172,7 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <a href="https://zalo.me/0842717266" target="_blank" rel="noopener noreferrer" onClick={() => pushGtm('zalo_click', { location: 'footer' })} className="hover:text-white transition-colors">
+                  <a href="https://zalo.me/0842717266" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                     Hotline/Zalo: 084 271 7266
                   </a>
                 </li>
@@ -2302,7 +2206,7 @@ export default function App() {
         showFloatingCTA ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-20 pointer-events-none"
       )}>
         <button
-          onClick={() => { pushGtm('cta_click', { button_location: 'floating_cta' }); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
+          onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
           className="flex flex-col items-center gap-1 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-4 rounded-2xl shadow-2xl shadow-orange-900/70 active:scale-95 transition-all font-black text-center min-w-max"
         >
           <span className="text-base leading-tight">👉 Đặt Hàng Ngay</span>
