@@ -1351,14 +1351,14 @@ export default function App() {
             </div>
 
             {/* Illustration image */}
-            <div className="mb-8 md:mb-12 max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-md border border-slate-100">
+            <div className="mb-8 md:mb-12 max-w-md mx-auto md:max-w-lg rounded-2xl overflow-hidden shadow-md border border-slate-100">
               <img
-                src="/sdsamuraimin.webp"
-                alt="Cách tự xử lý mối tại nhà bằng Samurai Nhật Bản"
+                src="/cachsudung.webp"
+                alt="Cách sử dụng chai xịt muỗi PestShield – 3 bước đơn giản"
                 className="w-full h-auto block"
                 loading="lazy"
                 width={1024}
-                height={683}
+                height={1024}
               />
             </div>
 
