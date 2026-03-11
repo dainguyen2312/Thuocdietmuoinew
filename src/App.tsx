@@ -1005,8 +1005,8 @@ export default function App() {
                 },
                 {
                   title: "Muỗi đốt ban đêm — cả nhà mất ngủ, lo bệnh",
-                  line1: "Sốt xuất huyết, virus zika — muỗi là nguồn",
-                  line2: "lây chính. Một đêm bị đốt là một đêm không yên.",
+                  line1: "Sốt xuất huyết, virus zika —",
+                  line2: "muỗi là nguồn lây chính. Một đêm bị đốt là một đêm không yên.",
                   img: "/muoidotbedesktop.webp", imgW: 771, imgH: 461,
                   highlight: true
                 },
@@ -1042,7 +1042,7 @@ export default function App() {
               ))}
             </div>
             <p className="text-center mt-10 text-base md:text-lg font-semibold text-slate-700 max-w-2xl mx-auto">
-              Xử lý đúng cách từ đầu — tiết kiệm tiền, bảo vệ sức khoẻ cả nhà.
+              Xử lý đúng cách từ đầu —<br className="sm:hidden" /> tiết kiệm tiền, bảo vệ sức khoẻ cả nhà.
             </p>
             <div className="flex flex-col items-center mt-6 gap-2">
               <button
