@@ -788,8 +788,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-12 md:h-16">
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-1.5 md:gap-2 hover:opacity-75 transition-opacity">
-              <img src="/logovuongsamuraimin.webp" alt="Samurai Japan Logo" className="h-8 w-8 md:h-10 md:w-10 object-contain rounded-lg cursor-pointer" width={40} height={40} loading="eager" />
-              <span className="text-base md:text-xl font-bold tracking-tighter text-slate-900 cursor-pointer leading-tight">Thuốc Diệt Mối <span className="text-emerald-600">Nhật Bản</span></span>
+              <img src="/pslogo.webp" alt="PestShield Logo" className="h-8 w-8 md:h-10 md:w-10 object-contain rounded-lg cursor-pointer" width={40} height={40} loading="eager" />
+              <span className="text-base md:text-xl font-bold tracking-tighter text-slate-900 cursor-pointer leading-tight">Thuốc Xịt Muỗi <span className="text-emerald-600">PestShield</span></span>
             </button>
             
             <div className="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
@@ -855,7 +855,7 @@ export default function App() {
               >
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold uppercase tracking-widest mb-5 bg-emerald-50 border-emerald-500 text-emerald-800">
                   <span className="flex h-2 w-2 rounded-full animate-pulse bg-emerald-500"></span>
-                  🇯🇵 Giải Pháp Diệt Mối Từ Nhật Bản
+                  �🇪 Giải pháp bảo vệ gia đình khỏi Muỗi từ Đức
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 tracking-tight">
                   Xịt Hoài Vẫn Còn Muỗi?<br />
