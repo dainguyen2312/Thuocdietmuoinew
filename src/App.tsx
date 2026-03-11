@@ -1329,8 +1329,8 @@ export default function App() {
             {/* Header */}
             <div className="text-center mb-8 md:mb-12">
               <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Cách sử dụng</p>
-              <h2 className="text-2xl md:text-3xl font-black mb-2 uppercase tracking-tight">3 Bước tự xử lý Mối tại nhà</h2>
-              <p className="text-slate-500 text-base">Không cần kinh nghiệm – không cần dụng cụ chuyên dụng</p>
+              <h2 className="text-2xl md:text-3xl font-black mb-2 uppercase tracking-tight">Xịt 5 Phút — Bảo Vệ Cả Nhà 6 Tháng</h2>
+              <p className="text-slate-500 text-base">3 bước đơn giản — không cần kinh nghiệm</p>
             </div>
 
             {/* Illustration image */}
@@ -1351,22 +1351,22 @@ export default function App() {
                 {
                   num: "1",
                   time: "2 phút",
-                  title: "Xác định vị trí",
-                  desc: "Tìm khe gỗ, chân tủ, chân cửa hoặc nơi thấy mối xuất hiện.",
+                  title: "Xác định điểm xịt",
+                  desc: "Chân tường, góc nhà, gầm bếp, cửa ra vào — nơi côn trùng hay bò qua.",
                   icon: "🔍",
                 },
                 {
                   num: "2",
-                  time: "5 phút",
-                  title: "Mở nắp – rải bột",
-                  desc: "Mở nắp lọ, rải bột Samurai trực tiếp vào vị trí mối hoạt động. Không cần khoan đục.",
-                  icon: "📦",
+                  time: "3 phút",
+                  title: "Xịt đều vào các điểm",
+                  desc: "Giữ chai cách bề mặt 20cm, xịt 1 lượt mỏng. Không cần xịt nhiều.",
+                  icon: "🧴",
                 },
                 {
                   num: "3",
-                  time: "3–7 ngày",
-                  title: "Để yên – dọn sạch",
-                  desc: "Mối tiếp xúc sẽ mang hoạt chất vào tổ và lây cho cả đàn. Sau vài ngày dọn sạch khu vực là hoàn tất.",
+                  time: "Xong. Để khô 30 phút",
+                  title: "Ra ngoài — về sinh hoạt bình thường",
+                  desc: "Ra ngoài 30 phút cho khô. Về nhà sinh hoạt bình thường — hiệu lực giữ nguyên 6 tháng.",
                   icon: "✅",
                 },
               ].map((item, idx) => (
@@ -1418,7 +1418,7 @@ export default function App() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">💡</span>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  <span className="font-bold text-slate-800">Mẹo:</span> Để hiệu quả tốt nhất, rải vào buổi tối khi mối hoạt động nhiều. Không cần dọn ngay – để bột tiếp xúc với mối càng lâu càng tốt.
+                  <span className="font-bold text-slate-800">Mẹo:</span> Xịt vào buổi tối hiệu quả hơn — côn trùng hoạt động nhiều về đêm, tiếp xúc hoạt chất nhanh hơn.
                 </p>
               </div>
               <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-6 py-3 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
