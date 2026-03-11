@@ -13,6 +13,7 @@ import {
   ShoppingCart, 
   Star,
   Package,
+  Leaf,
   ArrowRight,
   Menu,
   X,
@@ -1065,7 +1066,7 @@ export default function App() {
                 <div className="relative rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
                   <img
                     src="/samurai-product-combo-min.webp"
-                    alt="Bột diệt mối Samurai Nhật Bản chính hãng – Combo 3, 6, 9 lọ"
+                    alt="Thuốc xịt muỗi PestShield – xịt 1 lần hiệu lực 6 tháng"
                     className="w-full h-auto block"
                     loading="lazy"
                     width={1536}
@@ -1074,7 +1075,7 @@ export default function App() {
                 </div>
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 lg:mb-8 text-center lg:text-left">Cách Samurai Xử Lý Mối Từ Gốc</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 lg:mb-8 text-center lg:text-left">Tại Sao Xịt 1 Lần Mà Hiệu Lực 6 Tháng?</h2>
 
                 {/* Mobile Image - Product Showcase */}
                 <div className="lg:hidden mb-6 relative">
@@ -1082,7 +1083,7 @@ export default function App() {
                   <div className="relative rounded-3xl shadow-xl w-full max-w-sm mx-auto overflow-hidden">
                     <img
                       src="/samurai-product-combo-min.webp"
-                      alt="Bột diệt mối Samurai Nhật Bản chính hãng – Combo 3, 6, 9 lọ"
+                      alt="Thuốc xịt muỗi PestShield – xịt 1 lần hiệu lực 6 tháng"
                       className="w-full h-auto block"
                       loading="lazy"
                       width={1536}
@@ -1095,18 +1096,18 @@ export default function App() {
                   {[
                     {
                       icon: <Zap className="w-6 h-6 text-yellow-500" />,
-                      title: "Lây nhiễm chéo cả đàn - xử lý tận tổ",
-                      desc: "Mối dính thuốc sẽ mang hoạt chất về tổ, lây sang cả đàn và mối chúa.\nKhông chỉ xử lý chỗ nhìn thấy → giúp kiểm soát mối từ bên trong."
+                      title: "Không xịt trúng — vẫn hiệu quả",
+                      desc: "Xịt vào góc nhà, chân tường, cửa ra vào.\nMuỗi và côn trùng bò qua vùng xịt là tê liệt.\nKhông cần rượt theo từng con."
                     },
                     {
-                      icon: <Package className="w-6 h-6 text-blue-500" />,
-                      title: "Xử lý tại chỗ – không đục phá",
-                      desc: "Chỉ cần rải vào khe gỗ, chân tủ, chân cửa nơi mối hoạt động.\nKhông tháo nội thất, không khoan đục, không gọi thợ."
+                      icon: <ShieldCheck className="w-6 h-6 text-blue-500" />,
+                      title: "Bám dính 6 tháng — không bay hơi như chai thường",
+                      desc: "Hoạt chất bám chắc vào bề mặt, không bốc hơi,\nkhông cần xịt lại. Mưa không trôi, quạt không bay."
                     },
                     {
-                      icon: <Star className="w-6 h-6 text-emerald-500" />,
-                      title: "Tự xử lý sớm – tránh tốn kém về sau",
-                      desc: "Phù hợp cho gia đình tự xử lý Mối tại nhà, hạn chế lan rộng và giảm chi phí sửa chữa nhà cửa."
+                      icon: <Leaf className="w-6 h-6 text-emerald-500" />,
+                      title: "Thiên nhiên — không mùi sau 30 phút",
+                      desc: "Chiết xuất thực vật, khô hoàn toàn sau 30 phút.\nKhông độc, không mùi — trẻ bò sàn, thú cưng ở nhà bình thường."
                     }
                   ].map((feature, idx) => (
                     <div key={idx} className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
@@ -1115,11 +1116,14 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
-                        <p className="text-slate-600 text-base leading-relaxed">{feature.desc}</p>
+                        <p className="text-slate-600 text-base leading-relaxed whitespace-pre-line">{feature.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
+                <p className="mt-6 text-center lg:text-left text-base md:text-lg font-semibold text-slate-700">
+                  Không phải xịt mạnh hơn — mà xịt đúng cách hơn.
+                </p>
               </div>
             </div>
           </div>
