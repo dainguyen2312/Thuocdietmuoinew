@@ -1237,11 +1237,21 @@ export default function App() {
               </table>
             </div>
 
-            {/* Desktop Bottom note */}
-            <p className="hidden md:block text-center mt-6 text-base font-semibold text-slate-700">
-              Tiết kiệm hơn 10 lần so với thuê dịch vụ —{' '}
-              <span className="text-emerald-600">hiệu quả gấp 20+ lần chai xịt thường.</span>
-            </p>
+            {/* Desktop Bottom note + CTA */}
+            <div className="hidden md:flex flex-col items-center gap-4 mt-8">
+              <p className="text-center text-base font-semibold text-slate-700">
+                Tiết kiệm hơn 10 lần so với thuê dịch vụ —{' '}
+                <span className="text-emerald-600">hiệu quả gấp 20+ lần chai xịt thường.</span>
+              </p>
+              <button
+                onClick={scrollToPricing}
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all duration-200"
+              >
+                <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
+                Đặt Ngay — Rẻ Hơn Thuê Dịch Vụ, Dùng Cả Năm
+              </button>
+              <span className="text-sm text-slate-500 font-medium">298.000đ · 2 chai · Bảo vệ cả nhà suốt 12 tháng+</span>
+            </div>
 
             {/* Mobile View */}
             <div className="md:hidden space-y-3">
