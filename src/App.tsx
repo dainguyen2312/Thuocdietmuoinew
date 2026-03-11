@@ -149,20 +149,20 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-3xl leading-none flex-shrink-0">{detail.emoji}</span>
                   <div className="flex-1 min-w-0">
-                    <p className="font-black text-stone-900 text-xl leading-tight">{detail.name}</p>
-                    <p className="text-stone-500 text-sm mt-1">{detail.quantity}</p>
+                    <p className="font-black text-slate-900 text-xl leading-tight">{detail.name}</p>
+                    <p className="text-slate-500 text-sm mt-1">{detail.quantity}</p>
                   </div>
                 </div>
                 <div className="border-t border-green-200 pt-3 flex items-end justify-between">
                   <div>
-                    <p className="text-stone-500 text-sm mb-0.5">Thành tiền</p>
+                    <p className="text-slate-500 text-sm mb-0.5">Thành tiền</p>
                     <p className="text-2xl font-black text-green-700 leading-none">{detail.price}</p>
                     {detail.originalPrice && (
-                      <p className="text-stone-400 text-sm mt-0.5 line-through">{detail.originalPrice}</p>
+                      <p className="text-slate-400 text-sm mt-0.5 line-through">{detail.originalPrice}</p>
                     )}
                   </div>
                   {detail.savings && (
-                    <span className="bg-red-500 text-white text-sm font-black px-3 py-1.5 rounded-full">
+                    <span className="bg-orange-500 text-white text-sm font-black px-3 py-1.5 rounded-full">
                       🎉 {detail.savings}
                     </span>
                   )}
@@ -175,10 +175,10 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
           <div className="bg-amber-50 border-l-4 border-amber-400 rounded-xl p-4 flex gap-3 items-start">
             <span className="text-2xl leading-none flex-shrink-0 mt-0.5">⏰</span>
             <div>
-              <p className="font-black text-stone-800 text-lg leading-snug">
+              <p className="font-black text-slate-800 text-lg leading-snug">
                 Nhân viên gọi xác nhận trong <span className="text-amber-600">24 giờ</span>
               </p>
-              <p className="text-stone-600 text-base mt-1 leading-snug">
+              <p className="text-slate-600 text-base mt-1 leading-snug">
                 Kèm thông báo thời gian giao hàng cụ thể đến tận nhà bạn.
               </p>
             </div>
@@ -195,24 +195,24 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
           {/* Nút Đóng - Primary (Nổi bật) */}
           <button
             onClick={onClose}
-            className="w-full py-4 rounded-2xl bg-gradient-to-r from-stone-800 to-stone-900 text-white font-black text-xl hover:from-stone-900 hover:to-stone-950 active:scale-95 transition-all shadow-lg shadow-stone-800/30"
+            className="w-full py-4 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 text-white font-black text-xl hover:from-slate-900 hover:to-slate-950 active:scale-95 transition-all shadow-lg shadow-slate-800/30"
           >
             Đóng
           </button>
 
           {/* Zalo Support - Secondary (Nhỏ, không nổi bật) */}
           <div className="text-center pt-0.5">
-            <p className="text-stone-500 text-sm mb-1.5">Cần hỗ trợ?</p>
+            <p className="text-slate-500 text-sm mb-1.5">Cần hỗ trợ?</p>
             <a
               href="https://zalo.me/0842717266"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => pushGtm('zalo_click', { location: 'success_modal' })}
-              className="flex items-center justify-center gap-1.5 w-full py-3 px-3 rounded-xl bg-stone-100 hover:bg-stone-200 active:scale-95 transition-all text-stone-600 font-semibold text-base"
+              className="flex items-center justify-center gap-1.5 w-full py-3 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 active:scale-95 transition-all text-slate-600 font-semibold text-base"
             >
               💬 Nhắn Zalo hỗ trợ
             </a>
-            <p className="text-stone-500 text-sm mt-1.5">T2 - T7: 8h30 - 16h30</p>
+            <p className="text-slate-500 text-sm mt-1.5">T2 - T7: 8h30 - 16h30</p>
           </div>
         </div>
       </motion.div>
@@ -261,23 +261,23 @@ const ConfirmOrderModal = ({
         className="bg-white w-full sm:max-w-sm sm:mx-4 sm:rounded-3xl rounded-t-3xl shadow-2xl max-h-[92vh] overflow-y-auto"
       >
         {/* Header */}
-        <div className="bg-white border-b-2 border-red-100 px-5 pt-5 pb-4 text-center">
-          <div className="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-red-200">
-            <svg className="w-6 h-6" style={{ color: '#E53E3E' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+        <div className="bg-white border-b-2 border-emerald-100 px-5 pt-5 pb-4 text-center">
+          <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-emerald-200">
+            <svg className="w-6 h-6" style={{ color: '#059669' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-black leading-tight" style={{ color: '#E53E3E' }}>Xác nhận đặt hàng</h2>
-          <p className="text-stone-500 text-base mt-1.5 font-medium leading-snug">Đơn sẽ được xử lý ngay sau khi bạn xác nhận</p>
+          <h2 className="text-2xl font-black leading-tight" style={{ color: '#059669' }}>Xác nhận đặt hàng</h2>
+          <p className="text-slate-500 text-base mt-1.5 font-medium leading-snug">Đơn sẽ được xử lý ngay sau khi bạn xác nhận</p>
         </div>
 
         {/* Body */}
         <div className="px-4 pt-4 pb-5 space-y-3">
 
           {/* Phone – nổi bật nhất */}
-          <div className="bg-red-50 border-2 rounded-2xl px-4 py-4 text-center" style={{ borderColor: '#FDA4A4' }}>
-            <p className="text-base font-bold uppercase tracking-wide mb-2" style={{ color: '#E53E3E' }}>Số điện thoại nhận cuộc gọi</p>
-            <p className="text-5xl font-black text-stone-900 tracking-wide tabular-nums leading-none">{data.phone}</p>
+          <div className="bg-emerald-50 border-2 rounded-2xl px-4 py-4 text-center" style={{ borderColor: '#6EE7B7' }}>
+            <p className="text-base font-bold uppercase tracking-wide mb-2" style={{ color: '#059669' }}>Số điện thoại nhận cuộc gọi</p>
+            <p className="text-5xl font-black text-slate-900 tracking-wide tabular-nums leading-none">{data.phone}</p>
           </div>
 
           {/* Cảnh báo nhân viên gọi lại – riêng, nổi bật */}
@@ -291,18 +291,18 @@ const ConfirmOrderModal = ({
           </div>
 
           {/* Name + Address + Combo */}
-          <div className="bg-stone-50 border border-stone-200 rounded-2xl px-4 py-3.5 space-y-3 text-base">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 space-y-3 text-base">
             <div className="flex gap-2.5">
-              <span className="text-stone-600 w-20 flex-shrink-0 font-medium">Họ tên</span>
-              <span className="font-bold text-stone-800 flex-1">{data.name}</span>
+              <span className="text-slate-600 w-20 flex-shrink-0 font-medium">Họ tên</span>
+              <span className="font-bold text-slate-800 flex-1">{data.name}</span>
             </div>
             <div className="flex gap-2.5">
-              <span className="text-stone-600 w-20 flex-shrink-0 font-medium">Địa chỉ</span>
-              <span className="font-semibold text-stone-700 flex-1 leading-snug">{data.address}</span>
+              <span className="text-slate-600 w-20 flex-shrink-0 font-medium">Địa chỉ</span>
+              <span className="font-semibold text-slate-700 flex-1 leading-snug">{data.address}</span>
             </div>
             <div className="flex gap-2.5">
-              <span className="text-stone-600 w-20 flex-shrink-0 font-medium">Sản phẩm</span>
-              <span className="font-bold text-stone-800 flex-1">{comboLabel[data.combo] ?? data.combo}</span>
+              <span className="text-slate-600 w-20 flex-shrink-0 font-medium">Sản phẩm</span>
+              <span className="font-bold text-slate-800 flex-1">{comboLabel[data.combo] ?? data.combo}</span>
             </div>
           </div>
 
@@ -312,7 +312,7 @@ const ConfirmOrderModal = ({
           {/* Buttons */}
           <button
             onClick={onConfirm}
-            className="w-full py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 text-white font-black text-2xl hover:from-red-700 hover:to-red-800 active:scale-95 transition-all shadow-lg shadow-red-200 flex items-center justify-center gap-2"
+            className="w-full py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black text-2xl hover:from-orange-600 hover:to-orange-700 active:scale-95 transition-all shadow-lg shadow-orange-200 flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-7 h-7 flex-shrink-0" />
             Xác nhận đặt hàng
@@ -320,7 +320,7 @@ const ConfirmOrderModal = ({
 
           <button
             onClick={onEdit}
-            className="w-full py-4 rounded-2xl border-2 border-stone-200 bg-white text-stone-600 font-bold text-xl hover:bg-stone-50 hover:border-stone-300 active:scale-95 transition-all flex items-center justify-center gap-2"
+            className="w-full py-4 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 font-bold text-xl hover:bg-slate-50 hover:border-slate-300 active:scale-95 transition-all flex items-center justify-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -338,13 +338,13 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
     privacy: {
       title: "Chính sách bảo mật thông tin",
       body: (
-        <div className="space-y-4 text-sm text-stone-600">
+        <div className="space-y-4 text-sm text-slate-600">
           <p>Chào mừng bạn đến với Samurai Japan. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
-          <h5 className="font-bold text-stone-900">1. Thu thập thông tin</h5>
+          <h5 className="font-bold text-slate-900">1. Thu thập thông tin</h5>
           <p>Chúng tôi thu thập thông tin cá nhân (tên, số điện thoại, địa chỉ) chỉ nhằm mục đích xử lý đơn hàng và hỗ trợ khách hàng.</p>
-          <h5 className="font-bold text-stone-900">2. Công nghệ theo dõi</h5>
+          <h5 className="font-bold text-slate-900">2. Công nghệ theo dõi</h5>
           <p>Trang web sử dụng Google Tag Manager, GA4 và Meta Pixel để phân tích hành vi người dùng và tối ưu hóa quảng cáo. Dữ liệu này là ẩn danh và không chứa thông tin nhận dạng cá nhân trực tiếp.</p>
-          <h5 className="font-bold text-stone-900">3. Bảo mật</h5>
+          <h5 className="font-bold text-slate-900">3. Bảo mật</h5>
           <p>Thông tin của bạn được lưu trữ an toàn và không bao giờ được chia sẻ với bên thứ ba cho mục đích thương mại.</p>
         </div>
       )
@@ -352,13 +352,13 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
     terms: {
       title: "Điều khoản dịch vụ",
       body: (
-        <div className="space-y-4 text-sm text-stone-600">
+        <div className="space-y-4 text-sm text-slate-600">
           <p>Bằng việc đặt hàng tại website, bạn đồng ý với các điều khoản sau:</p>
-          <h5 className="font-bold text-stone-900">1. Đặt hàng</h5>
+          <h5 className="font-bold text-slate-900">1. Đặt hàng</h5>
           <p>Thông tin đặt hàng phải chính xác để đảm bảo việc giao hàng không bị gián đoạn.</p>
-          <h5 className="font-bold text-stone-900">2. Hiệu quả sản phẩm</h5>
+          <h5 className="font-bold text-slate-900">2. Hiệu quả sản phẩm</h5>
           <p>Hiệu quả của thuốc Samurai phụ thuộc vào việc sử dụng đúng hướng dẫn kỹ thuật. Chúng tôi cam kết cung cấp sản phẩm chính hãng với nồng độ hoạt chất tiêu chuẩn Nhật Bản để đạt kết quả tối ưu nhất khi được sử dụng đúng cách.</p>
-          <h5 className="font-bold text-stone-900">3. Trách nhiệm người dùng</h5>
+          <h5 className="font-bold text-slate-900">3. Trách nhiệm người dùng</h5>
           <p>Người dùng cần đọc kỹ hướng dẫn sử dụng và tuân thủ các quy tắc an toàn sinh học được in trên bao bì.</p>
         </div>
       )
@@ -366,15 +366,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
     warranty: {
       title: "Cam kết Chất lượng & Đổi trả",
       body: (
-        <div className="space-y-4 text-sm text-stone-600">
-          <h5 className="font-bold text-stone-900">1. Cam kết chất lượng</h5>
+        <div className="space-y-4 text-sm text-slate-600">
+          <h5 className="font-bold text-slate-900">1. Cam kết chất lượng</h5>
           <p>Chúng tôi cam kết sản phẩm Samurai là hàng chính hãng công nghệ Nhật Bản, đạt tiêu chuẩn kiểm định nghiêm ngặt. Hiệu quả diệt mối đã được chứng minh qua hàng ngàn khách hàng trên toàn quốc.</p>
-          <h5 className="font-bold text-stone-900">2. Chính sách đổi trả</h5>
+          <h5 className="font-bold text-slate-900">2. Chính sách đổi trả</h5>
           <ul className="list-disc pl-5 space-y-2">
             <li>Hỗ trợ đổi mới 100% nếu sản phẩm bị lỗi do nhà sản xuất hoặc hư hỏng trong quá trình vận chuyển.</li>
             <li>Khách hàng được kiểm tra hàng trước khi thanh toán để đảm bảo quyền lợi tuyệt đối.</li>
           </ul>
-          <h5 className="font-bold text-stone-900">3. Hỗ trợ kỹ thuật</h5>
+          <h5 className="font-bold text-slate-900">3. Hỗ trợ kỹ thuật</h5>
           <p>Đội ngũ chuyên gia luôn sẵn sàng hướng dẫn bạn cách xịt thuốc sao cho đạt hiệu quả diệt tận gốc cao nhất. Chúng tôi đồng hành cùng bạn cho đến khi tổ mối bị tiêu diệt hoàn toàn.</p>
         </div>
       )
@@ -382,15 +382,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
     shipping: {
       title: "Chính sách vận chuyển",
       body: (
-        <div className="space-y-4 text-sm text-stone-600">
-          <h5 className="font-bold text-stone-900">1. Thời gian giao hàng</h5>
+        <div className="space-y-4 text-sm text-slate-600">
+          <h5 className="font-bold text-slate-900">1. Thời gian giao hàng</h5>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Nội thành TP. HCM:</strong> 2 - 3 ngày làm việc kể từ khi xác nhận đơn hàng thành công.</li>
             <li><strong>Các tỉnh thành khác:</strong> 3 - 5 ngày làm việc tùy vào khu vực địa lý.</li>
           </ul>
-          <h5 className="font-bold text-stone-900">2. Phí vận chuyển</h5>
+          <h5 className="font-bold text-slate-900">2. Phí vận chuyển</h5>
           <p>Chúng tôi áp dụng chính sách <strong>Miễn phí vận chuyển (Free Ship)</strong> cho tất cả các đơn hàng trên toàn quốc.</p>
-          <h5 className="font-bold text-stone-900">3. Theo dõi đơn hàng</h5>
+          <h5 className="font-bold text-slate-900">3. Theo dõi đơn hàng</h5>
           <p>Sau khi gửi hàng, nhân viên tư vấn sẽ liên hệ thông báo mã vận đơn để bạn tiện theo dõi hành trình đơn hàng.</p>
         </div>
       )
@@ -411,17 +411,17 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
         className="bg-white rounded-[24px] md:rounded-[32px] shadow-2xl w-full max-w-2xl max-h-[90vh] md:max-h-[80vh] overflow-hidden flex flex-col mx-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-4 md:p-6 border-b border-stone-100 flex justify-between items-center bg-stone-50 relative">
-          <h3 className="text-lg md:text-xl font-bold text-stone-900 uppercase tracking-tight pr-8">{modalData.title}</h3>
-          <button onClick={onClose} className="p-2 hover:bg-stone-200 rounded-full transition-colors absolute right-4 top-4 md:static">
+        <div className="p-4 md:p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50 relative">
+          <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase tracking-tight pr-8">{modalData.title}</h3>
+          <button onClick={onClose} className="p-2 hover:bg-slate-200 rounded-full transition-colors absolute right-4 top-4 md:static">
             <X className="w-6 h-6" />
           </button>
         </div>
         <div className="p-6 md:p-8 overflow-y-auto">
           {modalData.body}
         </div>
-        <div className="p-4 md:p-6 border-t border-stone-100 bg-stone-50 text-center">
-          <button onClick={onClose} className="w-full md:w-auto bg-stone-900 text-white px-8 py-3 rounded-full font-bold text-sm">ĐÃ HIỂU</button>
+        <div className="p-4 md:p-6 border-t border-slate-100 bg-slate-50 text-center">
+          <button onClick={onClose} className="w-full md:w-auto bg-slate-900 text-white px-8 py-3 rounded-full font-bold text-sm">ĐÃ HIỂU</button>
         </div>
       </motion.div>
     </div>
@@ -816,7 +816,7 @@ export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-stone-50 font-sans text-stone-900 selection:bg-red-100">
+    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-emerald-100">
       {/* Success Modal */}
       <AnimatePresence>
         {showSuccessModal && (
@@ -852,46 +852,46 @@ export default function App() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[52px] md:top-auto md:bottom-8 left-4 z-[60] bg-white rounded-xl shadow-lg border border-stone-100 px-3 py-2.5 flex items-center gap-2.5 max-w-[252px] md:max-w-[300px]"
+            className="fixed top-[52px] md:top-auto md:bottom-8 left-4 z-[60] bg-white rounded-xl shadow-lg border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 max-w-[252px] md:max-w-[300px]"
           >
             <div className="relative flex-shrink-0">
-              <div className="w-9 h-9 bg-red-100 rounded-full flex items-center justify-center">
-                <ShoppingCart className="w-4 h-4 text-red-600" />
+              <div className="w-9 h-9 bg-emerald-100 rounded-full flex items-center justify-center">
+                <ShoppingCart className="w-4 h-4 text-emerald-600" />
               </div>
               <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs text-stone-500 leading-tight truncate">
+              <p className="text-xs text-slate-500 leading-tight truncate">
                 {currentNotification.name} · {currentNotification.loc} · {currentNotification.time}
               </p>
-              <p className="text-sm font-bold text-red-600 leading-snug">
+              <p className="text-sm font-bold text-emerald-700 leading-snug">
                 {currentNotification.combo}
               </p>
             </div>
-            <button onClick={() => setCurrentNotification(null)} className="flex-shrink-0 text-stone-400 hover:text-stone-600 p-2 -mr-2">
+            <button onClick={() => setCurrentNotification(null)} className="flex-shrink-0 text-slate-400 hover:text-slate-600 p-2 -mr-2">
               <X className="w-4 h-4" />
             </button>
           </motion.div>
         )}
       </AnimatePresence>
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-12 md:h-16">
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-1.5 md:gap-2 hover:opacity-75 transition-opacity">
               <img src="/logovuongsamuraimin.webp" alt="Samurai Japan Logo" className="h-8 w-8 md:h-10 md:w-10 object-contain rounded-lg cursor-pointer" width={40} height={40} loading="eager" />
-              <span className="text-base md:text-xl font-bold tracking-tighter text-stone-900 cursor-pointer leading-tight">Thuốc Diệt Mối <span className="text-red-600">Nhật Bản</span></span>
+              <span className="text-base md:text-xl font-bold tracking-tighter text-slate-900 cursor-pointer leading-tight">Thuốc Diệt Mối <span className="text-emerald-600">Nhật Bản</span></span>
             </button>
             
             <div className="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
-              <button onClick={() => document.getElementById('how-samurai')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-red-600 transition-colors">Ưu điểm</button>
-              <button onClick={() => document.getElementById('usage-guide')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-red-600 transition-colors">Cách Sử Dụng</button>
-              <button onClick={() => document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-red-600 transition-colors">So Sánh Chi Phí</button>
-              <button onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-red-600 transition-colors">Phản hồi</button>
-              <button onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-red-600 transition-colors">Câu Hỏi</button>
+              <button onClick={() => document.getElementById('how-samurai')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Ưu điểm</button>
+              <button onClick={() => document.getElementById('usage-guide')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Cách Sử Dụng</button>
+              <button onClick={() => document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">So Sánh Chi Phí</button>
+              <button onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Phản hồi</button>
+              <button onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Câu Hỏi</button>
               <button
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all shadow-lg shadow-red-200"
+                className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-all shadow-lg shadow-orange-200"
               >
                 ĐẶT HÀNG NGAY
               </button>
@@ -913,17 +913,17 @@ export default function App() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white border-b border-stone-200 fixed top-16 left-0 right-0 z-40 shadow-xl"
+            className="md:hidden bg-white border-b border-slate-200 fixed top-16 left-0 right-0 z-40 shadow-xl"
           >
             <div className="px-4 pt-1 pb-4 space-y-0">
-              <button onClick={() => { document.getElementById('how-samurai')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-stone-100">Ưu điểm vượt trội</button>
-              <button onClick={() => { document.getElementById('usage-guide')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-stone-100">Cách Sử Dụng</button>
-              <button onClick={() => { document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-stone-100">So Sánh Chi Phí</button>
-              <button onClick={() => { document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-stone-100">Khách hàng nói gì?</button>
-              <button onClick={() => { document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-stone-100">Câu Hỏi Thường Gặp</button>
+              <button onClick={() => { document.getElementById('how-samurai')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Ưu điểm vượt trội</button>
+              <button onClick={() => { document.getElementById('usage-guide')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Cách Sử Dụng</button>
+              <button onClick={() => { document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">So Sánh Chi Phí</button>
+              <button onClick={() => { document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Khách hàng nói gì?</button>
+              <button onClick={() => { document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Câu Hỏi Thường Gặp</button>
               <button
                 onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }}
-                className="w-full mt-3 bg-red-600 text-white py-4 rounded-xl font-bold text-lg"
+                className="w-full mt-3 bg-orange-500 text-white py-4 rounded-xl font-bold text-lg"
               >
                 ĐẶT HÀNG NGAY
               </button>
@@ -944,13 +944,13 @@ export default function App() {
                 transition={{ duration: 0.6 }}
                 className="text-center lg:text-left order-1 lg:order-1"
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold uppercase tracking-widest mb-5" style={{ backgroundColor: '#E8F5E9', borderColor: '#4CAF50', color: '#2E7D32' }}>
-                  <span className="flex h-2 w-2 rounded-full animate-pulse" style={{ backgroundColor: '#4CAF50' }}></span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold uppercase tracking-widest mb-5 bg-emerald-50 border-emerald-500 text-emerald-800">
+                  <span className="flex h-2 w-2 rounded-full animate-pulse bg-emerald-500"></span>
                   🇯🇵 Giải Pháp Diệt Mối Từ Nhật Bản
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-stone-900 leading-[1.15] mb-4 tracking-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 tracking-tight">
                   Nhà Đang Có Mối?<br />
-                  <span className="text-red-600">Đừng Gọi Thợ Vội.</span>
+                  <span className="text-emerald-600">Đừng Gọi Thợ Vội.</span>
                 </h1>
                 {/* Hero Image chỉ hiện dưới tiêu đề trên mobile, ẩn trên desktop */}
                 <div className="block lg:hidden mb-6">
@@ -969,7 +969,7 @@ export default function App() {
                       height={1024}
                     />
                     {/* Badge cảnh báo – góc trên phải, bên trong ảnh */}
-                    <div className="absolute top-3 right-3 bg-red-600 px-3 py-2 rounded-2xl shadow-xl flex items-center gap-2 z-10">
+                    <div className="absolute top-3 right-3 bg-orange-500 px-3 py-2 rounded-2xl shadow-xl flex items-center gap-2 z-10">
                       <AlertTriangle className="w-5 h-5 text-yellow-300 flex-shrink-0" />
                       <span className="text-white font-black text-sm leading-tight">MỐI ĂN RỖNG GỖ<br />TỪ BÊN TRONG</span>
                     </div>
@@ -978,13 +978,13 @@ export default function App() {
                       <ShieldCheck className="w-7 h-7 flex-shrink-0" style={{ color: '#1E6B52' }} />
                       <div>
                         <p className="font-black text-sm leading-tight" style={{ color: '#1E6B52' }}>XỬ LÝ NGAY</p>
-                        <p className="font-bold text-xs text-stone-500 leading-tight">Bảo vệ ngôi nhà bạn</p>
+                        <p className="font-bold text-xs text-slate-500 leading-tight">Bảo vệ ngôi nhà bạn</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 {/* Main Subtitle - Tối ưu cho tuổi 40-60 */}
-                <p className="text-lg sm:text-xl font-medium text-stone-700 mb-2 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                <p className="text-lg sm:text-xl font-medium text-slate-700 mb-2 leading-relaxed max-w-xl mx-auto lg:mx-0">
                   Rắc 1 lần — mối ăn thuốc và mang về tổ, diệt cả đàn và Mối chúa sau vài ngày.
                 </p>
                 <p className="text-lg sm:text-xl font-extrabold mb-6 max-w-xl mx-auto lg:mx-0" style={{ color: '#1E6B52' }}>
@@ -995,26 +995,26 @@ export default function App() {
                 <div className="flex flex-col gap-3 max-w-md mx-auto lg:mx-0 mb-8">
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-stone-800">Tiết kiệm hơn <span className="text-green-700">2.000.000đ</span> so với gọi thợ</span>
+                    <span className="text-base font-bold text-slate-800">Tiết kiệm hơn <span className="text-green-700">2.000.000đ</span> so với gọi thợ</span>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-stone-800">Diệt tận tổ, không chỉ mối bề mặt</span>
+                    <span className="text-base font-bold text-slate-800">Diệt tận tổ, không chỉ mối bề mặt</span>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-stone-800">An toàn cho người &amp; vật nuôi</span>
+                    <span className="text-base font-bold text-slate-800">An toàn cho người &amp; vật nuôi</span>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-stone-800">Tự làm tại nhà, không khoan đục</span>
+                    <span className="text-base font-bold text-slate-800">Tự làm tại nhà, không khoan đục</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-10 justify-center lg:justify-start">
                   <button
                     onClick={scrollToComparison}
-                    className="group flex items-center justify-center gap-3 bg-red-600 text-white px-8 py-5 rounded-2xl font-black text-xl hover:bg-red-700 transition-all shadow-2xl shadow-red-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
+                    className="group flex items-center justify-center gap-3 bg-orange-500 text-white px-8 py-5 rounded-2xl font-black text-xl hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
                   >
                     <span className="block leading-snug text-left">
                       <span className="block text-xl font-black tracking-tight">Gọi Thợ Tốn Bao Nhiêu? Xem Ngay</span>
@@ -1041,7 +1041,7 @@ export default function App() {
                       <div className="flex text-yellow-400">
                         {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
                       </div>
-                      <p className="text-sm font-bold text-stone-600">12,400+ Khách hàng tin dùng</p>
+                      <p className="text-sm font-bold text-slate-600">12,400+ Khách hàng tin dùng</p>
                     </div>
                   </div>
                 </div>
@@ -1068,7 +1068,7 @@ export default function App() {
                   height={1024}
                 />
                 {/* Badge cảnh báo – góc trên phải, bên trong ảnh */}
-                <div className="absolute top-4 right-4 bg-red-600 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 z-10">
+                <div className="absolute top-4 right-4 bg-orange-500 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 z-10">
                   <AlertTriangle className="w-6 h-6 text-yellow-300 flex-shrink-0" />
                   <span className="text-white font-black text-sm leading-tight">MỐI ĂN RỖNG GỖ<br />TỪ BÊN TRONG</span>
                 </div>
@@ -1077,7 +1077,7 @@ export default function App() {
                   <ShieldCheck className="w-8 h-8 flex-shrink-0" style={{ color: '#1E6B52' }} />
                   <div>
                     <p className="font-black text-base leading-tight" style={{ color: '#1E6B52' }}>XỬ LÝ NGAY</p>
-                    <p className="font-bold text-sm text-stone-500 leading-tight">Bảo vệ ngôi nhà bạn</p>
+                    <p className="font-bold text-sm text-slate-500 leading-tight">Bảo vệ ngôi nhà bạn</p>
                   </div>
                 </div>
               </motion.div>
@@ -1086,11 +1086,11 @@ export default function App() {
         </section>
 
         {/* Pain Points Section */}
-        <section id="benefits" className="py-10 md:py-20 bg-stone-50">
+        <section id="benefits" className="py-10 md:py-20 bg-emerald-50/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
               <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Mối có thể gây thiệt hại lớn trước khi bạn kịp nhận ra</h2>
-              <p className="text-stone-600 text-base md:text-lg">Mối thường phá hoại âm thầm bên trong tường, sàn và nền móng. Khi phát hiện, chi phí sửa chữa có thể đã rất tốn kém.</p>
+              <p className="text-slate-600 text-base md:text-lg">Mối thường phá hoại âm thầm bên trong tường, sàn và nền móng. Khi phát hiện, chi phí sửa chữa có thể đã rất tốn kém.</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 items-stretch">
@@ -1116,37 +1116,37 @@ export default function App() {
               ].map((item, idx) => (
                 <div key={idx} className={`rounded-2xl overflow-hidden shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
                   item.highlight
-                    ? 'bg-red-50 border-red-200 ring-2 ring-red-400 ring-offset-2'
-                    : 'bg-white border-stone-100'
+                    ? 'bg-orange-50 border-orange-300 ring-2 ring-orange-400 ring-offset-2'
+                    : 'bg-white border-slate-100'
                 }`}>
                   <div className="overflow-hidden aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3]">
                     <img src={item.img} alt={item.title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform" loading="lazy" decoding="async" width={item.imgW} height={item.imgH} />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     {item.highlight && (
-                      <span className="inline-block mb-2 text-xs font-bold uppercase tracking-widest text-red-600 bg-red-100 px-2 py-1 rounded-full w-fit">Quan trọng nhất</span>
+                      <span className="inline-block mb-2 text-xs font-bold uppercase tracking-widest text-orange-600 bg-orange-100 px-2 py-1 rounded-full w-fit">Quan trọng nhất</span>
                     )}
-                    <h3 className={`text-xl font-bold mb-3 flex items-center gap-2 ${item.highlight ? 'text-red-700' : ''}`}>
-                      <AlertTriangle className={`w-5 h-5 flex-shrink-0 ${item.highlight ? 'text-red-600' : 'text-red-500'}`} />
+                    <h3 className={`text-xl font-bold mb-3 flex items-center gap-2 ${item.highlight ? 'text-orange-700' : ''}`}>
+                      <AlertTriangle className={`w-5 h-5 flex-shrink-0 ${item.highlight ? 'text-orange-600' : 'text-orange-400'}`} />
                       {item.title}
                     </h3>
-                    <p className="text-stone-600 text-base leading-relaxed flex-grow">{item.desc}</p>
+                    <p className="text-slate-600 text-base leading-relaxed flex-grow">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-center mt-10 text-base md:text-lg font-semibold text-stone-700 max-w-2xl mx-auto">
+            <p className="text-center mt-10 text-base md:text-lg font-semibold text-slate-700 max-w-2xl mx-auto">
               Càng phát hiện sớm, thiệt hại và chi phí xử lý càng được kiểm soát tốt hơn.
             </p>
             <div className="flex flex-col items-center mt-6 gap-2">
               <button
                 onClick={scrollToPricing}
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-bold text-base md:text-lg px-7 py-3 rounded-xl shadow-lg shadow-red-200 hover:shadow-red-300 transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base md:text-lg px-7 py-3 rounded-xl shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all duration-200"
               >
                 <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
                 Xử Lý Ngay Hôm Nay
               </button>
-              <span className="text-xs text-stone-500 font-medium">Giao hàng toàn quốc · Dùng được ngay · Không cần thợ</span>
+              <span className="text-xs text-slate-500 font-medium">Giao hàng toàn quốc · Dùng được ngay · Không cần thợ</span>
             </div>
           </div>
         </section>
@@ -1156,7 +1156,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <div className="hidden lg:block order-1 relative">
-                <div className="absolute -inset-4 bg-red-100 rounded-[40px] blur-2xl opacity-50"></div>
+                <div className="absolute -inset-4 bg-emerald-100 rounded-[40px] blur-2xl opacity-50"></div>
                 <div className="relative rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
                   <img
                     src="/samurai-product-combo-min.webp"
@@ -1173,7 +1173,7 @@ export default function App() {
 
                 {/* Mobile Image - Product Showcase */}
                 <div className="lg:hidden mb-6 relative">
-                  <div className="absolute -inset-3 bg-red-100 rounded-3xl blur-2xl opacity-40"></div>
+                  <div className="absolute -inset-3 bg-emerald-100 rounded-3xl blur-2xl opacity-40"></div>
                   <div className="relative rounded-3xl shadow-xl w-full max-w-sm mx-auto overflow-hidden">
                     <img
                       src="/samurai-product-combo-min.webp"
@@ -1199,18 +1199,18 @@ export default function App() {
                       desc: "Chỉ cần rải vào khe gỗ, chân tủ, chân cửa nơi mối hoạt động.\nKhông tháo nội thất, không khoan đục, không gọi thợ."
                     },
                     {
-                      icon: <Star className="w-6 h-6 text-red-500" />,
+                      icon: <Star className="w-6 h-6 text-emerald-500" />,
                       title: "Tự xử lý sớm – tránh tốn kém về sau",
                       desc: "Phù hợp cho gia đình tự xử lý Mối tại nhà, hạn chế lan rộng và giảm chi phí sửa chữa nhà cửa."
                     }
                   ].map((feature, idx) => (
-                    <div key={idx} className="flex gap-4 p-4 rounded-2xl hover:bg-stone-50 transition-colors border border-transparent hover:border-stone-100">
-                      <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm border border-stone-100 flex items-center justify-center">
+                    <div key={idx} className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+                      <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center">
                         {feature.icon}
                       </div>
                       <div>
                         <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
-                        <p className="text-stone-600 text-base leading-relaxed">{feature.desc}</p>
+                        <p className="text-slate-600 text-base leading-relaxed">{feature.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -1221,17 +1221,17 @@ export default function App() {
         </section>
 
         {/* Comparison Table */}
-        <section id="comparison" className="py-12 md:py-20 bg-stone-50">
+        <section id="comparison" className="py-12 md:py-20 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
             <div className="text-center mb-10">
-              <p className="text-red-600 font-bold uppercase tracking-widest text-sm mb-2">Chi phí & Kết quả thực tế</p>
+              <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Chi phí & Kết quả thực tế</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight">
                 Cùng xử lý mối –{' '}
-                <span className="text-red-600">kết quả khác nhau hoàn toàn</span>
+                <span className="text-emerald-600">kết quả khác nhau hoàn toàn</span>
               </h2>
-              <p className="text-stone-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
                 Nhiều gia đình đã tốn 3–5 triệu/năm nhưng mối vẫn tái phát.<br className="block sm:hidden mb-2" />
                 <br className="hidden sm:block" />
                 Xem so sánh thực tế trước khi quyết định.
@@ -1239,13 +1239,13 @@ export default function App() {
             </div>
 
             {/* Desktop Table View */}
-            <div className="hidden md:block overflow-hidden rounded-3xl border border-stone-200 shadow-2xl bg-white">
+            <div className="hidden md:block overflow-hidden rounded-3xl border border-slate-200 shadow-2xl bg-white">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr>
-                    <th className="p-5 font-bold bg-stone-900 text-white text-base w-[22%]">So sánh</th>
-                    <th className="p-5 font-black text-center bg-red-700 text-yellow-400 text-base w-[26%] relative overflow-hidden">
-                      <div className="absolute top-0 right-0 bg-yellow-400 text-red-700 text-xs px-2 py-0.5 font-bold uppercase -rotate-45 translate-x-4 translate-y-2">✓ Nên chọn</div>
+                    <th className="p-5 font-bold bg-slate-900 text-white text-base w-[22%]">So sánh</th>
+                    <th className="p-5 font-black text-center bg-emerald-700 text-white text-base w-[26%] relative overflow-hidden">
+                      <div className="absolute top-0 right-0 bg-yellow-400 text-emerald-800 text-xs px-2 py-0.5 font-bold uppercase -rotate-45 translate-x-4 translate-y-2">✓ Nên chọn</div>
                       🛡️ SAMURAI
                       <div className="text-white/70 font-normal text-xs mt-1">Từ 249.000đ</div>
                     </th>
@@ -1253,9 +1253,9 @@ export default function App() {
                       🔧 Thuê dịch vụ
                       <div className="text-orange-300/80 font-normal text-xs mt-1">2–5 triệu/lần</div>
                     </th>
-                    <th className="p-5 font-bold text-center bg-stone-700 text-stone-200 text-base w-[26%]">
+                    <th className="p-5 font-bold text-center bg-slate-700 text-slate-200 text-base w-[26%]">
                       🧪 Các loại khác
-                      <div className="text-stone-400 font-normal text-xs mt-1">300k+</div>
+                      <div className="text-slate-400 font-normal text-xs mt-1">300k+</div>
                     </th>
                   </tr>
                 </thead>
@@ -1293,11 +1293,11 @@ export default function App() {
                       normal: "Mùi hóa chất khó chịu",
                     },
                   ].map((row, i) => (
-                    <tr key={i} className={cn("border-b border-stone-100 last:border-0 text-sm", row.highlight && "bg-yellow-50/40")}>
-                      <td className="p-5 font-bold text-stone-700 bg-stone-50/60">{row.label}</td>
-                      <td className="p-5 bg-red-50 border-x-2 border-red-100 text-center">
-                        <div className="flex items-center justify-center gap-2 font-bold text-green-800">
-                          <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                    <tr key={i} className={cn("border-b border-slate-100 last:border-0 text-sm", row.highlight && "bg-yellow-50/40")}>
+                      <td className="p-5 font-bold text-slate-700 bg-slate-50/60">{row.label}</td>
+                      <td className="p-5 bg-emerald-50 border-x-2 border-emerald-100 text-center">
+                        <div className="flex items-center justify-center gap-2 font-bold text-emerald-800">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                           {row.samurai}
                         </div>
                       </td>
@@ -1308,8 +1308,8 @@ export default function App() {
                         </div>
                       </td>
                       <td className="p-5 text-center">
-                        <div className="flex items-center justify-center gap-2 text-stone-500 italic">
-                          <XCircle className="w-4 h-4 text-stone-400 flex-shrink-0" />
+                        <div className="flex items-center justify-center gap-2 text-slate-500 italic">
+                          <XCircle className="w-4 h-4 text-slate-400 flex-shrink-0" />
                           {row.normal}
                         </div>
                       </td>
@@ -1320,21 +1320,21 @@ export default function App() {
             </div>
 
             {/* Desktop Bottom CTA */}
-            <div className="hidden md:flex items-center justify-between mt-6 bg-white rounded-2xl px-8 py-5 shadow-sm border border-stone-100 gap-6">
+            <div className="hidden md:flex items-center justify-between mt-6 bg-white rounded-2xl px-8 py-5 shadow-sm border border-slate-100 gap-6">
               <div>
-                <p className="text-stone-500 text-sm mb-0.5">Tiết kiệm lên đến</p>
-                <p className="text-red-600 font-black text-2xl leading-tight">10–15 triệu đồng</p>
-                <p className="text-stone-500 text-sm">so với thuê dịch vụ trong 3 năm</p>
+                <p className="text-slate-500 text-sm mb-0.5">Tiết kiệm lên đến</p>
+                <p className="text-emerald-600 font-black text-2xl leading-tight">10–15 triệu đồng</p>
+                <p className="text-slate-500 text-sm">so với thuê dịch vụ trong 3 năm</p>
               </div>
-              <div className="w-px h-14 bg-stone-100"></div>
-              <div className="flex items-center gap-3 text-stone-500 text-sm">
+              <div className="w-px h-14 bg-slate-100"></div>
+              <div className="flex items-center gap-3 text-slate-500 text-sm">
                 <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Miễn phí vận chuyển toàn quốc
               </div>
-              <div className="w-px h-14 bg-stone-100"></div>
-              <div className="flex items-center gap-3 text-stone-500 text-sm">
+              <div className="w-px h-14 bg-slate-100"></div>
+              <div className="flex items-center gap-3 text-slate-500 text-sm">
                 <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Miễn phí đổi trả
               </div>
-              <button onClick={scrollToPricing} className="ml-auto bg-red-600 text-white font-black text-base px-8 py-4 rounded-2xl shadow-lg shadow-red-100 hover:bg-red-700 transition-all whitespace-nowrap flex-shrink-0">
+              <button onClick={scrollToPricing} className="ml-auto bg-orange-500 text-white font-black text-base px-8 py-4 rounded-2xl shadow-lg shadow-orange-100 hover:bg-orange-600 transition-all whitespace-nowrap flex-shrink-0">
                 ĐẶT MUA NGAY – 249.000Đ
               </button>
             </div>
@@ -1343,25 +1343,25 @@ export default function App() {
             <div className="md:hidden space-y-4">
 
               {/* Hook: số tiết kiệm to – đập vào mắt đầu tiên */}
-              <div className="bg-red-600 rounded-2xl py-5 px-4 text-center shadow-lg shadow-red-200">
+              <div className="bg-emerald-700 rounded-2xl py-5 px-4 text-center shadow-lg shadow-emerald-900/30">
                 <p className="text-white/80 text-base mb-1 font-medium">Dùng Samurai – tiết kiệm được</p>
                 <p className="text-yellow-300 font-black text-5xl leading-none tracking-tight">10–15 triệu</p>
                 <p className="text-white/60 text-sm mt-1.5">so với thuê dịch vụ trong 3 năm<br /><span className="text-white/50 text-xs">(chưa tính chi phí sửa chữa hỏng hóc)</span></p>
               </div>
 
               {/* Bảng compact 3 cột – tất cả 5 điểm trong 1 card */}
-              <div className="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-lg">
+              <div className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
 
                 {/* Header cột */}
                 <div className="grid grid-cols-[88px_1fr_1fr]">
-                  <div className="bg-stone-800 p-3" />
-                  <div className="bg-red-600 py-3 px-2 text-center border-l border-red-500">
-                    <p className="text-yellow-300 font-black text-sm leading-tight">🛡️ SAMURAI</p>
-                    <p className="text-red-200 text-xs mt-0.5">Từ 249.000đ</p>
+                  <div className="bg-slate-800 p-3" />
+                  <div className="bg-emerald-600 py-3 px-2 text-center border-l border-emerald-500">
+                    <p className="text-white font-black text-sm leading-tight">🛡️ SAMURAI</p>
+                    <p className="text-emerald-100 text-xs mt-0.5">Từ 249.000đ</p>
                   </div>
-                  <div className="bg-stone-600 py-3 px-2 text-center border-l border-stone-500">
-                    <p className="text-stone-100 font-bold text-sm leading-tight">🔧 Cách khác</p>
-                    <p className="text-stone-300 text-xs mt-0.5">2–5 triệu/lần</p>
+                  <div className="bg-slate-600 py-3 px-2 text-center border-l border-slate-500">
+                    <p className="text-slate-100 font-bold text-sm leading-tight">🔧 Cách khác</p>
+                    <p className="text-slate-300 text-xs mt-0.5">2–5 triệu/lần</p>
                   </div>
                 </div>
 
@@ -1373,21 +1373,21 @@ export default function App() {
                   { icon: "⏰", label: "Chờ đợi", samurai: "Dùng ngay", bad: "3 ~ 10 ngày+" },
                   { icon: "🏠", label: "Ảnh hưởng", samurai: "An toàn", bad: "Hóa chất" },
                 ].map((row, i) => (
-                  <div key={i} className={cn("grid grid-cols-[88px_1fr_1fr] border-t border-stone-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-stone-50/40")}>
+                  <div key={i} className={cn("grid grid-cols-[88px_1fr_1fr] border-t border-slate-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-slate-50/40")}>
                     {/* Nhãn */}
-                    <div className="p-3 flex flex-col justify-center bg-stone-50 border-r border-stone-100">
+                    <div className="p-3 flex flex-col justify-center bg-slate-50 border-r border-slate-100">
                       <span className="text-lg leading-none mb-1">{row.icon}</span>
-                      <span className="text-[11px] font-bold text-stone-600 leading-tight">{row.label}</span>
+                      <span className="text-[11px] font-bold text-slate-600 leading-tight">{row.label}</span>
                     </div>
                     {/* Samurai */}
-                    <div className={cn("p-3 flex flex-col items-center justify-center border-r border-stone-100", row.highlight ? "bg-green-50" : "bg-green-50/30")}>
-                      <CheckCircle2 className="w-4 h-4 text-green-500 mb-1 flex-shrink-0" />
-                      <p className={cn("font-black text-center leading-tight", row.highlight ? "text-green-700 text-sm" : "text-green-800 text-sm")}>{row.samurai}</p>
+                    <div className={cn("p-3 flex flex-col items-center justify-center border-r border-slate-100", row.highlight ? "bg-emerald-50" : "bg-emerald-50/30")}>
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 mb-1 flex-shrink-0" />
+                      <p className={cn("font-black text-center leading-tight", row.highlight ? "text-emerald-700 text-sm" : "text-emerald-800 text-sm")}>{row.samurai}</p>
                     </div>
                     {/* Cách khác */}
                     <div className="p-3 flex flex-col items-center justify-center">
                       <XCircle className="w-4 h-4 text-orange-400 mb-1 flex-shrink-0" />
-                      <p className="text-sm text-stone-500 italic text-center leading-tight">{row.bad}</p>
+                      <p className="text-sm text-slate-500 italic text-center leading-tight">{row.bad}</p>
                     </div>
                   </div>
                 ))}
@@ -1396,11 +1396,11 @@ export default function App() {
               {/* CTA */}
               <button
                 onClick={scrollToPricing}
-                className="w-full bg-red-600 text-white font-black text-xl py-5 rounded-2xl shadow-lg shadow-red-200 active:scale-95 transition-all"
+                className="w-full bg-orange-500 text-white font-black text-xl py-5 rounded-2xl shadow-lg shadow-orange-200 active:scale-95 transition-all"
               >
                 ĐẶT MUA SAMURAI – 249.000Đ
               </button>
-              <div className="flex justify-center gap-6 text-stone-600 text-sm pb-2">
+              <div className="flex justify-center gap-6 text-slate-600 text-sm pb-2">
                 <span>✓ Miễn phí giao hàng</span>
                 <span>✓ Miễn phí đổi trả</span>
               </div>
@@ -1416,13 +1416,13 @@ export default function App() {
 
             {/* Header */}
             <div className="text-center mb-8 md:mb-12">
-              <p className="text-red-600 font-bold uppercase tracking-widest text-sm mb-2">Cách sử dụng</p>
+              <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Cách sử dụng</p>
               <h2 className="text-2xl md:text-3xl font-black mb-2 uppercase tracking-tight">3 Bước tự xử lý Mối tại nhà</h2>
-              <p className="text-stone-500 text-base">Không cần kinh nghiệm – không cần dụng cụ chuyên dụng</p>
+              <p className="text-slate-500 text-base">Không cần kinh nghiệm – không cần dụng cụ chuyên dụng</p>
             </div>
 
             {/* Illustration image */}
-            <div className="mb-8 md:mb-12 max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-md border border-stone-100">
+            <div className="mb-8 md:mb-12 max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-md border border-slate-100">
               <img
                 src="/sdsamuraimin.webp"
                 alt="Cách tự xử lý mối tại nhà bằng Samurai Nhật Bản"
@@ -1464,37 +1464,37 @@ export default function App() {
                   <div className="flex md:hidden items-start gap-4 pb-8 relative">
                     {/* Left: number + line */}
                     <div className="flex flex-col items-center flex-shrink-0">
-                      <div className="w-12 h-12 rounded-2xl bg-red-600 text-white font-black text-xl flex items-center justify-center shadow-md shadow-red-100">
+                      <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-black text-xl flex items-center justify-center shadow-md shadow-emerald-100">
                         {item.num}
                       </div>
-                      {idx < 2 && <div className="w-0.5 flex-1 bg-red-100 mt-2 min-h-[2rem]"></div>}
+                      {idx < 2 && <div className="w-0.5 flex-1 bg-emerald-100 mt-2 min-h-[2rem]"></div>}
                     </div>
                     {/* Right: content */}
                     <div className="flex-1 pt-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-xl">{item.icon}</span>
-                        <span className="text-xs font-bold text-red-500 bg-red-50 px-2 py-0.5 rounded-full">{item.time}</span>
+                        <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">{item.time}</span>
                       </div>
-                      <h4 className="text-lg font-black text-stone-900 mb-1">{item.title}</h4>
-                      <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
+                      <h4 className="text-lg font-black text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
 
                   {/* Desktop: vertical card */}
                   <div className="hidden md:flex flex-col items-center text-center flex-1 px-6">
-                    <div className="w-16 h-16 rounded-2xl bg-red-600 text-white font-black text-2xl flex items-center justify-center shadow-lg shadow-red-100 mb-4">
+                    <div className="w-16 h-16 rounded-2xl bg-emerald-600 text-white font-black text-2xl flex items-center justify-center shadow-lg shadow-emerald-100 mb-4">
                       {item.num}
                     </div>
                     <span className="text-2xl mb-3">{item.icon}</span>
-                    <span className="text-xs font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full mb-3">{item.time}</span>
-                    <h4 className="text-lg font-black text-stone-900 mb-2">{item.title}</h4>
-                    <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
+                    <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full mb-3">{item.time}</span>
+                    <h4 className="text-lg font-black text-slate-900 mb-2">{item.title}</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
                   </div>
 
                   {/* Desktop arrow between steps */}
                   {idx < 2 && (
                     <div className="hidden md:flex items-center justify-center flex-shrink-0 mt-8">
-                      <ChevronRight className="w-6 h-6 text-red-300" />
+                      <ChevronRight className="w-6 h-6 text-emerald-300" />
                     </div>
                   )}
                 </div>
@@ -1502,14 +1502,14 @@ export default function App() {
             </div>
 
             {/* Bottom note + CTA */}
-            <div className="mt-6 md:mt-10 bg-stone-50 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 border border-stone-100">
+            <div className="mt-6 md:mt-10 bg-slate-50 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-100">
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">💡</span>
-                <p className="text-stone-600 text-sm leading-relaxed">
-                  <span className="font-bold text-stone-800">Mẹo:</span> Để hiệu quả tốt nhất, rải vào buổi tối khi mối hoạt động nhiều. Không cần dọn ngay – để bột tiếp xúc với mối càng lâu càng tốt.
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  <span className="font-bold text-slate-800">Mẹo:</span> Để hiệu quả tốt nhất, rải vào buổi tối khi mối hoạt động nhiều. Không cần dọn ngay – để bột tiếp xúc với mối càng lâu càng tốt.
                 </p>
               </div>
-              <button onClick={scrollToPricing} className="flex-shrink-0 bg-red-600 text-white font-black text-sm px-6 py-3 rounded-xl hover:bg-red-700 transition-all whitespace-nowrap shadow-md shadow-red-100">
+              <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-6 py-3 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
                 ĐẶT MUA NGAY
               </button>
             </div>
@@ -1518,7 +1518,7 @@ export default function App() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-10 md:py-14 bg-stone-900 text-white overflow-hidden">
+        <section id="pricing" className="py-10 md:py-14 bg-slate-900 text-white overflow-hidden">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
@@ -1526,7 +1526,7 @@ export default function App() {
               <p className="text-amber-400 font-bold uppercase tracking-widest text-sm mb-2">📦 Giao hàng toàn quốc · COD tận nơi</p>
               <h2 className="text-2xl md:text-4xl font-black mb-2 leading-tight">Đặt Hàng Ngay</h2>
               <p className="text-amber-300 text-xl md:text-2xl font-bold mb-3">Giao Tận Nhà – Thanh Toán Khi Nhận Hàng</p>
-              <p className="text-stone-400 text-sm md:text-base">Miễn phí giao hàng toàn quốc · Kiểm tra hàng trước khi thanh toán · Miễn phí đổi trả</p>
+              <p className="text-slate-400 text-sm md:text-base">Miễn phí giao hàng toàn quốc · Kiểm tra hàng trước khi thanh toán · Miễn phí đổi trả</p>
             </div>
 
             {/* Cards grid */}
@@ -1535,11 +1535,11 @@ export default function App() {
               {/* ── GÓI GIA ĐÌNH HERO – mobile: top, desktop: middle ── */}
               <div className="order-first md:order-2 relative flex flex-col">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
-                  <span className="bg-amber-400 text-stone-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                  <span className="bg-amber-400 text-slate-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
                     🏆 Phổ biến nhất – Nên chọn
                   </span>
                 </div>
-                <div className="bg-gradient-to-b from-red-700 to-red-900 rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-xl shadow-red-950/70 mt-5 flex flex-col flex-1">
+                <div className="bg-gradient-to-b from-emerald-700 to-teal-900 rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-xl shadow-emerald-950/70 mt-5 flex flex-col flex-1">
 
                   {/* Title */}
                   <div className="mb-1">
@@ -1558,12 +1558,12 @@ export default function App() {
                       </span>
                     </div>
                   </div>
-                  <p className="text-red-200 text-sm mb-1 font-medium">6 lọ Samurai · Nhà 50–100m²</p>
-                  <p className="text-red-300/80 text-xs mb-4">Xử lý 7–10 vị trí mối · Đủ cho cả nhà</p>
+                  <p className="text-emerald-200 text-sm mb-1 font-medium">6 lọ Samurai · Nhà 50–100m²</p>
+                  <p className="text-emerald-300/80 text-xs mb-4">Xử lý 7–10 vị trí mối · Đủ cho cả nhà</p>
 
                   {/* Price block */}
                   <div className="bg-black/25 rounded-xl px-4 py-3 mb-4">
-                    <p className="text-red-300 text-xs mb-1">Giá gốc: <span className="line-through text-red-400">498.000đ</span></p>
+                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">498.000đ</span></p>
                     <div className="flex items-baseline gap-2 mb-1.5">
                       <span className="text-4xl font-black text-white">328.000đ</span>
                     </div>
@@ -1591,11 +1591,11 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-4 rounded-xl bg-amber-400 text-stone-900 font-black text-lg hover:bg-amber-300 transition-all active:scale-95 shadow-md"
+                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-lg hover:bg-amber-300 transition-all active:scale-95 shadow-md"
                   >
                     CHỌN GÓI NÀY – 328.000Đ
                   </button>
-                  <p className="text-center text-red-300/70 text-xs mt-2 font-semibold">
+                  <p className="text-center text-emerald-300/70 text-xs mt-2 font-semibold">
                     ⚠️ Chỉ còn <span className="text-amber-300 font-black">{stockRemaining} suất</span> – Hết giá này lúc 12h đêm nay
                   </p>
                 </div>
@@ -1603,10 +1603,10 @@ export default function App() {
 
               {/* ── GÓI NHÀ NHỎ – mobile: 2nd, desktop: left ── */}
               <div className="order-2 md:order-1 flex flex-col">
-                <div className="bg-stone-800/80 rounded-2xl p-5 border border-stone-700 flex flex-col flex-1">
-                  <h3 className="text-lg font-black text-stone-100 mb-0.5">GÓI NHÀ NHỎ</h3>
-                  <p className="text-stone-300 text-sm mb-1 font-medium">3 lọ Samurai · Nhà ≤ 50m²</p>
-                  <p className="text-stone-500 text-xs mb-4">Xử lý 2–3 vị trí mối · Dùng thử, nhà ít mối mới có mối.</p>
+                <div className="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 flex flex-col flex-1">
+                  <h3 className="text-lg font-black text-slate-100 mb-0.5">GÓI NHÀ NHỎ</h3>
+                  <p className="text-slate-300 text-sm mb-1 font-medium">3 lọ Samurai · Nhà ≤ 50m²</p>
+                  <p className="text-slate-500 text-xs mb-4">Xử lý 2–3 vị trí mối · Dùng thử, nhà ít mối mới có mối.</p>
                   <div className="mb-4">
                     <span className="text-3xl font-black text-white">249.000đ</span>
                   </div>
@@ -1618,15 +1618,15 @@ export default function App() {
                       "Miễn phí giao hàng",
                       "Kiểm tra hàng trước khi nhận",
                     ].map((item, i) => (
-                      <li key={i} className="flex items-center gap-2.5 text-sm text-stone-300">
-                        <CheckCircle2 className="w-4 h-4 text-stone-500 flex-shrink-0" />
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-slate-500 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
                   </ul>
                   <button
                     onClick={() => scrollToOrderWithCombo('combo1')}
-                    className="w-full py-3.5 rounded-xl bg-stone-700 text-stone-200 font-bold text-base hover:bg-stone-600 hover:text-white transition-colors"
+                    className="w-full py-3.5 rounded-xl bg-slate-700 text-slate-200 font-bold text-base hover:bg-slate-600 hover:text-white transition-colors"
                   >
                     CHỌN GÓI NÀY
                   </button>
@@ -1635,10 +1635,10 @@ export default function App() {
 
               {/* ── GÓI NHÀ LỚN – mobile: 3rd, desktop: right ── */}
               <div className="order-3 md:order-3 flex flex-col">
-                <div className="bg-stone-800/80 rounded-2xl p-5 border border-stone-700 flex flex-col flex-1">
-                  <h3 className="text-lg font-black text-stone-100 mb-0.5">GÓI NHÀ LỚN</h3>
-                  <p className="text-stone-300 text-sm mb-1 font-medium">9 lọ Samurai · Nhà &gt; 100m²</p>
-                  <p className="text-stone-500 text-xs mb-4">Xử lý 15–20 vị trí · Nhà lớn, nhiều tầng, nhiều tổ mối lâu năm</p>
+                <div className="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 flex flex-col flex-1">
+                  <h3 className="text-lg font-black text-slate-100 mb-0.5">GÓI NHÀ LỚN</h3>
+                  <p className="text-slate-300 text-sm mb-1 font-medium">9 lọ Samurai · Nhà &gt; 100m²</p>
+                  <p className="text-slate-500 text-xs mb-4">Xử lý 15–20 vị trí · Nhà lớn, nhiều tầng, nhiều tổ mối lâu năm</p>
                   <div className="mb-4">
                     <span className="text-3xl font-black text-white">497.000đ</span>
                   </div>
@@ -1650,15 +1650,15 @@ export default function App() {
                       "Miễn phí giao hàng",
                       "Kiểm tra hàng trước khi nhận",
                     ].map((item, i) => (
-                      <li key={i} className="flex items-center gap-2.5 text-sm text-stone-300">
-                        <CheckCircle2 className="w-4 h-4 text-stone-500 flex-shrink-0" />
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-slate-500 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
                   </ul>
                   <button
                     onClick={() => scrollToOrderWithCombo('combo3')}
-                    className="w-full py-3.5 rounded-xl bg-stone-700 text-stone-200 font-bold text-base hover:bg-stone-600 hover:text-white transition-colors"
+                    className="w-full py-3.5 rounded-xl bg-slate-700 text-slate-200 font-bold text-base hover:bg-slate-600 hover:text-white transition-colors"
                   >
                     CHỌN GÓI NÀY
                   </button>
@@ -1674,9 +1674,9 @@ export default function App() {
                 { icon: "🔍", text: "Kiểm tra hàng trước khi nhận" },
                 { icon: "🔄", text: "Miễn phí đổi trả" },
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-1 bg-stone-800/50 rounded-xl py-2.5 px-2">
+                <div key={i} className="flex flex-col items-center gap-1 bg-slate-800/50 rounded-xl py-2.5 px-2">
                   <span className="text-lg">{item.icon}</span>
-                  <span className="text-stone-400 text-xs leading-tight">{item.text}</span>
+                  <span className="text-slate-400 text-xs leading-tight">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -1690,12 +1690,12 @@ export default function App() {
 
             {/* Header */}
             <div className="text-center mb-6 md:mb-8 px-4">
-              <p className="text-red-600 font-bold uppercase tracking-widest text-sm mb-1.5">Đánh giá thực tế</p>
+              <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-1.5">Đánh giá thực tế</p>
               <h2 className="text-xl md:text-3xl font-black mb-2 uppercase tracking-tight">Khách Hàng Nói Gì Về Samurai?</h2>
               <div className="flex justify-center gap-0.5 text-amber-400 mb-1">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}
               </div>
-              <p className="text-stone-500 text-base font-medium">12.400+ khách hàng đã tin dùng Samurai trên toàn quốc</p>
+              <p className="text-slate-500 text-base font-medium">12.400+ khách hàng đã tin dùng Samurai trên toàn quốc</p>
             </div>
 
             {/* ── MOBILE: Auto-scroll carousel ── */}
@@ -1708,27 +1708,27 @@ export default function App() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', paddingLeft: '1rem', paddingRight: '1rem' }}
             >
               {REVIEWS.map((t, i) => (
-                <div key={i} className="snap-start flex-shrink-0 w-[82vw] max-w-[310px] bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
+                <div key={i} className="snap-start flex-shrink-0 w-[82vw] max-w-[310px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                   {/* Customer photo – square slot (1:1), replace photo: null → "url" when ready */}
                   {t.photo ? (
                     <img src={t.photo} alt="Ảnh thực tế khách hàng dùng bột diệt mối Samurai tại nhà" className="w-full aspect-square object-cover object-center" loading="lazy" width={800} height={800} srcSet={t.photoSmall ? `${t.photoSmall} 400w, ${t.photo} 800w` : undefined} sizes="(max-width: 640px) 82vw, 310px" />
                   ) : (
-                    <div className="w-full aspect-square bg-stone-100" />
+                    <div className="w-full aspect-square bg-slate-100" />
                   )}
                   <div className="p-3.5">
                     {/* Avatar + Name + Stars */}
                     <div className="flex items-center gap-2 mb-2.5">
                       <img src={t.avatar} alt={t.name} className="w-8 h-8 rounded-full object-cover border-2 border-white shadow flex-shrink-0" loading="lazy" width={32} height={32} />
                       <div className="min-w-0 flex-1">
-                        <p className="font-bold text-stone-800 text-sm leading-tight truncate">{t.name} ({t.age} tuổi)</p>
-                        <p className="text-stone-500 text-xs">{t.loc}</p>
+                        <p className="font-bold text-slate-800 text-sm leading-tight truncate">{t.name} ({t.age} tuổi)</p>
+                        <p className="text-slate-500 text-xs">{t.loc}</p>
                       </div>
                       <div className="flex gap-0.5 text-amber-400 flex-shrink-0">
                         {Array.from({ length: t.rating }).map((_, s) => <Star key={s} className="w-3 h-3 fill-current" />)}
                       </div>
                     </div>
-                    <p className="text-stone-700 text-sm leading-relaxed mb-2.5 italic">"{t.text}"</p>
-                    <span className="inline-block text-xs bg-red-50 text-red-600 font-semibold px-2 py-1 rounded-full border border-red-100">{t.combo}</span>
+                    <p className="text-slate-700 text-sm leading-relaxed mb-2.5 italic">"{t.text}"</p>
+                    <span className="inline-block text-xs bg-emerald-50 text-emerald-700 font-semibold px-2 py-1 rounded-full border border-emerald-100">{t.combo}</span>
                   </div>
                 </div>
               ))}
@@ -1739,7 +1739,7 @@ export default function App() {
               {/* Prev */}
               <button
                 onClick={() => jumpToReview((activeDot - 1 + REVIEWS.length) % REVIEWS.length)}
-                className="w-8 h-8 rounded-full bg-stone-100 active:bg-stone-200 flex items-center justify-center text-stone-500 flex-shrink-0"
+                className="w-8 h-8 rounded-full bg-slate-100 active:bg-slate-200 flex items-center justify-center text-slate-500 flex-shrink-0"
                 aria-label="Review trước"
               >
                 <ChevronRight className="w-4 h-4 rotate-180" />
@@ -1756,7 +1756,7 @@ export default function App() {
                   >
                     <span className={cn(
                       "block rounded-full transition-all duration-300",
-                      i === activeDot ? "w-5 h-1.5 bg-red-500" : "w-1.5 h-1.5 bg-stone-300"
+                      i === activeDot ? "w-5 h-1.5 bg-emerald-500" : "w-1.5 h-1.5 bg-slate-300"
                     )} />
                   </button>
                 ))}
@@ -1765,7 +1765,7 @@ export default function App() {
               {/* Next */}
               <button
                 onClick={() => jumpToReview((activeDot + 1) % REVIEWS.length)}
-                className="w-8 h-8 rounded-full bg-stone-100 active:bg-stone-200 flex items-center justify-center text-stone-500 flex-shrink-0"
+                className="w-8 h-8 rounded-full bg-slate-100 active:bg-slate-200 flex items-center justify-center text-slate-500 flex-shrink-0"
                 aria-label="Review tiếp"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -1775,26 +1775,26 @@ export default function App() {
             {/* ── DESKTOP: Compact 3-col × 2-row (6 reviews) ── */}
             <div className="hidden md:grid md:grid-cols-3 gap-4 px-4 sm:px-6 lg:px-8 mt-2">
               {REVIEWS.slice(0, 6).map((t, i) => (
-                <div key={i} className="bg-white rounded-xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div key={i} className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                   {/* Customer photo – 100px slot, crops square image to landscape banner */}
                   {t.photo ? (
                     <img src={t.photo} alt="Ảnh thực tế khách hàng dùng bột diệt mối Samurai tại nhà" className="w-full h-[100px] object-cover object-center" loading="lazy" width={800} height={800} srcSet={t.photoSmall ? `${t.photoSmall} 400w, ${t.photo} 800w` : undefined} sizes="(max-width: 640px) 100vw, 33vw" />
                   ) : (
-                    <div className="w-full h-[100px] bg-stone-100" />
+                    <div className="w-full h-[100px] bg-slate-100" />
                   )}
                   <div className="p-4 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <img src={t.avatar} alt={t.name} className="w-8 h-8 rounded-full object-cover border-2 border-white shadow flex-shrink-0" loading="lazy" width={32} height={32} />
                       <div className="min-w-0 flex-1">
-                        <p className="font-bold text-stone-800 text-sm leading-tight">{t.name} ({t.age} tuổi)</p>
-                        <p className="text-stone-500 text-xs">{t.loc}</p>
+                        <p className="font-bold text-slate-800 text-sm leading-tight">{t.name} ({t.age} tuổi)</p>
+                        <p className="text-slate-500 text-xs">{t.loc}</p>
                       </div>
                       <div className="flex gap-0.5 text-amber-400 flex-shrink-0">
                         {Array.from({ length: t.rating }).map((_, s) => <Star key={s} className="w-3.5 h-3.5 fill-current" />)}
                       </div>
                     </div>
-                    <p className="text-stone-600 text-sm leading-relaxed italic flex-1 mb-3">"{t.text}"</p>
-                    <span className="inline-block text-xs bg-red-50 text-red-600 font-semibold px-2.5 py-0.5 rounded-full border border-red-100 self-start">{t.combo}</span>
+                    <p className="text-slate-600 text-sm leading-relaxed italic flex-1 mb-3">"{t.text}"</p>
+                    <span className="inline-block text-xs bg-emerald-50 text-emerald-700 font-semibold px-2.5 py-0.5 rounded-full border border-emerald-100 self-start">{t.combo}</span>
                   </div>
                 </div>
               ))}
@@ -1804,11 +1804,11 @@ export default function App() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-12 md:py-20 bg-amber-50">
+        <section id="faq" className="py-12 md:py-20 bg-teal-50">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 md:mb-10">
-              <p className="text-sm font-bold text-amber-700 uppercase tracking-widest mb-2">Giải đáp thắc mắc</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-stone-900 tracking-tight">Câu hỏi thường gặp</h2>
+              <p className="text-sm font-bold text-emerald-700 uppercase tracking-widest mb-2">Giải đáp thắc mắc</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Câu hỏi thường gặp</h2>
             </div>
             <div className="space-y-2.5">
               {FAQS.map((item, idx) => (
@@ -1816,7 +1816,7 @@ export default function App() {
                   key={idx}
                   className={cn(
                     "bg-white rounded-2xl border transition-all duration-200 overflow-hidden",
-                    openFaq === idx ? "border-red-200 shadow-md" : "border-stone-200 shadow-sm"
+                    openFaq === idx ? "border-emerald-200 shadow-md" : "border-slate-200 shadow-sm"
                   )}
                 >
                   <button
@@ -1825,24 +1825,24 @@ export default function App() {
                   >
                     <span className={cn(
                       "font-bold text-base leading-snug transition-colors",
-                      openFaq === idx ? "text-red-700" : "text-stone-800"
+                      openFaq === idx ? "text-emerald-700" : "text-slate-800"
                     )}>
                       {item.q}
                     </span>
                     <span className={cn(
                       "w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-200",
-                      openFaq === idx ? "bg-red-100" : "bg-stone-100"
+                      openFaq === idx ? "bg-emerald-100" : "bg-slate-100"
                     )}>
                       <ChevronRight className={cn(
                         "w-4 h-4 transition-all duration-200",
-                        openFaq === idx ? "text-red-600 rotate-90" : "text-stone-400 rotate-0"
+                        openFaq === idx ? "text-emerald-600 rotate-90" : "text-slate-400 rotate-0"
                       )} />
                     </span>
                   </button>
                   {openFaq === idx && (
                     <div className="px-5 pb-5">
-                      <div className="border-t border-stone-100 pt-4">
-                        <p className="text-stone-600 text-base leading-relaxed whitespace-pre-line">{item.a}</p>
+                      <div className="border-t border-slate-100 pt-4">
+                        <p className="text-slate-600 text-base leading-relaxed whitespace-pre-line">{item.a}</p>
                       </div>
                     </div>
                   )}
@@ -1853,24 +1853,24 @@ export default function App() {
         </section>
 
         {/* Order Form Section */}
-        <section id="order-section" className="py-8 md:py-14 bg-gradient-to-b from-red-50 to-orange-50 border-t-4 border-red-600">
+        <section id="order-section" className="py-8 md:py-14 bg-gradient-to-b from-emerald-50 to-teal-50 border-t-4 border-emerald-600">
           <div className="max-w-2xl mx-auto px-4 sm:px-6">
 
             {/* Header */}
             <div className="text-center mb-6">
-              <div className="inline-flex items-center gap-2 bg-red-600 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-3">
+              <div className="inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-3">
                 🎁 TIẾT KIỆM 170.000Đ – CHỈ HÔM NAY
               </div>
-              <h2 className="text-2xl md:text-3xl font-black text-stone-900 leading-tight mb-2">
+              <h2 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-2">
                 Đặt Hàng Ngay – Giao Tận Nhà
               </h2>
-              <p className="text-stone-600 text-sm md:text-base leading-relaxed">
-                ⚠️ <strong className="text-stone-800">Nhân viên gọi lại SỚM NHẤT</strong> – Vui lòng cung cấp <strong className="text-red-600">số điện thoại chính xác</strong>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                ⚠️ <strong className="text-slate-800">Nhân viên gọi lại SỚM NHẤT</strong> – Vui lòng cung cấp <strong className="text-emerald-600">số điện thoại chính xác</strong>
               </p>
             </div>
 
             {/* Form Card */}
-            <div className="bg-white rounded-3xl shadow-2xl border border-red-100 overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-2xl border border-emerald-100 overflow-hidden">
 
               {/* Trust bar */}
               <div className="bg-green-600 px-6 py-3 flex items-center justify-center gap-3 text-white text-sm font-bold">
@@ -1885,7 +1885,7 @@ export default function App() {
                   <img
                     src="/samuraingangmin.webp"
                     alt="Samurai Diệt Mối - Combo 3 Lọ, Combo 6 Lọ, Combo 9 Lọ"
-                    className="w-full max-w-xs md:max-w-md h-auto rounded-2xl shadow-xl border border-stone-100"
+                    className="w-full max-w-xs md:max-w-md h-auto rounded-2xl shadow-xl border border-slate-100"
                     loading="lazy"
                     width={1376}
                     height={768}
@@ -1894,7 +1894,7 @@ export default function App() {
 
                 {/* Bước 1: Combo – compact 3-col selector */}
                 <div id="combo-step">
-                  <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-3">Bước 1 — Chọn gói</p>
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Bước 1 — Chọn gói</p>
                   <div className="grid grid-cols-3 gap-2">
                     {[
                       { value: 'combo1', emoji: '🏠', name: 'GÓI NHÀ NHỎ', sub: '3 lọ · ≤50m²', price: '249.000đ' },
@@ -1904,8 +1904,8 @@ export default function App() {
                       <label key={item.value} className={cn(
                         "relative flex flex-col items-center text-center p-3 rounded-2xl border-2 cursor-pointer transition-all select-none",
                         selectedCombo === item.value
-                          ? "border-red-500 bg-red-50 shadow-md"
-                          : "border-stone-200 bg-stone-50 hover:border-stone-300"
+                          ? "border-emerald-500 bg-emerald-50 shadow-md"
+                          : "border-slate-200 bg-slate-50 hover:border-slate-300"
                       )}>
                         <input
                           type="radio"
@@ -1916,19 +1916,19 @@ export default function App() {
                           className="sr-only"
                         />
                         {item.recommended && (
-                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[11px] font-black px-2 py-0.5 rounded-full whitespace-nowrap tracking-wide">
+                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[11px] font-black px-2 py-0.5 rounded-full whitespace-nowrap tracking-wide">
                             NÊN CHỌN
                           </span>
                         )}
                         {selectedCombo === item.value && (
-                          <CheckCircle2 className="absolute top-2 right-2 w-3.5 h-3.5 text-red-500" />
+                          <CheckCircle2 className="absolute top-2 right-2 w-3.5 h-3.5 text-emerald-500" />
                         )}
                         <span className="text-xl mb-1">{item.emoji}</span>
-                        <span className={cn("text-[11px] font-black leading-tight mb-1", selectedCombo === item.value ? "text-red-700" : "text-stone-700")}>
+                        <span className={cn("text-[11px] font-black leading-tight mb-1", selectedCombo === item.value ? "text-emerald-700" : "text-slate-700")}>
                           {item.name}
                         </span>
-                        <span className="text-xs text-stone-500 mb-1.5 leading-tight">{item.sub}</span>
-                        <span className={cn("text-sm font-black", selectedCombo === item.value ? "text-red-600" : "text-stone-800")}>
+                        <span className="text-xs text-slate-500 mb-1.5 leading-tight">{item.sub}</span>
+                        <span className={cn("text-sm font-black", selectedCombo === item.value ? "text-emerald-600" : "text-slate-800")}>
                           {item.price}
                         </span>
                       </label>
@@ -1948,8 +1948,8 @@ export default function App() {
                       >
                         {/* Header */}
                         <div className="bg-amber-400 px-4 py-2 flex items-center gap-2">
-                          <span className="text-stone-900 text-sm font-black leading-snug">🔥 Khoan đã!</span>
-                          <span className="text-stone-800 text-xs font-bold leading-snug">Chỉ thêm <strong>79.000đ</strong> → nâng lên Gói Gia Đình</span>
+                          <span className="text-slate-900 text-sm font-black leading-snug">🔥 Khoan đã!</span>
+                          <span className="text-slate-800 text-xs font-bold leading-snug">Chỉ thêm <strong>79.000đ</strong> → nâng lên Gói Gia Đình</span>
                         </div>
                         {/* Body */}
                         <div className="bg-amber-50 px-4 py-3 space-y-2">
@@ -1959,7 +1959,7 @@ export default function App() {
                               { icon: '🏠', text: 'Đủ cho nhà 50–100m² – không cần đặt lại lần 2' },
                               { icon: '⚠️', text: `Còn ${stockRemaining} suất giá này – hết hôm nay không mở lại` },
                             ].map((r, i) => (
-                              <li key={i} className="flex items-start gap-2 text-sm text-stone-700 leading-snug">
+                              <li key={i} className="flex items-start gap-2 text-sm text-slate-700 leading-snug">
                                 <span className="text-base leading-none flex-shrink-0 mt-0.5">{r.icon}</span>
                                 <span>{r.text}</span>
                               </li>
@@ -1972,14 +1972,14 @@ export default function App() {
                               setValue('combo', 'combo2');
                               setUpsellApplied(true);
                             }}
-                            className="w-full mt-1 py-2.5 rounded-xl bg-red-600 text-white font-black text-sm hover:bg-red-700 active:scale-95 transition-all shadow-sm"
+                            className="w-full mt-1 py-2.5 rounded-xl bg-orange-500 text-white font-black text-sm hover:bg-orange-600 active:scale-95 transition-all shadow-sm"
                           >
                             ✅ Nâng lên Gói Gia Đình – 328.000đ
                           </button>
                           <button
                             type="button"
                             onClick={() => setTimeout(() => nameStepRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80)}
-                            className="w-full py-1.5 text-stone-400 text-xs font-medium hover:text-stone-600 transition-colors"
+                            className="w-full py-1.5 text-slate-400 text-xs font-medium hover:text-slate-600 transition-colors"
                           >
                             Không, giữ nguyên Gói Nhà Nhỏ
                           </button>
@@ -2021,10 +2021,10 @@ export default function App() {
 
                 {/* Bước 2: Thông tin */}
                 <div className="space-y-4" ref={nameStepRef}>
-                  <p className="text-xs font-bold text-red-600 uppercase tracking-widest">Bước 2 — Thông tin nhận hàng</p>
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest">Bước 2 — Thông tin nhận hàng</p>
 
                   <div>
-                    <label className="block text-base font-bold text-stone-800 mb-2">Họ và tên <span className="text-red-500">*</span></label>
+                    <label className="block text-base font-bold text-slate-800 mb-2">Họ và tên <span className="text-red-500">*</span></label>
                     <input
                       {...register("name", { required: "Vui lòng nhập họ tên" })}
                       placeholder="Ví dụ: Nguyễn Văn A"
@@ -2037,7 +2037,7 @@ export default function App() {
                         }
                       }}
                       className={cn(
-                        "w-full px-5 py-4 text-lg rounded-2xl bg-stone-50 border-2 border-stone-200 focus:outline-none focus:border-red-400 focus:bg-white transition-all",
+                        "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.name && "border-red-400 bg-red-50"
                       )}
                     />
@@ -2045,7 +2045,7 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="block text-base font-bold text-stone-800 mb-2">Số điện thoại <span className="text-red-500">*</span></label>
+                    <label className="block text-base font-bold text-slate-800 mb-2">Số điện thoại <span className="text-red-500">*</span></label>
                     <input
                       {...register("phone", { required: "Vui lòng nhập số điện thoại", pattern: { value: /^0(3[2-9]|5[25689]|7[06789]|8[1-9]|9[0-9])[0-9]{7}$/, message: "Số điện thoại không hợp lệ (vd: 0912 345 678)" } })}
                       placeholder="Ví dụ: 0912 345 678"
@@ -2054,7 +2054,7 @@ export default function App() {
                       autoComplete="tel"
                       name="phone"
                       className={cn(
-                        "w-full px-5 py-4 text-lg rounded-2xl bg-stone-50 border-2 border-stone-200 focus:outline-none focus:border-red-400 focus:bg-white transition-all",
+                        "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.phone && "border-red-400 bg-red-50"
                       )}
                     />
@@ -2062,14 +2062,14 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="block text-base font-bold text-stone-800 mb-2">Địa chỉ nhận hàng <span className="text-red-500">*</span></label>
+                    <label className="block text-base font-bold text-slate-800 mb-2">Địa chỉ nhận hàng <span className="text-red-500">*</span></label>
                     <input
                       {...register("address", { required: "Vui lòng nhập địa chỉ nhận hàng" })}
                       placeholder="Số nhà, đường, phường, quận, tỉnh/thành"
                       autoComplete="street-address"
                       name="address"
                       className={cn(
-                        "w-full px-5 py-4 text-lg rounded-2xl bg-stone-50 border-2 border-stone-200 focus:outline-none focus:border-red-400 focus:bg-white transition-all",
+                        "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.address && "border-red-400 bg-red-50"
                       )}
                     />
@@ -2079,7 +2079,7 @@ export default function App() {
 
                 {/* Bước 3: Submit */}
                 <div>
-                  <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-3">Bước 3 — Xác nhận</p>
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Bước 3 — Xác nhận</p>
 
                   {submitStatus === 'success' ? (
                     <div className="w-full py-5 rounded-2xl bg-green-600 text-white font-black text-xl text-center shadow-xl shadow-green-200">
@@ -2090,7 +2090,7 @@ export default function App() {
                       <button
                         type="submit"
                         disabled={submitStatus === 'loading'}
-                        className="w-full py-5 rounded-2xl bg-red-600 text-white font-black text-xl md:text-2xl hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-200 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed disabled:active:scale-100"
+                        className="w-full py-5 rounded-2xl bg-orange-500 text-white font-black text-xl md:text-2xl hover:bg-orange-600 active:scale-95 transition-all shadow-xl shadow-orange-200 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed disabled:active:scale-100"
                       >
                         {submitStatus === 'loading' ? (
                           <>
@@ -2167,14 +2167,14 @@ export default function App() {
                     );
                   })()}
                   {submitStatus !== 'success' && (
-                    <p className="text-center text-stone-500 text-xs mt-2 leading-snug">
-                      ✓ Nhân viên gọi lại <strong className="text-stone-700">sớm nhất</strong> · Chú ý để chuông ☎️
+                    <p className="text-center text-slate-500 text-xs mt-2 leading-snug">
+                      ✓ Nhân viên gọi lại <strong className="text-slate-700">sớm nhất</strong> · Chú ý để chuông ☎️
                     </p>
                   )}
                 </div>
 
                 {/* Trust icons */}
-                <div className="grid grid-cols-3 gap-3 pt-2 border-t border-stone-100">
+                <div className="grid grid-cols-3 gap-3 pt-2 border-t border-slate-100">
                   {[
                     { icon: <Package className="w-5 h-5 text-green-600" />, text: 'Miễn phí giao hàng' },
                     { icon: <CheckCircle2 className="w-5 h-5 text-green-600" />, text: 'Kiểm hàng trước khi trả tiền' },
@@ -2182,7 +2182,7 @@ export default function App() {
                   ].map((item, i) => (
                     <div key={i} className="flex flex-col items-center gap-1.5 text-center">
                       {item.icon}
-                      <span className="text-sm font-semibold text-stone-600 leading-tight">{item.text}</span>
+                      <span className="text-sm font-semibold text-slate-600 leading-tight">{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -2197,18 +2197,18 @@ export default function App() {
                 { emoji: '✅', title: 'Dễ sử dụng tại nhà', sub: 'Không cần gọi thợ' },
                 { emoji: '🇯🇵', title: 'Hàng chính hãng Nhật Bản', sub: 'Nhập khẩu trực tiếp công ty' },
               ].map((b, i) => (
-                <div key={i} className="bg-white rounded-2xl border border-stone-200 px-4 py-3 flex items-start gap-3 shadow-sm">
+                <div key={i} className="bg-white rounded-2xl border border-slate-200 px-4 py-3 flex items-start gap-3 shadow-sm">
                   <span className="text-2xl leading-none mt-0.5">{b.emoji}</span>
                   <div>
-                    <p className="text-sm font-bold text-stone-800 leading-snug">{b.title}</p>
-                    <p className="text-sm text-stone-500 mt-0.5">{b.sub}</p>
+                    <p className="text-sm font-bold text-slate-800 leading-snug">{b.title}</p>
+                    <p className="text-sm text-slate-500 mt-0.5">{b.sub}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Social proof */}
-            <div className="mt-4 bg-white rounded-2xl border border-stone-200 px-5 py-4 flex items-center gap-4 shadow-sm">
+            <div className="mt-4 bg-white rounded-2xl border border-slate-200 px-5 py-4 flex items-center gap-4 shadow-sm">
               <div className="flex -space-x-2 flex-shrink-0">
                 {['/customers/1min.webp', '/customers/2min.webp', '/customers/3min.webp', '/customers/4min.webp'].map((img, i) => (
                   <img key={i} src={img} alt={`Khách hàng ${i + 1}`} className="w-10 h-10 rounded-full border-2 border-white object-cover object-center flex-shrink-0" loading="lazy" width={40} height={40} onError={(e) => {
@@ -2220,21 +2220,21 @@ export default function App() {
                 <div className="flex items-center gap-1 mb-0.5">
                   {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                 </div>
-                <p className="text-sm font-bold text-stone-800">Hơn 12.400+ khách hàng đã đặt thành công</p>
-                <p className="text-xs text-stone-500">Đánh giá trung bình 4.9/5 ⭐</p>
+                <p className="text-sm font-bold text-slate-800">Hơn 12.400+ khách hàng đã đặt thành công</p>
+                <p className="text-xs text-slate-500">Đánh giá trung bình 4.9/5 ⭐</p>
               </div>
             </div>
 
             {/* Chứng Nhận Chất Lượng ISO Nhật Bản */}
             <div className="mt-10">
-              <h3 className="text-center text-lg sm:text-xl font-extrabold text-stone-800 mb-5 tracking-tight">
+              <h3 className="text-center text-lg sm:text-xl font-extrabold text-slate-800 mb-5 tracking-tight">
                 🇯🇵 Chứng Nhận Chất Lượng ISO Nhật Bản
               </h3>
               <div className="flex justify-center px-4">
                 <img
                   src="/chungnhanmin.webp"
                   alt="Chứng nhận chất lượng ISO Nhật Bản"
-                  className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-lg border border-stone-200 object-contain"
+                  className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-lg border border-slate-200 object-contain"
                   loading="lazy"
                   width={480}
                   height={679}
@@ -2247,13 +2247,13 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+      <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <img src="/logovuongsamuraimin.webp" alt="Samurai Japan Logo" className="h-10 w-10 object-contain rounded-lg" loading="lazy" width={40} height={40} />
-                <span className="text-xl font-bold tracking-tighter text-white">Thuốc Diệt Mối <span className="text-red-600">Nhật Bản</span></span>
+                <span className="text-xl font-bold tracking-tighter text-white">Thuốc Diệt Mối <span className="text-emerald-400">Nhật Bản</span></span>
               </div>
               <p className="text-sm leading-relaxed">
                 Đơn vị phân phối độc quyền thuốc diệt mối sinh học Samurai công nghệ Nhật Bản tại Việt Nam. Bảo vệ ngôi nhà Việt khỏi hiểm họa mối mọt.
@@ -2263,17 +2263,17 @@ export default function App() {
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Liên hệ</h4>
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-red-600 mt-0.5 shrink-0" />
-                  <span>Kho Tây Nam, Lô 01 - 02 - An Sương, Phường Trung Mỹ Tây, TP Hồ Chí Minh<br /><span className="text-stone-500 text-xs">Tất cả đơn hàng giao tận nơi cho quý khách.</span></span>
+                  <MapPin className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                  <span>Kho Tây Nam, Lô 01 - 02 - An Sương, Phường Trung Mỹ Tây, TP Hồ Chí Minh<br /><span className="text-slate-500 text-xs">Tất cả đơn hàng giao tận nơi cho quý khách.</span></span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-red-600 shrink-0" />
+                  <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
                   <a href="https://zalo.me/0842717266" target="_blank" rel="noopener noreferrer" onClick={() => pushGtm('zalo_click', { location: 'footer' })} className="hover:text-white transition-colors">
                     Hotline/Zalo: 084 271 7266
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-red-600 shrink-0" />
+                  <Mail className="w-4 h-4 text-emerald-500 shrink-0" />
                   <a href="mailto:dietmoinhatban@gmail.com" className="hover:text-white transition-colors">
                     dietmoinhatban@gmail.com
                   </a>
@@ -2290,7 +2290,7 @@ export default function App() {
               </ul>
             </div>
           </div>
-          <div className="pt-8 border-t border-stone-800 text-center text-xs">
+          <div className="pt-8 border-t border-slate-800 text-center text-xs">
             <p>© 2026 - Bản quyền thuộc về Thuốc diệt Mối Nhật Bản</p>
           </div>
         </div>
@@ -2303,7 +2303,7 @@ export default function App() {
       )}>
         <button
           onClick={() => { pushGtm('cta_click', { button_location: 'floating_cta' }); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-          className="flex flex-col items-center gap-1 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-4 py-4 rounded-2xl shadow-2xl shadow-red-900/70 active:scale-95 transition-all font-black text-center min-w-max"
+          className="flex flex-col items-center gap-1 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-4 rounded-2xl shadow-2xl shadow-orange-900/70 active:scale-95 transition-all font-black text-center min-w-max"
         >
           <span className="text-base leading-tight">👉 Đặt Hàng Ngay</span>
           <span className="text-sm text-amber-300 font-bold">Giá khuyến mãi chỉ từ 249k</span>
