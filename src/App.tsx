@@ -858,8 +858,8 @@ export default function App() {
                   🇯🇵 Giải Pháp Diệt Mối Từ Nhật Bản
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 tracking-tight">
-                  Muỗi Đầy Nhà? 1 Lần Xịt —<br />
-                  <span className="text-emerald-600">Bảo Vệ Cả Gia Đình 6 Tháng</span>
+                  Xịt Hoài Vẫn Còn Muỗi?<br />
+                  <span className="text-emerald-600">1 Lần Xịt — Sạch 6 Tháng. Không Làm Lại.</span>
                 </h1>
                 {/* Hero Image chỉ hiện dưới tiêu đề trên mobile, ẩn trên desktop */}
                 <div className="block lg:hidden mb-6">
@@ -893,36 +893,55 @@ export default function App() {
                   </div>
                 </div>
                 {/* Main Subtitle */}
-                <p className="text-lg sm:text-xl font-medium text-slate-700 mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Chiết xuất thiên nhiên, an toàn cho trẻ nhỏ &amp; thú cưng. Xịt phủ toàn nhà — muỗi bay vào là bị tiêu diệt.
+                <p className="text-lg sm:text-xl font-medium text-slate-700 mb-1 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Côn trùng bò qua điểm xịt là chết — không cần xịt trực tiếp, không cần làm lại.
+                </p>
+                <p className="text-lg sm:text-xl font-bold text-slate-800 mb-6 max-w-xl mx-auto lg:mx-0">
+                  Muỗi, gián, kiến, ruồi. Xử lý 1 lần. Xong hẳn.
                 </p>
 
-                {/* Benefits List - Single column, font lớn cho 40-60 tuổi */}
+                {/* Benefits List */}
                 <div className="flex flex-col gap-3 max-w-md mx-auto lg:mx-0 mb-8">
-                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">An toàn chiết xuất thiên nhiên</span>
+                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-base font-bold text-slate-800">Xịt 1 lần duy nhất — không xịt lại suốt 6 tháng</p>
+                      <p className="text-sm text-slate-500 mt-0.5">Không phải xịt mỗi tối. Không phải mua thêm giữa chừng.</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">Hiệu lực kéo dài <span className="text-green-700">6 tháng</span></span>
+                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-base font-bold text-slate-800">Côn trùng bò qua tự chết — không cần xịt trúng từng con</p>
+                      <p className="text-sm text-slate-500 mt-0.5">Xịt vào góc nhà, chân tường, cửa ra vào — xong. Để đó nó tự làm việc.</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">Tự xịt tại nhà chỉ 5 phút</span>
+                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-base font-bold text-slate-800">1 chai diệt hết: muỗi, gián, kiến, ruồi — không cần mua 4–5 loại</p>
+                      <p className="text-sm text-slate-500 mt-0.5">Raid cho gián, nhang cho muỗi, bẫy cho kiến — bỏ hết. 1 thứ xử lý tất.</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">Miễn phí giao hàng COD</span>
+                  <div className="flex items-start gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-base font-bold text-slate-800">Thiên nhiên, không mùi — xịt xong vợ con ở nhà bình thường</p>
+                      <p className="text-sm text-slate-500 mt-0.5">Không phải đợi thoáng khí, không phải đuổi người ra ngoài trước khi xịt.</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-10 justify-center lg:justify-start">
                   <button
-                    onClick={scrollToComparison}
+                    onClick={scrollToOrder}
                     className="group flex items-center justify-center gap-3 bg-orange-500 text-white px-8 py-5 rounded-2xl font-black text-xl hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
                   >
-                    <span className="block text-xl font-black tracking-tight">Nhà Bạn Có Nhiều Muỗi? Xem Giải Pháp Ngay</span>
+                    <ShoppingCart className="w-6 h-6 flex-shrink-0" />
+                    <span className="block leading-snug text-left">
+                      <span className="block text-xl font-black tracking-tight">Đặt Combo 2 Chai — Xử Lý &amp; Bảo Vệ 1 Năm</span>
+                      <small className="block text-sm font-medium text-yellow-100 mt-0.5">Tiết kiệm 120.000đ · Xịt 1 lần · Không lo 6 tháng</small>
+                    </span>
                     <ChevronRight className="w-6 h-6 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <div className="flex items-center gap-3 px-4 py-2 justify-center">
