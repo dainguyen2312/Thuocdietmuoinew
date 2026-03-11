@@ -1305,6 +1305,18 @@ export default function App() {
                 Tiết kiệm hơn 10 lần — <span className="text-emerald-600">hiệu quả gấp 20+ lần.</span>
               </p>
 
+              {/* Mobile CTA */}
+              <div className="flex flex-col items-center gap-2 pt-2">
+                <button
+                  onClick={scrollToPricing}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base px-6 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200"
+                >
+                  <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
+                  <span>Đặt Ngay — Rẻ Hơn Thuê Dịch Vụ, Dùng Cả Năm</span>
+                </button>
+                <span className="text-xs text-slate-500 font-medium text-center">298.000đ · 2 chai · Bảo vệ cả nhà suốt 12 tháng+</span>
+              </div>
+
             </div>
 
           </div>
