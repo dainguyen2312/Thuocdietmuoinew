@@ -853,9 +853,9 @@ export default function App() {
                 transition={{ duration: 0.6 }}
                 className="text-center lg:text-left order-1 lg:order-1"
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold uppercase tracking-widest mb-5 bg-orange-50 border-orange-400 text-orange-700">
-                  <span className="flex h-2 w-2 rounded-full animate-pulse bg-orange-400"></span>
-                  Giải pháp bảo vệ gia đình khỏi Muỗi từ Đức
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-semibold mb-5 bg-emerald-50 border-emerald-400 text-emerald-800">
+                  <span className="flex h-2 w-2 rounded-full animate-pulse bg-emerald-500"></span>
+                  Chiết xuất thiên nhiên — an toàn cho trẻ em &amp; thú cưng
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.2] mb-3 tracking-tight">
                   Xịt Hoài Vẫn Còn Muỗi?<br />
@@ -906,7 +906,7 @@ export default function App() {
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Không mùi, không hóa chất — sinh hoạt bình thường</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Không mùi, không hóa chất — an toàn cả nhà</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
