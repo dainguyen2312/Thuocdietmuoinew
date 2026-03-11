@@ -1121,9 +1121,12 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-6 text-center lg:text-left text-base md:text-lg font-semibold text-slate-700">
-                  Không phải xịt mạnh hơn — mà xịt đúng cách hơn.
-                </p>
+                <div className="mt-8 inline-flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-3.5 w-full lg:w-auto">
+                  <span className="text-2xl">💡</span>
+                  <p className="text-emerald-800 font-bold text-base md:text-lg leading-snug">
+                    Không phải xịt mạnh hơn —<br className="sm:hidden" /> mà <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">xịt đúng cách hơn</span>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
