@@ -1139,15 +1139,14 @@ export default function App() {
 
             {/* Header */}
             <div className="text-center mb-10">
-              <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Chi phí & Kết quả thực tế</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight">
-                Cùng xử lý mối –{' '}
-                <span className="text-emerald-600">kết quả khác nhau hoàn toàn</span>
+              <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Chi phí & Hiệu quả thực tế</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Cùng Tốn Tiền —{' '}
+                <span className="text-emerald-600">Kết Quả Khác Nhau Hoàn Toàn</span>
               </h2>
               <p className="text-slate-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-                Nhiều gia đình đã tốn 3–5 triệu/năm nhưng mối vẫn tái phát.<br className="block sm:hidden mb-2" />
-                <br className="hidden sm:block" />
-                Xem so sánh thực tế trước khi quyết định.
+                Nhiều gia đình tốn 1–2 triệu/năm mà muỗi vẫn còn.<br />
+                Xem so sánh trước khi quyết định.
               </p>
             </div>
 
@@ -1159,51 +1158,57 @@ export default function App() {
                     <th className="p-5 font-bold bg-slate-900 text-white text-base w-[22%]">So sánh</th>
                     <th className="p-5 font-black text-center bg-emerald-700 text-white text-base w-[26%] relative overflow-hidden">
                       <div className="absolute top-0 right-0 bg-yellow-400 text-emerald-800 text-xs px-2 py-0.5 font-bold uppercase -rotate-45 translate-x-4 translate-y-2">✓ Nên chọn</div>
-                      🛡️ SAMURAI
-                      <div className="text-white/70 font-normal text-xs mt-1">Từ 249.000đ</div>
+                      🛡️ PESTSHIELD
+                      <div className="text-white/70 font-normal text-xs mt-1">298.000đ — 2 chai</div>
                     </th>
                     <th className="p-5 font-bold text-center bg-orange-900/90 text-orange-100 text-base w-[26%]">
-                      🔧 Thuê dịch vụ
-                      <div className="text-orange-300/80 font-normal text-xs mt-1">2–5 triệu/lần</div>
+                      🔧 Thuê dịch vụ phun
+                      <div className="text-orange-300/80 font-normal text-xs mt-1">500k–1.5tr/lần</div>
                     </th>
                     <th className="p-5 font-bold text-center bg-slate-700 text-slate-200 text-base w-[26%]">
-                      🧪 Các loại khác
-                      <div className="text-slate-400 font-normal text-xs mt-1">300k+</div>
+                      🕯️ Nhang & chai xịt thường
+                      <div className="text-slate-400 font-normal text-xs mt-1">50–100k/tháng</div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
                     {
-                      label: "Chi phí ban đầu",
-                      samurai: "249.000đ – 1 lọ",
-                      service: "2.000.000–5.000.000đ",
-                      normal: "300k+",
+                      label: "Chi phí",
+                      samurai: "298.000đ — 2 chai",
+                      service: "500k–1.5tr/lần",
+                      normal: "50–100k/tháng",
                     },
                     {
-                      label: "Mối có tái phát?",
-                      samurai: "Rất hiếm – diệt tận tổ chúa",
-                      service: "Tái phát sau 6–12 tháng",
-                      normal: "Tái phát trong vài tuần",
+                      label: "Hiệu lực",
+                      samurai: "6 tháng/lần xịt",
+                      service: "1–2 tháng tái phát",
+                      normal: "1–3 ngày hết tác dụng",
                     },
                     {
-                      label: "Chi phí tích lũy 3 năm",
-                      samurai: "~249.000đ",
-                      service: "6.000.000–15.000.000đ",
-                      normal: "1.500.000–3.000.000đ",
-                      highlight: true,
-                    },
-                    {
-                      label: "Thời gian chờ đợi",
-                      samurai: "Dùng ngay khi nhận hàng",
+                      label: "Phải làm lại?",
+                      samurai: "Không — xịt 1 lần",
                       service: "Đặt lịch, chờ 3–7 ngày",
-                      normal: "Dùng được ngay",
+                      normal: "Xịt lại mỗi ngày",
                     },
                     {
-                      label: "Ảnh hưởng sinh hoạt",
-                      samurai: "Không mùi – sinh hoạt bình thường",
-                      service: "Phải dọn đồ, tránh mặt 2–4 giờ",
-                      normal: "Mùi hóa chất khó chịu",
+                      label: "Mùi hóa chất",
+                      samurai: "Không mùi",
+                      service: "Phải rời nhà 2–4 giờ",
+                      normal: "Mùi khó chịu",
+                    },
+                    {
+                      label: "An toàn trẻ em",
+                      samurai: "✅ Thiên nhiên 100%",
+                      service: "⚠️ Hóa chất công nghiệp",
+                      normal: "⚠️ Không khuyến nghị",
+                    },
+                    {
+                      label: "Chi phí 1 năm",
+                      samurai: "~298.000đ",
+                      service: "3–9 triệu",
+                      normal: "600k–1.2 triệu",
+                      highlight: true,
                     },
                   ].map((row, i) => (
                     <tr key={i} className={cn("border-b border-slate-100 last:border-0 text-sm", row.highlight && "bg-yellow-50/40")}>
@@ -1232,72 +1237,52 @@ export default function App() {
               </table>
             </div>
 
-            {/* Desktop Bottom CTA */}
-            <div className="hidden md:flex items-center justify-between mt-6 bg-white rounded-2xl px-8 py-5 shadow-sm border border-slate-100 gap-6">
-              <div>
-                <p className="text-slate-500 text-sm mb-0.5">Tiết kiệm lên đến</p>
-                <p className="text-emerald-600 font-black text-2xl leading-tight">10–15 triệu đồng</p>
-                <p className="text-slate-500 text-sm">so với thuê dịch vụ trong 3 năm</p>
-              </div>
-              <div className="w-px h-14 bg-slate-100"></div>
-              <div className="flex items-center gap-3 text-slate-500 text-sm">
-                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Miễn phí vận chuyển toàn quốc
-              </div>
-              <div className="w-px h-14 bg-slate-100"></div>
-              <div className="flex items-center gap-3 text-slate-500 text-sm">
-                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" /> Miễn phí đổi trả
-              </div>
-              <button onClick={scrollToPricing} className="ml-auto bg-orange-500 text-white font-black text-base px-8 py-4 rounded-2xl shadow-lg shadow-orange-100 hover:bg-orange-600 transition-all whitespace-nowrap flex-shrink-0">
-                ĐẶT MUA NGAY – 249.000Đ
-              </button>
-            </div>
+            {/* Desktop Bottom note */}
+            <p className="hidden md:block text-center mt-6 text-base font-semibold text-slate-700">
+              Tiết kiệm hơn 10 lần so với thuê dịch vụ —{' '}
+              <span className="text-emerald-600">hiệu quả gấp 20+ lần chai xịt thường.</span>
+            </p>
 
-            {/* Mobile Optimised View – đọc hiểu trong 3s */}
-            <div className="md:hidden space-y-4">
+            {/* Mobile View */}
+            <div className="md:hidden space-y-3">
 
-              {/* Hook: số tiết kiệm to – đập vào mắt đầu tiên */}
+              {/* Hook */}
               <div className="bg-emerald-700 rounded-2xl py-5 px-4 text-center shadow-lg shadow-emerald-900/30">
-                <p className="text-white/80 text-base mb-1 font-medium">Dùng Samurai – tiết kiệm được</p>
-                <p className="text-yellow-300 font-black text-5xl leading-none tracking-tight">10–15 triệu</p>
-                <p className="text-white/60 text-sm mt-1.5">so với thuê dịch vụ trong 3 năm<br /><span className="text-white/50 text-xs">(chưa tính chi phí sửa chữa hỏng hóc)</span></p>
+                <p className="text-white/80 text-sm mb-1 font-medium">Dùng PestShield — tiết kiệm hơn</p>
+                <p className="text-yellow-300 font-black text-4xl leading-none tracking-tight">10 lần</p>
+                <p className="text-white/70 text-sm mt-1.5">so với thuê dịch vụ phun · hiệu quả gấp 20+ lần nhang xịt</p>
               </div>
 
-              {/* Bảng compact 3 cột – tất cả 5 điểm trong 1 card */}
+              {/* Compact table */}
               <div className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
-
-                {/* Header cột */}
-                <div className="grid grid-cols-[88px_1fr_1fr]">
+                <div className="grid grid-cols-[90px_1fr_1fr]">
                   <div className="bg-slate-800 p-3" />
                   <div className="bg-emerald-600 py-3 px-2 text-center border-l border-emerald-500">
-                    <p className="text-white font-black text-sm leading-tight">🛡️ SAMURAI</p>
-                    <p className="text-emerald-100 text-xs mt-0.5">Từ 249.000đ</p>
+                    <p className="text-white font-black text-sm leading-tight">🛡️ PESTSHIELD</p>
+                    <p className="text-emerald-100 text-xs mt-0.5">298.000đ</p>
                   </div>
                   <div className="bg-slate-600 py-3 px-2 text-center border-l border-slate-500">
                     <p className="text-slate-100 font-bold text-sm leading-tight">🔧 Cách khác</p>
-                    <p className="text-slate-300 text-xs mt-0.5">2–5 triệu/lần</p>
+                    <p className="text-slate-300 text-xs mt-0.5">500k–1.5tr</p>
                   </div>
                 </div>
 
-                {/* Các hàng so sánh */}
                 {[
-                  { icon: "💸", label: "Chi phí", samurai: "249.000đ", bad: "2–5 triệu" },
-                  { icon: "🔁", label: "Tái phát?", samurai: "Rất hiếm", bad: "Sau vài tháng" },
-                  { icon: "📅", label: "Chi phí 3 năm", samurai: "~249.000đ", bad: "6–15 triệu", highlight: true },
-                  { icon: "⏰", label: "Chờ đợi", samurai: "Dùng ngay", bad: "3 ~ 10 ngày+" },
-                  { icon: "🏠", label: "Ảnh hưởng", samurai: "An toàn", bad: "Hóa chất" },
+                  { icon: "💸", label: "Chi phí", samurai: "298.000đ", bad: "500k–1.5tr" },
+                  { icon: "⏱️", label: "Hiệu lực", samurai: "6 tháng", bad: "Vài ngày–tháng" },
+                  { icon: "🔁", label: "Làm lại?", samurai: "Không cần", bad: "Liên tục" },
+                  { icon: "🌿", label: "An toàn", samurai: "Thiên nhiên", bad: "Hóa chất" },
+                  { icon: "💰", label: "1 năm", samurai: "~298.000đ", bad: "1.2–9 triệu", highlight: true },
                 ].map((row, i) => (
-                  <div key={i} className={cn("grid grid-cols-[88px_1fr_1fr] border-t border-slate-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-slate-50/40")}>
-                    {/* Nhãn */}
+                  <div key={i} className={cn("grid grid-cols-[90px_1fr_1fr] border-t border-slate-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-slate-50/40")}>
                     <div className="p-3 flex flex-col justify-center bg-slate-50 border-r border-slate-100">
                       <span className="text-lg leading-none mb-1">{row.icon}</span>
                       <span className="text-[11px] font-bold text-slate-600 leading-tight">{row.label}</span>
                     </div>
-                    {/* Samurai */}
                     <div className={cn("p-3 flex flex-col items-center justify-center border-r border-slate-100", row.highlight ? "bg-emerald-50" : "bg-emerald-50/30")}>
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 mb-1 flex-shrink-0" />
-                      <p className={cn("font-black text-center leading-tight", row.highlight ? "text-emerald-700 text-sm" : "text-emerald-800 text-sm")}>{row.samurai}</p>
+                      <p className="font-black text-emerald-800 text-sm text-center leading-tight">{row.samurai}</p>
                     </div>
-                    {/* Cách khác */}
                     <div className="p-3 flex flex-col items-center justify-center">
                       <XCircle className="w-4 h-4 text-orange-400 mb-1 flex-shrink-0" />
                       <p className="text-sm text-slate-500 italic text-center leading-tight">{row.bad}</p>
@@ -1306,17 +1291,9 @@ export default function App() {
                 ))}
               </div>
 
-              {/* CTA */}
-              <button
-                onClick={scrollToPricing}
-                className="w-full bg-orange-500 text-white font-black text-xl py-5 rounded-2xl shadow-lg shadow-orange-200 active:scale-95 transition-all"
-              >
-                ĐẶT MUA SAMURAI – 249.000Đ
-              </button>
-              <div className="flex justify-center gap-6 text-slate-600 text-sm pb-2">
-                <span>✓ Miễn phí giao hàng</span>
-                <span>✓ Miễn phí đổi trả</span>
-              </div>
+              <p className="text-center text-sm font-semibold text-slate-600 pt-1">
+                Tiết kiệm hơn 10 lần — <span className="text-emerald-600">hiệu quả gấp 20+ lần.</span>
+              </p>
 
             </div>
 
