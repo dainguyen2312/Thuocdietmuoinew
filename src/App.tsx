@@ -858,8 +858,8 @@ export default function App() {
                   🇯🇵 Giải Pháp Diệt Mối Từ Nhật Bản
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 tracking-tight">
-                  Nhà Đang Có Mối?<br />
-                  <span className="text-emerald-600">Đừng Gọi Thợ Vội.</span>
+                  Muỗi Đầy Nhà? 1 Lần Xịt —<br />
+                  <span className="text-emerald-600">Bảo Vệ Cả Gia Đình 6 Tháng</span>
                 </h1>
                 {/* Hero Image chỉ hiện dưới tiêu đề trên mobile, ẩn trên desktop */}
                 <div className="block lg:hidden mb-6">
@@ -892,31 +892,28 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                {/* Main Subtitle - Tối ưu cho tuổi 40-60 */}
-                <p className="text-lg sm:text-xl font-medium text-slate-700 mb-2 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Rắc 1 lần — mối ăn thuốc và mang về tổ, diệt cả đàn và Mối chúa sau vài ngày.
-                </p>
-                <p className="text-lg sm:text-xl font-extrabold mb-6 max-w-xl mx-auto lg:mx-0" style={{ color: '#1E6B52' }}>
-                  💰 Chi phí chỉ bằng 1/10 gọi thợ.
+                {/* Main Subtitle */}
+                <p className="text-lg sm:text-xl font-medium text-slate-700 mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Chiết xuất thiên nhiên, an toàn cho trẻ nhỏ &amp; thú cưng. Xịt phủ toàn nhà — muỗi bay vào là bị tiêu diệt.
                 </p>
 
                 {/* Benefits List - Single column, font lớn cho 40-60 tuổi */}
                 <div className="flex flex-col gap-3 max-w-md mx-auto lg:mx-0 mb-8">
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">Tiết kiệm hơn <span className="text-green-700">2.000.000đ</span> so với gọi thợ</span>
+                    <span className="text-base font-bold text-slate-800">An toàn chiết xuất thiên nhiên</span>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">Diệt tận tổ, không chỉ mối bề mặt</span>
+                    <span className="text-base font-bold text-slate-800">Hiệu lực kéo dài <span className="text-green-700">6 tháng</span></span>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">An toàn cho người &amp; vật nuôi</span>
+                    <span className="text-base font-bold text-slate-800">Tự xịt tại nhà chỉ 5 phút</span>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-                    <span className="text-base font-bold text-slate-800">Tự làm tại nhà, không khoan đục</span>
+                    <span className="text-base font-bold text-slate-800">Miễn phí giao hàng COD</span>
                   </div>
                 </div>
 
@@ -925,10 +922,7 @@ export default function App() {
                     onClick={scrollToComparison}
                     className="group flex items-center justify-center gap-3 bg-orange-500 text-white px-8 py-5 rounded-2xl font-black text-xl hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
                   >
-                    <span className="block leading-snug text-left">
-                      <span className="block text-xl font-black tracking-tight">Gọi Thợ Tốn Bao Nhiêu? Xem Ngay</span>
-                      <small className="block text-sm font-medium text-yellow-100 mt-0.5">Nhiều gia đình tốn 3–5 triệu/năm mà mối vẫn tái phát – Xem thực tế.</small>
-                    </span>
+                    <span className="block text-xl font-black tracking-tight">Nhà Bạn Có Nhiều Muỗi? Xem Giải Pháp Ngay</span>
                     <ChevronRight className="w-6 h-6 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <div className="flex items-center gap-3 px-4 py-2 justify-center">
@@ -950,7 +944,7 @@ export default function App() {
                       <div className="flex text-yellow-400">
                         {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
                       </div>
-                      <p className="text-sm font-bold text-slate-600">12,400+ Khách hàng tin dùng</p>
+                      <p className="text-sm font-bold text-slate-600">14,800+ gia đình đã tin dùng</p>
                     </div>
                   </div>
                 </div>
