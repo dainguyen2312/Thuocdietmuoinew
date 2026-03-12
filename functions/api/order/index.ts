@@ -21,9 +21,9 @@ interface OrderPayload {
 }
 
 const COMBO_MAP = {
-  combo1: { label: 'Gói Nhà Nhỏ – 3 lọ',  price: 249000, productId: 'bc9e9d6e-41d3-4906-8241-d7430e3f6fd9', variationId: 'a1243c18-98fe-46cb-bd6c-fa47af46bfca' },
-  combo2: { label: 'Gói Gia Đình – 6 lọ', price: 328000, productId: 'a6f4ce4b-b1e9-4319-9ace-9e532e3996d4', variationId: '71fbaf11-5f98-45c7-addf-71abb75185cb' },
-  combo3: { label: 'Gói Nhà Lớn – 9 lọ',  price: 497000, productId: '8739cd47-861a-4e19-a9a3-a1688eb2ba6f', variationId: 'fb1e921a-f66b-491a-bd3b-148721ed919b' },
+  combo1: { label: '1 Chai Xịt Muỗi PestShield',     price: 209000, productId: 'cdeeafa7-c5a1-4528-9855-5473d857d981', variationId: '35b2c4b9-7de5-4c38-9f7d-54256bbca1f3' },
+  combo2: { label: 'Combo 2 Chai Xịt Muỗi PestShield', price: 298000, productId: 'c385ca3a-7e80-46dd-af31-2812fe3d77ca', variationId: 'ccb5c226-6346-4e72-8fc0-14701ef33570' },
+  combo3: { label: 'Combo 3 Chai Xịt Muỗi PestShield', price: 397000, productId: '29c7dcb6-b773-4c37-a93f-8ab873f73e80', variationId: 'e70e92a1-37ac-4385-ba51-1d4b7440154c' },
 } as const;
 
 const ALLOWED_ORIGINS = new Set([
