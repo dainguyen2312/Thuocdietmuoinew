@@ -1497,11 +1497,29 @@ export default function App() {
                     ))}
                   </ul>
 
+                  {/* Urgency strip */}
+                  <div className="mb-3 rounded-xl overflow-hidden border border-red-400/40">
+                    <div className="bg-red-600 px-3 py-1.5 flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-1.5">
+                        <span className="relative flex h-1.5 w-1.5 flex-shrink-0">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-100"></span>
+                        </span>
+                        <span className="text-white text-xs font-black uppercase tracking-wide">⚡ Hàng có hạn trong ngày</span>
+                      </div>
+                      <span className="bg-white text-red-600 text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap shadow-sm">Còn {stockRemaining} suất</span>
+                    </div>
+                    <div className="bg-red-950/60 px-3 py-2 flex items-center gap-2">
+                      <span className="text-base flex-shrink-0">🔥</span>
+                      <p className="text-red-200 text-xs font-semibold leading-snug">Chỉ còn <span className="font-black text-white">{stockRemaining} suất</span> giá KM hôm nay — hết là về giá gốc, không mở lại.</p>
+                    </div>
+                  </div>
+
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
                     className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-lg hover:bg-amber-300 transition-all active:scale-95 shadow-md"
                   >
-                    CHỌN GÓI NÀY →
+                    ĐẶT NGAY TRƯỚC KHI HẾT →
                   </button>
                 </div>
               </div>
@@ -2090,37 +2108,7 @@ export default function App() {
               </form>
             </div>
 
-            {/* Urgency bar – synchronized with stockRemaining */}
-            <div className="mt-4 rounded-2xl overflow-hidden border border-red-200 shadow-md">
-              <div className="bg-red-600 px-4 py-2.5 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="relative flex h-2 w-2 flex-shrink-0">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-100"></span>
-                  </span>
-                  <span className="text-white text-xs font-black uppercase tracking-wide leading-tight truncate">⚡ Hàng có hạn trong ngày</span>
-                </div>
-                <span className="bg-white text-red-600 text-xs font-black px-2.5 py-1 rounded-full whitespace-nowrap flex-shrink-0 shadow-sm">
-                  Còn {stockRemaining} suất
-                </span>
-              </div>
-              <div className="bg-red-50 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <div className="flex items-center gap-2 flex-1 min-w-0">
-                  <span className="text-red-500 text-lg flex-shrink-0">🔥</span>
-                  <p className="text-red-800 text-xs font-semibold leading-snug">
-                    Chỉ còn <span className="font-black text-red-700 text-sm">{stockRemaining} suất</span> giá khuyến mãi hôm nay — hết là về giá gốc, không mở lại.
-                  </p>
-                </div>
-                <button
-                  onClick={() => document.getElementById('combo-step')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
-                  className="flex-shrink-0 w-full sm:w-auto bg-red-600 text-white text-xs font-black px-4 py-2 rounded-xl hover:bg-red-700 active:scale-95 transition-all whitespace-nowrap shadow-sm"
-                >
-                  ĐẶT NGAY TRƯỚC KHI HẾT
-                </button>
-              </div>
-            </div>
-
-            {/* Trust badges */}
+            {/* Trust badges */
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
                 { emoji: '🚚', title: 'Freeship toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
