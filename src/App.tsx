@@ -2108,7 +2108,7 @@ export default function App() {
               </form>
             </div>
 
-            {/* Trust badges */
+            {/* Trust badges */}
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
                 { emoji: '🚚', title: 'Freeship toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
