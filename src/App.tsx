@@ -1503,8 +1503,9 @@ export default function App() {
               {/* ── COMBO 2 CHAI HERO – mobile: top, desktop: middle ── */}
               <div className="order-first md:order-2 relative flex flex-col">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
-                  <span className="bg-amber-400 text-slate-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                    �️ ĐƯỢC CHỌN NHIỀU NHẤT
+                  <span className="inline-flex items-center gap-1.5 bg-amber-400 text-slate-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                    <Star className="w-3.5 h-3.5 fill-slate-900" />
+                    ĐƯỢC CHỌN NHIỀU NHẤT
                   </span>
                 </div>
                 <div className="bg-gradient-to-b from-blue-950 to-slate-900 rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-xl shadow-blue-950/70 mt-5 flex flex-col flex-1">
@@ -1570,7 +1571,7 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-base hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
+                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-base md:text-sm lg:text-base hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
                   >
                     ✔ Chọn Combo 2 — Bảo Vệ Cả Năm
                   </button>
