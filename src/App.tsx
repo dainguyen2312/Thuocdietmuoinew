@@ -1375,7 +1375,7 @@ export default function App() {
                   time: "3 phút",
                   title: "Xịt đều vào các điểm",
                   desc: "Giữ chai cách bề mặt 20cm, xịt 1 lượt mỏng. Không cần xịt nhiều.",
-                  icon: "�",
+                  icon: '💦',
                 },
                 {
                   num: "3",
