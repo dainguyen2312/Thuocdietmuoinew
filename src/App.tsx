@@ -1471,12 +1471,12 @@ export default function App() {
 
                   {/* Price block */}
                   <div className="bg-black/25 rounded-xl px-4 py-3 mb-4 mt-2">
-                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">498.000đ</span></p>
+                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">418.000đ</span></p>
                     <div className="flex items-baseline gap-2 mb-1.5">
                       <span className="text-4xl font-black text-white">298.000đ</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 200K</span>
+                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
                     </div>
                   </div>
 
@@ -1500,24 +1500,35 @@ export default function App() {
                   {/* Urgency strip */}
                   <div className="mb-3 rounded-xl overflow-hidden border border-red-400/40">
                     <div className="bg-red-600 px-3 py-1.5 flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1.5 min-w-0">
                         <span className="relative flex h-1.5 w-1.5 flex-shrink-0">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-100"></span>
                         </span>
-                        <span className="text-white text-xs font-black uppercase tracking-wide">⚡ Hàng có hạn trong ngày</span>
+                        <span className="text-white text-xs font-black uppercase tracking-wide truncate">⚡ Hàng có hạn trong ngày</span>
                       </div>
-                      <span className="bg-white text-red-600 text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap shadow-sm">Còn {stockRemaining} suất</span>
+                      <span className="bg-white text-red-600 text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0 shadow-sm">Còn {stockRemaining} suất</span>
                     </div>
-                    <div className="bg-red-950/60 px-3 py-2 flex items-center gap-2">
-                      <span className="text-base flex-shrink-0">🔥</span>
-                      <p className="text-red-200 text-xs font-semibold leading-snug">Chỉ còn <span className="font-black text-white">{stockRemaining} suất</span> giá KM hôm nay — hết là về giá gốc, không mở lại.</p>
+                    <div className="bg-red-950/60 px-3 py-2 flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-1.5 min-w-0">
+                        <span className="text-sm flex-shrink-0">🔥</span>
+                        <p className="text-red-200 text-xs font-semibold leading-snug">Chỉ còn <span className="font-black text-white">{stockRemaining} suất</span> — hết là về giá gốc.</p>
+                      </div>
+                      {(() => { const t = formatMidnight(midnightCountdownSecs); return (
+                        <div className="flex-shrink-0 flex items-center gap-0.5 bg-black/40 rounded-lg px-2 py-1">
+                          <span className="font-black text-white text-xs tabular-nums">{t.h}</span>
+                          <span className="text-red-300 text-xs font-black">:</span>
+                          <span className="font-black text-white text-xs tabular-nums">{t.m}</span>
+                          <span className="text-red-300 text-xs font-black">:</span>
+                          <span className="font-black text-amber-300 text-xs tabular-nums">{t.s}</span>
+                        </div>
+                      ); })()}
                     </div>
                   </div>
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-lg hover:bg-amber-300 transition-all active:scale-95 shadow-md"
+                    className="w-full py-3.5 rounded-xl bg-amber-400 text-slate-900 font-black text-sm sm:text-base md:text-sm lg:text-base whitespace-nowrap hover:bg-amber-300 transition-all active:scale-95 shadow-md"
                   >
                     ĐẶT NGAY TRƯỚC KHI HẾT →
                   </button>
