@@ -2262,7 +2262,7 @@ export default function App() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <img src="/pslogo.webp" alt="PestShield Logo" className="h-10 w-10 object-contain rounded-lg" loading="lazy" width={40} height={40} />
-                <span className="text-xl font-bold tracking-tighter text-white">Chai Xịt Muỗi <span className="text-emerald-400">PestShield</span></span>
+                <span className="text-xl font-bold tracking-tighter text-white">Thuốc Xịt Muỗi <span className="text-emerald-400">PestShield</span></span>
               </div>
               <p className="text-sm leading-relaxed">
                 Thuocxitmuoi.com — chai xịt muỗi &amp; côn trùng PestShield từ hoạt chất thiên nhiên. Xịt 1 lần, bảo vệ cả nhà suốt 6 tháng. An toàn cho trẻ nhỏ &amp; vật nuôi.
