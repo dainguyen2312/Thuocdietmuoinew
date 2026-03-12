@@ -165,7 +165,7 @@ async function notifyTelegram(
     : '';
 
   const text =
-    `🛒 <b>ĐƠN HÀNG MỚI – SAMURAI</b>\n` +
+    `🛒 <b>ĐƠN HÀNG MỚI – PESTSHIELD</b>\n` +
     `━━━━━━━━━━━━━━━━\n` +
     `👤 <b>Khách:</b> ${escapeHtml(order.name)}\n` +
     `📞 <b>SĐT:</b> <code>${escapeHtml(order.phone)}</code>\n` +
