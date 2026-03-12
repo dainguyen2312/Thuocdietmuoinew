@@ -1471,12 +1471,12 @@ export default function App() {
 
                   {/* Price block */}
                   <div className="bg-black/25 rounded-xl px-4 py-3 mb-4 mt-2">
-                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">418.000đ</span></p>
+                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">498.000đ</span></p>
                     <div className="flex items-baseline gap-2 mb-1.5">
                       <span className="text-4xl font-black text-white">298.000đ</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
+                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 200K</span>
                     </div>
                   </div>
 
@@ -1509,17 +1509,16 @@ export default function App() {
               {/* ── GÓI NHÀ NHỎ – mobile: 2nd, desktop: left ── */}
               <div className="order-2 md:order-1 flex flex-col">
                 <div className="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 flex flex-col flex-1">
-                  <h3 className="text-lg font-black text-slate-100 mb-0.5">GÓI NHÀ NHỎ</h3>
-                  <p className="text-slate-300 text-sm mb-1 font-medium">3 lọ Samurai · Nhà ≤ 50m²</p>
-                  <p className="text-slate-500 text-xs mb-4">Xử lý 2–3 vị trí mối · Dùng thử, nhà ít mối mới có mối.</p>
+                  <h3 className="text-lg font-black text-slate-100 mb-0.5">1 CHAI PESTSHIELD</h3>
+                  <p className="text-slate-300 text-sm mb-1 font-medium">Căn hộ · Nhà ≤ 50m²</p>
                   <div className="mb-4">
-                    <span className="text-3xl font-black text-white">249.000đ</span>
+                    <span className="text-3xl font-black text-white">209.000đ</span>
                   </div>
                   <ul className="space-y-2 mb-5 flex-1">
                     {[
-                      "3 lọ Samurai Nhật Bản",
-                      "Xử lý 2–3 vị trí mối",
-                      "Phù hợp nhà nhỏ ≤ 50m²",
+                      "1 chai PestShield 500ml",
+                      "Bảo vệ đủ nhà ≤ 50m²",
+                      "Hiệu lực 6 tháng",
                       "Miễn phí giao hàng",
                       "Kiểm tra hàng trước khi nhận",
                     ].map((item, i) => (
@@ -2089,6 +2088,36 @@ export default function App() {
                   ))}
                 </div>
               </form>
+            </div>
+
+            {/* Urgency bar – synchronized with stockRemaining */}
+            <div className="mt-4 rounded-2xl overflow-hidden border border-red-200 shadow-md">
+              <div className="bg-red-600 px-4 py-2.5 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="relative flex h-2 w-2 flex-shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-100"></span>
+                  </span>
+                  <span className="text-white text-xs font-black uppercase tracking-wide leading-tight truncate">⚡ Hàng có hạn trong ngày</span>
+                </div>
+                <span className="bg-white text-red-600 text-xs font-black px-2.5 py-1 rounded-full whitespace-nowrap flex-shrink-0 shadow-sm">
+                  Còn {stockRemaining} suất
+                </span>
+              </div>
+              <div className="bg-red-50 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <div className="flex items-center gap-2 flex-1 min-w-0">
+                  <span className="text-red-500 text-lg flex-shrink-0">🔥</span>
+                  <p className="text-red-800 text-xs font-semibold leading-snug">
+                    Chỉ còn <span className="font-black text-red-700 text-sm">{stockRemaining} suất</span> giá khuyến mãi hôm nay — hết là về giá gốc, không mở lại.
+                  </p>
+                </div>
+                <button
+                  onClick={() => document.getElementById('combo-step')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                  className="flex-shrink-0 w-full sm:w-auto bg-red-600 text-white text-xs font-black px-4 py-2 rounded-xl hover:bg-red-700 active:scale-95 transition-all whitespace-nowrap shadow-sm"
+                >
+                  ĐẶT NGAY TRƯỚC KHI HẾT
+                </button>
+              </div>
             </div>
 
             {/* Trust badges */}
