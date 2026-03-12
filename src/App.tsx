@@ -1462,21 +1462,21 @@ export default function App() {
               <div className="order-first md:order-2 relative flex flex-col">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
                   <span className="bg-amber-400 text-slate-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                    🔥 PHỔ BIẾN NHẤT – NÊN CHỌN
+                    �️ ĐƯỢC CHỌN NHIỀU NHẤT
                   </span>
                 </div>
-                <div className="bg-gradient-to-b from-emerald-700 to-teal-900 rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-xl shadow-emerald-950/70 mt-5 flex flex-col flex-1">
+                <div className="bg-gradient-to-b from-blue-950 to-slate-900 rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-xl shadow-blue-950/70 mt-5 flex flex-col flex-1">
                   <h3 className="text-xl font-black text-white tracking-tight mb-0.5">COMBO 2 CHAI</h3>
-                  <p className="text-emerald-200 text-sm mb-1 font-medium">Nhà phố · 50–100m²</p>
+                  <p className="text-blue-200 text-sm mb-1 font-medium">Nhà phố · 50–100m²</p>
 
                   {/* Price block */}
-                  <div className="bg-black/25 rounded-xl px-4 py-3 mb-4 mt-2">
-                    <p className="text-emerald-300 text-xs mb-1">Giá gốc: <span className="line-through text-emerald-400">418.000đ</span></p>
+                  <div className="bg-black/30 rounded-xl px-4 py-3 mb-4 mt-2">
+                    <p className="text-blue-300 text-xs mb-1">Giá gốc: <span className="line-through text-blue-400">418.000đ</span></p>
                     <div className="flex items-baseline gap-2 mb-1.5">
                       <span className="text-4xl font-black text-white">298.000đ</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-400 text-red-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
+                      <span className="bg-amber-400 text-slate-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
                     </div>
                   </div>
 
@@ -1490,8 +1490,8 @@ export default function App() {
                       { text: 'Miễn phí giao hàng toàn quốc' },
                       { text: 'Kiểm tra hàng trước khi nhận' },
                     ].map((item, i) => (
-                      <li key={i} className={cn('flex items-center gap-2.5', item.star ? 'text-sm font-black text-amber-300' : 'text-sm text-white/80')}>
-                        <CheckCircle2 className={cn('flex-shrink-0', item.star ? 'w-4 h-4 text-amber-300' : 'w-4 h-4 text-white/40')} />
+                      <li key={i} className={cn('flex items-center gap-2.5', item.star ? 'text-sm font-black text-amber-300' : 'text-sm text-blue-100/80')}>
+                        <CheckCircle2 className={cn('flex-shrink-0', item.star ? 'w-4 h-4 text-amber-400' : 'w-4 h-4 text-blue-400/60')} />
                         {item.text}
                       </li>
                     ))}
@@ -1528,9 +1528,9 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-3.5 rounded-xl bg-amber-400 text-slate-900 font-black text-sm sm:text-base md:text-sm lg:text-base whitespace-nowrap hover:bg-amber-300 transition-all active:scale-95 shadow-md"
+                    className="w-full py-3.5 rounded-xl bg-amber-400 text-slate-900 font-black text-sm sm:text-base md:text-sm lg:text-base whitespace-nowrap hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
                   >
-                    ĐẶT NGAY TRƯỚC KHI HẾT →
+                    🛡️ Chọn Combo 2 — Bảo Vệ Cả Năm
                   </button>
                 </div>
               </div>
