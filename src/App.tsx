@@ -1180,9 +1180,9 @@ export default function App() {
                   ))}
                 </div>
                 <div className="mt-8 inline-flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-3.5 w-full lg:w-auto">
-                  <span className="text-2xl">💡</span>
+                  <span className="text-2xl flex-shrink-0">💡</span>
                   <p className="text-emerald-800 font-bold text-base md:text-lg leading-snug">
-                    Không phải xịt mạnh hơn —<br className="sm:hidden" /> mà <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">xịt đúng cách hơn</span>.
+                    Không phải xịt mạnh hơn — mà <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">xịt đúng cách hơn</span>.
                   </p>
                 </div>
               </div>
@@ -1570,7 +1570,7 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-3.5 rounded-xl bg-amber-400 text-slate-900 font-black text-sm whitespace-nowrap overflow-hidden hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
+                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-base hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
                   >
                     ✔ Chọn Combo 2 — Bảo Vệ Cả Năm
                   </button>
