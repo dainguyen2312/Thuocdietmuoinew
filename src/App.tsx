@@ -420,15 +420,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
 
 // ── Testimonials data (defined once, reused for mobile & desktop) ──
 const REVIEWS = [
-  { name: "Bác Hùng",  age: 62, loc: "Hà Nội",    combo: "Combo Gia Đình",  avatar: "/hungmin.webp",  rating: 5, photo: "/xm1min.webp", photoSmall: "/xm1minnew.webp", text: "Nhà tôi dùng nhiều loại rồi mối vẫn cứ đục. Từ ngày rải Samurai vào khe gỗ thấy im hẳn, hiệu quả rõ sau 5 ngày. Rất hài lòng!" },
-  { name: "Cô Lan",    age: 55, loc: "TP. HCM",   combo: "Combo Gia Đình",  avatar: "/colanmin.webp",   rating: 4, photo: "/xm2min.webp", photoSmall: "/xm2minnew.webp", text: "Không mùi hôi như mấy loại ngoài chợ, nhà có cháu nhỏ nên tôi yên tâm. Cách dùng đơn giản, phụ nữ như tôi tự làm được." },
-  { name: "Anh Tuấn",  age: 45, loc: "Đà Nẵng",  combo: "Combo Nhà Nhỏ", avatar: "/anhtuanmin.webp",  rating: 5, photo: "/nhanhang3min.webp", text: "Giao hàng nhanh, đóng gói cẩn thận. Mua combo 6 lọ dùng cho cả nhà và biếu ông bà nội. Hiệu quả rõ rệt sau 1 tuần." },
-  { name: "Bác Minh",  age: 58, loc: "Cần Thơ",   combo: "Combo Nhà Lớn",  avatar: "/bacminhmin.webp",  rating: 4, photo: "/xm4min.webp", text: "Nhà gỗ cũ mối ăn nhiều năm, tôi đặt bột Samurai vào các khe tủ và chân cầu thang. Sau 1 tuần không còn thấy mối bò ra nữa." },
-  { name: "Cô Hoa",    age: 51, loc: "Hải Phòng", combo: "Combo Gia Đình",  avatar: "/cohoamin.webp",   rating: 5, photo: "/xm5min.webp", text: "Sợ nhất là thuốc độc hại cho cháu nội, nhưng loại này an toàn thật, không mùi. Rắc bột vào xong sinh hoạt bình thường, không cần tránh mặt." },
-  { name: "Chú Thành", age: 64, loc: "Bình Dương",combo: "Combo Gia Đình",  avatar: "/chuthanhmin.webp", rating: 4, photo: "/xm6min.webp", photoSmall: "/xm6minnew.webp", text: "Trước hay gọi thợ mỗi lần mấy triệu mà mối vẫn quay lại. Dùng Samurai tự xử lý được, tiết kiệm hơn nhiều mà hiệu quả hơn hẳn." },
-  { name: "Chị Nga",   age: 47, loc: "Đồng Nai",  combo: "Combo Nhà Nhỏ", avatar: "/chingamin.webp",   rating: 5, photo: "/xm7min.webp", text: "Nhà có 2 con mèo nên lo lắng lắm. Sử dụng Samurai thấy an toàn hoàn toàn, mèo không bị gì. Mối trong tủ quần áo giảm hẳn sau vài ngày." },
-  { name: "Bác Sơn",   age: 60, loc: "Quảng Nam", combo: "Combo Nhà Lớn",  avatar: "/bacsonmin.webp",   rating: 4, photo: "/xm8min.webp", text: "Mối trong tường nhà khó xử lý lắm. Tôi rải bột vào các vết nứt và đường mối đi qua. Khoảng 10 ngày sau không còn thấy đường mối nữa." },
-  { name: "Cô Mai",    age: 53, loc: "Vũng Tàu",  combo: "Combo Gia Đình",  avatar: "/comaimin.webp",   rating: 5, photo: "/nhanhang4min.webp", text: "Mua về dùng thấy hiệu quả nên biếu thêm cho hàng xóm. Ai cũng khen dễ dùng và hiệu quả. Giá cả phải chăng, freeship tận nhà." },
+  { name: "Bác Hùng",  age: 62, loc: "Hà Nội",    combo: "Combo 2 Chai PestShield",  avatar: "/hungmin.webp",  rating: 5, photo: "/xm1min.webp", photoSmall: "/xm1minnew.webp", text: "Nhà tôi muỗi nhiều lắm, nhất là tối mùa hè. Từ ngày xịt PestShield vào góc tường và rèm cửa thấy im hẳn, ngủ ngon không cần bật quạt. Hiệu quả rõ chỉ sau 2 ngày!" },
+  { name: "Cô Lan",    age: 55, loc: "TP. HCM",   combo: "Combo 2 Chai PestShield",  avatar: "/colanmin.webp",   rating: 4, photo: "/xm2min.webp", photoSmall: "/xm2minnew.webp", text: "Không mùi hắc như thuốc xịt ngoài chợ, nhà có cháu nhỏ tôi vẫn yên tâm. Xịt xong 30 phút vào sinh hoạt bình thường. PestShield thật sự khác hẳn các loại khác." },
+  { name: "Anh Tuấn",  age: 45, loc: "Đà Nẵng",  combo: "1 Chai PestShield", avatar: "/anhtuanmin.webp",  rating: 5, photo: "/nhanhang3min.webp", text: "Giao hàng nhanh, đóng gói cẩn thận. Căn hộ 40m² dùng 1 chai là đủ, muỗi và kiến giảm hẳn sau 1 tuần. Dùng xong tôi giới thiệu ngay cho cả nhóm công ty." },
+  { name: "Bác Minh",  age: 58, loc: "Cần Thơ",   combo: "Combo 3 Chai PestShield",  avatar: "/bacminhmin.webp",  rating: 4, photo: "/xm4min.webp", text: "Nhà tôi 3 tầng, muỗi nhiều từ kênh rạch. Mua combo 3 chai xịt toàn bộ, hiệu quả kéo dài gần 6 tháng không cần xịt lại. Rất đáng tiền, hơn cả dịch vụ phun ngoài." },
+  { name: "Cô Hoa",    age: 51, loc: "Hải Phòng", combo: "Combo 2 Chai PestShield",  avatar: "/cohoamin.webp",   rating: 5, photo: "/xm5min.webp", text: "Lo nhất là ảnh hưởng cháu nội, nhưng PestShield an toàn thật — không mùi độc, xịt xong sinh hoạt bình thường. Muỗi và kiến biến mất gần hết. Tôi rất hài lòng!" },
+  { name: "Chú Thành", age: 64, loc: "Bình Dương",combo: "Combo 2 Chai PestShield",  avatar: "/chuthanhmin.webp", rating: 4, photo: "/xm6min.webp", photoSmall: "/xm6minnew.webp", text: "Trước hay gọi dịch vụ phun mỗi lần mấy trăm mà chỉ hiệu quả 1–2 tháng. PestShield tự xịt tại nhà được, hiệu lực 6 tháng, tiết kiệm hơn nhiều mà chủ động hơn hẳn." },
+  { name: "Chị Nga",   age: 47, loc: "Đồng Nai",  combo: "1 Chai PestShield", avatar: "/chingamin.webp",   rating: 5, photo: "/xm7min.webp", text: "Nhà có 2 con mèo nên tôi rất cẩn thận. Xịt PestShield xong cho mèo ra ngoài 30 phút rồi thả vô bình thường, mèo không sao cả. Muỗi trong phòng ngủ giảm rõ rệt." },
+  { name: "Bác Sơn",   age: 60, loc: "Quảng Nam", combo: "Combo 3 Chai PestShield",  avatar: "/bacsonmin.webp",   rating: 4, photo: "/xm8min.webp", text: "Nhà vườn rộng, muỗi từ bụi cây nhiều vô kể. Đặt combo 3 chai xịt cả trong lẫn ngoài hiên. Sau 1 tuần ngồi sân không cần kem chống muỗi nữa — tuyệt vời!" },
+  { name: "Cô Mai",    age: 53, loc: "Vũng Tàu",  combo: "Combo 2 Chai PestShield",  avatar: "/comaimin.webp",   rating: 5, photo: "/nhanhang4min.webp", text: "Mua về dùng thấy hiệu quả nên đặt thêm biếu hàng xóm. Ai cũng khen PestShield dễ xịt, không cần gọi thợ. Freeship tận nhà, trả tiền khi nhận, rất yên tâm." },
 ];
 
 // ── FAQ data (accordion) ──
@@ -698,18 +698,18 @@ export default function App() {
   // Social Proof Notifications
   const [currentNotification, setCurrentNotification] = useState<any>(null);
   const notifications = [
-    { name: "Anh Thanh", loc: "Hà Nội", combo: "Gói Gia Đình (6 lọ)", time: "5 phút trước" },
-    { name: "Chị Lan", loc: "TP. Hồ Chí Minh", combo: "Gói Nhà Nhỏ (3 lọ)", time: "15 phút trước" },
-    { name: "Bác Hùng", loc: "Đà Nẵng", combo: "Gói Nhà Lớn (9 lọ)", time: "30 phút trước" },
-    { name: "Cô Mai", loc: "Hải Phòng", combo: "Gói Gia Đình (6 lọ)", time: "45 phút trước" },
-    { name: "Anh Tuấn", loc: "Cần Thơ", combo: "Gói Nhà Nhỏ (3 lọ)", time: "1 giờ trước" },
-    { name: "Chị Hoa", loc: "Bình Dương", combo: "Gói Gia Đình (6 lọ)", time: "20 phút trước" },
-    { name: "Bác Nam", loc: "Đồng Nai", combo: "Gói Nhà Lớn (9 lọ)", time: "40 phút trước" },
-    { name: "Chị Phượng", loc: "Nghệ An", combo: "Gói Nhà Nhỏ (3 lọ)", time: "10 phút trước" },
-    { name: "Chú Bình", loc: "Quảng Nam", combo: "Gói Gia Đình (6 lọ)", time: "35 phút trước" },
-    { name: "Bà Liên", loc: "Vũng Tàu", combo: "Gói Nhà Lớn (9 lọ)", time: "50 phút trước" },
-    { name: "Anh Dũng", loc: "Huế", combo: "Gói Nhà Nhỏ (3 lọ)", time: "25 phút trước" },
-    { name: "Chị Thảo", loc: "Long An", combo: "Gói Gia Đình (6 lọ)", time: "1 giờ trước" },
+    { name: "Anh Thanh", loc: "Hà Nội", combo: "Combo 2 Chai PestShield", time: "5 phút trước" },
+    { name: "Chị Lan", loc: "TP. Hồ Chí Minh", combo: "1 Chai PestShield", time: "15 phút trước" },
+    { name: "Bác Hùng", loc: "Đà Nẵng", combo: "Combo 3 Chai PestShield", time: "30 phút trước" },
+    { name: "Cô Mai", loc: "Hải Phòng", combo: "Combo 2 Chai PestShield", time: "45 phút trước" },
+    { name: "Anh Tuấn", loc: "Cần Thơ", combo: "1 Chai PestShield", time: "1 giờ trước" },
+    { name: "Chị Hoa", loc: "Bình Dương", combo: "Combo 2 Chai PestShield", time: "20 phút trước" },
+    { name: "Bác Nam", loc: "Đồng Nai", combo: "Combo 3 Chai PestShield", time: "40 phút trước" },
+    { name: "Chị Phượng", loc: "Nghệ An", combo: "1 Chai PestShield", time: "10 phút trước" },
+    { name: "Chú Bình", loc: "Quảng Nam", combo: "Combo 2 Chai PestShield", time: "35 phút trước" },
+    { name: "Bà Liên", loc: "Vũng Tàu", combo: "Combo 3 Chai PestShield", time: "50 phút trước" },
+    { name: "Anh Dũng", loc: "Huế", combo: "1 Chai PestShield", time: "25 phút trước" },
+    { name: "Chị Thảo", loc: "Long An", combo: "Combo 2 Chai PestShield", time: "1 giờ trước" },
   ];
 
   useEffect(() => {
@@ -1597,11 +1597,11 @@ export default function App() {
             {/* Header */}
             <div className="text-center mb-6 md:mb-8 px-4">
               <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-1.5">Đánh giá thực tế</p>
-              <h2 className="text-xl md:text-3xl font-black mb-2 uppercase tracking-tight">Khách Hàng Nói Gì Về Samurai?</h2>
+              <h2 className="text-xl md:text-3xl font-black mb-2 uppercase tracking-tight">Khách Hàng Nói Gì Về PestShield?</h2>
               <div className="flex justify-center gap-0.5 text-amber-400 mb-1">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}
               </div>
-              <p className="text-slate-500 text-base font-medium">12.400+ khách hàng đã tin dùng Samurai trên toàn quốc</p>
+              <p className="text-slate-500 text-base font-medium">12.400+ khách hàng đã tin dùng PestShield trên toàn quốc</p>
             </div>
 
             {/* ── MOBILE: Auto-scroll carousel ── */}
