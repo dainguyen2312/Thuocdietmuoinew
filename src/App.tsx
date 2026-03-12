@@ -2156,15 +2156,15 @@ export default function App() {
               </div>
             </div>
 
-            {/* Chứng Nhận Chất Lượng ISO Nhật Bản */}
+            {/* Chứng Nhận An Toàn Hoá Chất Châu Âu */}
             <div className="mt-10">
               <h3 className="text-center text-lg sm:text-xl font-extrabold text-slate-800 mb-5 tracking-tight">
-                🇯🇵 Chứng Nhận Chất Lượng ISO Nhật Bản
+                🇪🇺 Chứng Nhận An Toàn Hoá Chất Châu Âu
               </h3>
               <div className="flex justify-center px-4">
                 <img
-                  src="/chungnhanmin.webp"
-                  alt="Chứng nhận chất lượng ISO Nhật Bản"
+                  src="/chungnhan.webp"
+                  alt="Chứng nhận an toàn hoá chất Châu Âu"
                   className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-lg border border-slate-200 object-contain"
                   loading="lazy"
                   width={480}
