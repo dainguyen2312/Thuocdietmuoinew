@@ -976,17 +976,17 @@ export default function App() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-10 justify-center lg:justify-start">
-                  <button
-                    onClick={() => { trackCTAClick('Đặt Combo 2 Chai', 'hero'); scrollToOrder(); }}
-                    className="group flex items-center justify-center gap-3 bg-orange-500 text-white px-8 py-5 rounded-2xl font-black text-xl hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
-                  >
-                    <ShoppingCart className="w-6 h-6 flex-shrink-0" />
-                    <span className="block leading-snug text-left">
-                      <span className="block text-xl font-black tracking-tight">Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
-                      <small className="block text-sm font-medium text-yellow-100 mt-0.5">Tiết kiệm 120.000đ · Xịt 1 lần · Không lo 6 tháng</small>
-                    </span>
-                    <ChevronRight className="w-6 h-6 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="flex flex-col items-center sm:items-start gap-1.5 w-full sm:w-auto">
+                    <button
+                      onClick={() => { trackCTAClick('Đặt Combo 2 Chai', 'hero'); scrollToOrder(); }}
+                      className="group flex items-center justify-center gap-2.5 bg-orange-500 text-white px-6 py-4 rounded-2xl font-black text-lg hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full whitespace-nowrap"
+                    >
+                      <ShoppingCart className="w-5 h-5 flex-shrink-0" />
+                      <span className="whitespace-nowrap">Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
+                      <ChevronRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <p className="text-sm font-medium text-slate-500 text-center sm:text-left whitespace-nowrap">Tiết kiệm 120.000đ · Giao COD · Xịt 1 lần</p>
+                  </div>
                   <div className="flex items-center gap-3 px-4 py-2 justify-center">
                     <div className="flex -space-x-2">
                       {[1,2,3,4].map(i => (
