@@ -2126,7 +2126,7 @@ export default function App() {
                 { emoji: '🚚', title: 'Freeship toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
                 { emoji: '🛡️', title: 'An toàn cho người & thú cưng', sub: 'Không độc hại, không mùi khó chịu' },
                 { emoji: '⚡', title: 'Xịt 1 lần, hiệu lực 6 tháng', sub: 'Không cần gọi dịch vụ phun lại' },
-                { emoji: '�🇪', title: 'Công nghệ Đức', sub: 'Hoạt chất thiên nhiên chiết xuất hoa cúc' },
+                { emoji: '🇪🇺', title: 'Công Nghệ Đức - Tiêu Chuẩn Châu Âu', sub: 'Hoạt chất thiên nhiên chiết xuất từ Hoa Cúc' },
               ].map((b, i) => (
                 <div key={i} className="bg-white rounded-2xl border border-slate-200 px-4 py-3 flex items-start gap-3 shadow-sm">
                   <span className="text-2xl leading-none mt-0.5">{b.emoji}</span>
