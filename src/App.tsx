@@ -4,6 +4,17 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
+import {
+  initGTM,
+  trackPageView,
+  trackCTAClick,
+  trackSelectPackage,
+  trackFormStart,
+  trackFormSubmit,
+  trackPurchase,
+  trackScrollDepth,
+  trackBotDetection,
+} from './utils/gtm';
 import { 
   CheckCircle2, 
   ShieldCheck, 
@@ -482,6 +493,36 @@ export default function App() {
   const [countdownToMidnight, setCountdownToMidnight] = useState('');
   const [midnightCountdownSecs, setMidnightCountdownSecs] = useState(0);
   const [upsellApplied, setUpsellApplied] = useState(false);
+  // ── GTM: init + page view + scroll depth + bot detection ──────────────────
+  useEffect(() => {
+    initGTM();
+    trackPageView();
+
+    // Bot detection sau 5 giây
+    const botTimer = setTimeout(trackBotDetection, 5000);
+
+    // Scroll depth 25/50/75/90%
+    const fired = new Set<number>();
+    const thresholds = [25, 50, 75, 90] as const;
+    const onScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      const pct = Math.floor((scrolled / total) * 100);
+      for (const t of thresholds) {
+        if (!fired.has(t) && pct >= t) {
+          fired.add(t);
+          trackScrollDepth(t);
+        }
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      clearTimeout(botTimer);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
   // Capture UTM params – fallback sessionStorage phòng redirect drop UTM (www ↔ non-www)
   const _rawSource   = new URLSearchParams(window.location.search).get('utm_source')   ?? '';
   const _rawCampaign = new URLSearchParams(window.location.search).get('utm_campaign') ?? '';
@@ -581,6 +622,8 @@ export default function App() {
       });
       const result = await res.json();
       if (result.ok) {
+        const comboPrice = { combo1: 209000, combo2: 298000, combo3: 397000 }[data.combo as string] ?? 0;
+        trackFormSubmit(getComboName(data.combo), comboPrice, result.orderId ?? '');
         setPendingOrderData(data);
         setPendingOrderId(result.orderId);
         setSubmitStatus('idle');
@@ -616,6 +659,8 @@ export default function App() {
       });
       const result = await res.json();
       if (result.ok) {
+        const comboPrice = { combo1: 209000, combo2: 298000, combo3: 397000 }[data.combo as string] ?? 0;
+        trackPurchase(getComboName(data.combo), comboPrice, pendingOrderId ?? '');
         setSubmitStatus('success');
         setOrderCustomerName(data.name || '');
         setShowSuccessModal(true);
@@ -932,7 +977,7 @@ export default function App() {
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-10 justify-center lg:justify-start">
                   <button
-                    onClick={scrollToOrder}
+                    onClick={() => { trackCTAClick('Đặt Combo 2 Chai', 'hero'); scrollToOrder(); }}
                     className="group flex items-center justify-center gap-3 bg-orange-500 text-white px-8 py-5 rounded-2xl font-black text-xl hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full sm:w-auto"
                   >
                     <ShoppingCart className="w-6 h-6 flex-shrink-0" />
@@ -1851,7 +1896,13 @@ export default function App() {
                           {...register("combo", { required: true })}
                           value={item.value}
                           checked={selectedCombo === item.value}
-                          onChange={(e) => { setSelectedCombo(e.target.value); setValue('combo', e.target.value); }}
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            const price = { combo1: 209000, combo2: 298000, combo3: 397000 }[val] ?? 0;
+                            setSelectedCombo(val);
+                            setValue('combo', val);
+                            trackSelectPackage(getComboName(val), price);
+                          }}
                           className="sr-only"
                         />
                         {item.recommended && (
@@ -1969,6 +2020,7 @@ export default function App() {
                       placeholder="Ví dụ: Nguyễn Văn A"
                       autoComplete="name"
                       name="name"
+                      onFocus={trackFormStart}
 
                       className={cn(
                         "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
