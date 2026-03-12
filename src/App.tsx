@@ -819,7 +819,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[52px] md:top-auto md:bottom-8 left-4 z-[60] bg-white rounded-xl shadow-lg border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 max-w-[252px] md:max-w-[300px]"
+            className="fixed top-16 md:top-auto md:bottom-8 left-4 z-[60] bg-white rounded-2xl shadow-lg border border-slate-100 px-3 py-2.5 flex items-center gap-2.5 max-w-[252px] md:max-w-[300px]"
           >
             <div className="relative flex-shrink-0">
               <div className="w-9 h-9 bg-emerald-100 rounded-full flex items-center justify-center">
@@ -1048,7 +1048,7 @@ export default function App() {
         <section id="benefits" className="py-10 md:py-20 bg-emerald-50/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-              <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Muỗi, Gián, Kiến Trong Nhà — Tưởng Nhỏ, Hậu Quả Không Nhỏ</h2>
+              <h2 className="text-2xl md:text-4xl font-black mb-3 md:mb-4">Muỗi, Gián, Kiến Trong Nhà — Tưởng Nhỏ, Hậu Quả Không Nhỏ</h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 items-stretch">
@@ -1133,7 +1133,11 @@ export default function App() {
                 </div>
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 lg:mb-8 text-center lg:text-left">Tại Sao Xịt 1 Lần Mà Hiệu Lực 6 Tháng?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-3 lg:mb-4 text-center lg:text-left">Tại Sao Xịt 1 Lần Mà Hiệu Lực 6 Tháng?</h2>
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5 mb-5 lg:mb-6 text-sm font-semibold text-emerald-800">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                  14.800+ gia đình đã dùng · Đánh giá 4.9/5
+                </div>
 
                 {/* Mobile Image - Product Showcase */}
                 <div className="lg:hidden mb-6 relative">
@@ -1602,7 +1606,7 @@ export default function App() {
                   </ul>
                   <button
                     onClick={() => scrollToOrderWithCombo('combo1')}
-                    className="w-full py-3.5 rounded-xl bg-slate-700 text-slate-200 font-bold text-base hover:bg-slate-600 hover:text-white transition-colors"
+                    className="w-full py-3.5 rounded-xl bg-white text-slate-800 border-2 border-slate-300 font-black text-base hover:bg-slate-50 hover:border-slate-400 transition-all active:scale-95"
                   >
                     CHỌN GÓI NÀY
                   </button>
@@ -1640,7 +1644,7 @@ export default function App() {
                   </ul>
                   <button
                     onClick={() => scrollToOrderWithCombo('combo3')}
-                    className="w-full py-3.5 rounded-xl bg-slate-700 text-slate-200 font-bold text-base hover:bg-slate-600 hover:text-white transition-colors"
+                    className="w-full py-3.5 rounded-xl bg-slate-600 text-white font-black text-base hover:bg-slate-500 transition-all active:scale-95"
                   >
                     CHỌN GÓI NÀY
                   </button>
@@ -1677,7 +1681,7 @@ export default function App() {
               <div className="flex justify-center gap-0.5 text-amber-400 mb-1">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}
               </div>
-              <p className="text-slate-500 text-base font-medium">12.400+ khách hàng đã tin dùng PestShield trên toàn quốc</p>
+              <p className="text-slate-500 text-base font-medium">14.800+ khách hàng đã tin dùng PestShield trên toàn quốc</p>
             </div>
 
             {/* ── MOBILE: Auto-scroll carousel ── */}
@@ -1831,6 +1835,18 @@ export default function App() {
                 </div>
               ))}
             </div>
+
+            {/* CTA sau FAQ */}
+            <div className="mt-8 flex flex-col items-center gap-2">
+              <button
+                onClick={scrollToOrder}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-black text-lg px-8 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all"
+              >
+                <ShoppingCart className="w-5 h-5 flex-shrink-0" />
+                Đặt Hàng Ngay — Giao COD Toàn Quốc
+              </button>
+              <span className="text-xs text-slate-500 font-medium">Miễn phí giao hàng · Kiểm tra hàng trước khi trả tiền</span>
+            </div>
           </div>
         </section>
 
@@ -1855,9 +1871,17 @@ export default function App() {
             <div className="bg-white rounded-3xl shadow-2xl border border-emerald-100 overflow-hidden">
 
               {/* Trust bar */}
-              <div className="bg-green-600 px-6 py-3 flex items-center justify-center gap-3 text-white text-sm font-bold">
-                <ShieldCheck className="w-5 h-5 flex-shrink-0" />
-                <span>Xem hàng trước – Trả tiền sau – Miễn phí vận chuyển</span>
+              <div className="bg-green-600 px-4 py-3 grid grid-cols-3 gap-1 text-white text-xs font-bold">
+                {[
+                  { icon: '🔍', text: 'Xem trước khi nhận' },
+                  { icon: '💰', text: 'Trả tiền sau' },
+                  { icon: '🚚', text: 'Ship miễn phí' },
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col items-center gap-1 text-center">
+                    <span className="text-base leading-none">{item.icon}</span>
+                    <span className="leading-tight">{item.text}</span>
+                  </div>
+                ))}
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="p-5 md:p-7 space-y-5">
