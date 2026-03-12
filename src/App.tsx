@@ -186,7 +186,7 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
           <div className="text-center pt-0.5">
             <p className="text-slate-500 text-sm mb-1.5">Cần hỗ trợ?</p>
             <a
-              href="https://zalo.me/0842717266"
+              href="https://zalo.me/0978380508"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 w-full py-3 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 active:scale-95 transition-all text-slate-600 font-semibold text-base"
@@ -361,7 +361,7 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
             <li>Không hỗ trợ đổi trả nếu sản phẩm đã qua sử dụng và không có lỗi từ nhà sản xuất.</li>
           </ul>
           <h5 className="font-bold text-slate-900">3. Hỗ trợ sau mua</h5>
-          <p>Đội ngũ hỗ trợ của Chaixitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline/Zalo <strong>084 271 7266</strong> hoặc email <strong>lienhe@chaixitmuoi.com</strong>.</p>
+          <p>Đội ngũ hỗ trợ của Chaixitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline/Zalo <strong>0978 38 05 08</strong> hoặc email <strong>lienhe@chaixitmuoi.com</strong>.</p>
         </div>
       )
     },
@@ -2202,8 +2202,8 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <a href="https://zalo.me/0842717266" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    Hotline/Zalo: 084 271 7266
+                  <a href="https://zalo.me/0978380508" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    Hotline/Zalo: 0978 38 05 08
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
