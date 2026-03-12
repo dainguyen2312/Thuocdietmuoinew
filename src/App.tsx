@@ -2123,10 +2123,10 @@ export default function App() {
             {/* Trust badges */}
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
-                { emoji: '🚚', title: 'Giao hàng toàn quốc', sub: 'Nhận hàng rồi mới trả tiền' },
-                { emoji: '✅', title: 'Kiểm tra trước khi thanh toán', sub: 'An tâm mua hàng' },
-                { emoji: '✅', title: 'Dễ sử dụng tại nhà', sub: 'Không cần gọi thợ' },
-                { emoji: '🇯🇵', title: 'Hàng chính hãng Nhật Bản', sub: 'Nhập khẩu trực tiếp công ty' },
+                { emoji: '🚚', title: 'Freeship toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
+                { emoji: '🛡️', title: 'An toàn cho người & thú cưng', sub: 'Không độc hại, không mùi khó chịu' },
+                { emoji: '⚡', title: 'Xịt 1 lần, hiệu lực 6 tháng', sub: 'Không cần gọi dịch vụ phun lại' },
+                { emoji: '�🇪', title: 'Công nghệ Đức', sub: 'Hoạt chất thiên nhiên chiết xuất hoa cúc' },
               ].map((b, i) => (
                 <div key={i} className="bg-white rounded-2xl border border-slate-200 px-4 py-3 flex items-start gap-3 shadow-sm">
                   <span className="text-2xl leading-none mt-0.5">{b.emoji}</span>
