@@ -2024,7 +2024,7 @@ export default function App() {
                       <button
                         type="submit"
                         disabled={submitStatus === 'loading'}
-                        className="w-full py-5 rounded-2xl bg-orange-500 text-white font-black text-xl md:text-2xl hover:bg-orange-600 active:scale-95 transition-all shadow-xl shadow-orange-200 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed disabled:active:scale-100"
+                        className="w-full py-5 rounded-2xl bg-gradient-to-b from-red-600 to-red-700 text-white font-black text-xl md:text-2xl hover:from-red-700 hover:to-red-800 active:scale-95 transition-all shadow-xl shadow-red-900/40 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed disabled:active:scale-100"
                       >
                         {submitStatus === 'loading' ? (
                           <>
@@ -2066,33 +2066,33 @@ export default function App() {
                     };
                     const ctx = comboCtx[selectedCombo] ?? comboCtx.combo2;
                     return (
-                      <div className="mt-4 rounded-xl overflow-hidden border border-orange-200 bg-orange-50">
+                      <div className="mt-4 rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
                         {/* Compact header row */}
-                        <div className="bg-orange-500 px-3 py-1.5 flex items-center justify-between gap-2">
+                        <div className="bg-slate-800 px-3 py-1.5 flex items-center justify-between gap-2">
                           <span className="text-white text-[11px] font-bold flex items-center gap-1.5 leading-tight">
                             <span className="relative flex h-1.5 w-1.5 flex-shrink-0">
-                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-200 opacity-75"></span>
-                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-100"></span>
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-300"></span>
                             </span>
                             ⏰ {ctx.label}
                           </span>
-                          <span className="bg-white/25 text-white text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
+                          <span className="bg-white/20 text-white text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
                             Còn {stockRemaining} suất
                           </span>
                         </div>
                         {/* Timer compact – 1 hàng ngang */}
                         <div className="px-3 py-2.5 flex items-center justify-between gap-3">
-                          <p className="text-orange-800 text-xs leading-snug flex-1">{ctx.sub}</p>
+                          <p className="text-slate-600 text-xs leading-snug flex-1">{ctx.sub}</p>
                           <div className="flex items-center gap-1 flex-shrink-0">
                             {[{ val: ct.h, label: 'giờ' }, { val: ct.m, label: 'phút' }, { val: ct.s, label: 'giây' }].map((seg, i) => (
                               <React.Fragment key={i}>
                                 <div className="flex flex-col items-center">
-                                  <div className="bg-red-700 text-white font-black text-base w-10 h-10 rounded-lg flex items-center justify-center tabular-nums tracking-tight shadow-sm">
+                                  <div className="bg-slate-900 text-white font-black text-base w-10 h-10 rounded-lg flex items-center justify-center tabular-nums tracking-tight shadow-sm">
                                     {seg.val}
                                   </div>
-                                  <span className="text-orange-600 text-[11px] font-bold mt-0.5">{seg.label}</span>
+                                  <span className="text-slate-500 text-[11px] font-bold mt-0.5">{seg.label}</span>
                                 </div>
-                                {i < 2 && <span className="text-red-600 font-black text-base mb-3 select-none">:</span>}
+                                {i < 2 && <span className="text-slate-400 font-black text-base mb-3 select-none">:</span>}
                               </React.Fragment>
                             ))}
                           </div>
