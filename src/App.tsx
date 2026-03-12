@@ -1575,7 +1575,11 @@ export default function App() {
                   </div>
                   <p className="text-slate-300 text-sm mb-3 font-medium">Nhà rộng · &gt; 100m²</p>
                   <div className="mb-4">
+                    <p className="text-slate-400 text-xs mb-1">Giá gốc: <span className="line-through text-slate-500">627.000đ</span></p>
                     <span className="text-3xl font-black text-white">397.000đ</span>
+                    <div className="mt-1.5">
+                      <span className="bg-emerald-500 text-white text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 230K</span>
+                    </div>
                   </div>
                   <ul className="space-y-2 mb-5 flex-1">
                     {[
