@@ -328,15 +328,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       title: "Chính sách bảo mật thông tin",
       body: (
         <div className="space-y-4 text-sm text-slate-600">
-          <p>Chào mừng bạn đến với <strong>Chaixitmuoi.com</strong> — website chính thức của sản phẩm xịt muỗi &amp; côn trùng PestShield. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
+          <p>Chào mừng bạn đến với <strong>thuocxitmuoi.com</strong> — website chính thức của sản phẩm xịt muỗi &amp; côn trùng PestShield. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
           <h5 className="font-bold text-slate-900">1. Thu thập thông tin</h5>
           <p>Chúng tôi chỉ thu thập thông tin cá nhân (họ tên, số điện thoại, địa chỉ giao hàng) khi bạn đặt hàng, nhằm mục đích xử lý đơn hàng và hỗ trợ sau mua.</p>
           <h5 className="font-bold text-slate-900">2. Sử dụng thông tin</h5>
           <p>Thông tin của bạn chỉ được dùng để xác nhận và giao đơn hàng PestShield. Chúng tôi không bán, trao đổi hay chia sẻ dữ liệu cá nhân cho bất kỳ bên thứ ba nào vì mục đích thương mại.</p>
           <h5 className="font-bold text-slate-900">3. Công nghệ theo dõi</h5>
-          <p>Website <strong>chaixitmuoi.com</strong> sử dụng Google Analytics và Meta Pixel để phân tích hành vi truy cập và tối ưu quảng cáo. Dữ liệu này được thu thập dưới dạng ẩn danh, không chứa thông tin định danh cá nhân trực tiếp.</p>
+          <p>Website <strong>thuocxitmuoi.com</strong> sử dụng Google Analytics và Meta Pixel để phân tích hành vi truy cập và tối ưu quảng cáo. Dữ liệu này được thu thập dưới dạng ẩn danh, không chứa thông tin định danh cá nhân trực tiếp.</p>
           <h5 className="font-bold text-slate-900">4. Bảo mật dữ liệu</h5>
-          <p>Toàn bộ thông tin khách hàng được lưu trữ trên hệ thống bảo mật. Mọi thắc mắc về quyền riêng tư, vui lòng liên hệ: <strong>lienhe@chaixitmuoi.com</strong>.</p>
+          <p>Toàn bộ thông tin khách hàng được lưu trữ trên hệ thống bảo mật. Mọi thắc mắc về quyền riêng tư, vui lòng liên hệ: <strong>lienhe@thuocxitmuoi.com</strong>.</p>
         </div>
       )
     },
@@ -344,7 +344,7 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       title: "Điều khoản dịch vụ",
       body: (
         <div className="space-y-4 text-sm text-slate-600">
-          <p>Bằng việc đặt hàng tại <strong>chaixitmuoi.com</strong>, bạn xác nhận đã đọc và đồng ý với các điều khoản sau:</p>
+          <p>Bằng việc đặt hàng tại <strong>thuocxitmuoi.com</strong>, bạn xác nhận đã đọc và đồng ý với các điều khoản sau:</p>
           <h5 className="font-bold text-slate-900">1. Thông tin đặt hàng</h5>
           <p>Bạn cam kết cung cấp thông tin chính xác (họ tên, số điện thoại, địa chỉ) để đảm bảo đơn hàng được giao đúng nơi, đúng người.</p>
           <h5 className="font-bold text-slate-900">2. Hiệu quả sản phẩm PestShield</h5>
@@ -352,7 +352,7 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
           <h5 className="font-bold text-slate-900">3. Trách nhiệm người dùng</h5>
           <p>Người dùng cần đọc kỹ hướng dẫn in trên bao bì trước khi dùng, không xịt trực tiếp vào thực phẩm, đồ chơi trẻ em, hoặc nơi nuôi cá/chim cảnh.</p>
           <h5 className="font-bold text-slate-900">4. Giới hạn trách nhiệm</h5>
-          <p>Chaixitmuoi.com không chịu trách nhiệm với các thiệt hại phát sinh do sử dụng sai hướng dẫn hoặc phối hợp với hóa chất khác mà chưa được tư vấn.</p>
+          <p>Thuocxitmuoi.com không chịu trách nhiệm với các thiệt hại phát sinh do sử dụng sai hướng dẫn hoặc phối hợp với hóa chất khác mà chưa được tư vấn.</p>
         </div>
       )
     },
@@ -369,7 +369,7 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
             <li>Không hỗ trợ đổi trả nếu sản phẩm đã qua sử dụng và không có lỗi từ nhà sản xuất.</li>
           </ul>
           <h5 className="font-bold text-slate-900">3. Hỗ trợ sau mua</h5>
-          <p>Đội ngũ hỗ trợ của Chaixitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline/Zalo <strong>0978 38 05 08</strong> hoặc email <strong>lienhe@chaixitmuoi.com</strong>.</p>
+          <p>Đội ngũ hỗ trợ của Thuocxitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline/Zalo <strong>0978 38 05 08</strong> hoặc email <strong>lienhe@thuocxitmuoi.com</strong>.</p>
         </div>
       )
     },
@@ -378,7 +378,7 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
       body: (
         <div className="space-y-4 text-sm text-slate-600">
           <h5 className="font-bold text-slate-900">1. Phạm vi giao hàng</h5>
-          <p>Chaixitmuoi.com giao hàng toàn quốc — tất cả 63 tỉnh thành Việt Nam, thông qua các đơn vị vận chuyển uy tín (GHTK, GHN, J&amp;T).</p>
+          <p>Thuocxitmuoi.com giao hàng toàn quốc — tất cả 63 tỉnh thành Việt Nam, thông qua các đơn vị vận chuyển uy tín (GHTK, GHN, J&amp;T).</p>
           <h5 className="font-bold text-slate-900">2. Thời gian giao hàng</h5>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Nội thành TP. HCM:</strong> 1 – 2 ngày làm việc.</li>
@@ -2265,7 +2265,7 @@ export default function App() {
                 <span className="text-xl font-bold tracking-tighter text-white">Chai Xịt Muỗi <span className="text-emerald-400">PestShield</span></span>
               </div>
               <p className="text-sm leading-relaxed">
-                Chaixitmuoi.com — chai xịt muỗi &amp; côn trùng PestShield từ hoạt chất thiên nhiên. Xịt 1 lần, bảo vệ cả nhà suốt 6 tháng. An toàn cho trẻ nhỏ &amp; vật nuôi.
+                Thuocxitmuoi.com — chai xịt muỗi &amp; côn trùng PestShield từ hoạt chất thiên nhiên. Xịt 1 lần, bảo vệ cả nhà suốt 6 tháng. An toàn cho trẻ nhỏ &amp; vật nuôi.
               </p>
             </div>
             <div>
@@ -2283,8 +2283,8 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <a href="mailto:lienhe@chaixitmuoi.com" className="hover:text-white transition-colors">
-                    lienhe@chaixitmuoi.com
+                  <a href="mailto:lienhe@thuocxitmuoi.com" className="hover:text-white transition-colors">
+                    lienhe@thuocxitmuoi.com
                   </a>
                 </li>
               </ul>
@@ -2300,7 +2300,7 @@ export default function App() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-800 text-center text-xs">
-            <p>© 2026 - Bản quyền thuộc về Chaixitmuoi.com - PestShield</p>
+            <p>© 2026 - Bản quyền thuộc về Thuocxitmuoi.com - PestShield</p>
           </div>
         </div>
       </footer>

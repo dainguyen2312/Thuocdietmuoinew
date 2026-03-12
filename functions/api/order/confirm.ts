@@ -13,13 +13,13 @@ interface ConfirmPayload {
 }
 
 const ALLOWED_ORIGINS = new Set([
-  'https://thuocdietmoinhatban.com',
-  'https://www.thuocdietmoinhatban.com',
+  'https://thuocxitmuoi.com',
+  'https://www.thuocxitmuoi.com',
 ]);
 
 function getCorsOrigin(request: Request): string {
   const origin = request.headers.get('Origin') ?? '';
-  return ALLOWED_ORIGINS.has(origin) ? origin : 'https://thuocdietmoinhatban.com';
+  return ALLOWED_ORIGINS.has(origin) ? origin : 'https://thuocxitmuoi.com';
 }
 
 // Handle CORS preflight
@@ -69,7 +69,7 @@ async function confirmPancakeOrder(apiKey: string, shopId: string, orderId: stri
 }
 
 // ─── Helper ───────────────────────────────────────────────────────────────────
-function json(data: unknown, status = 200, origin = 'https://thuocdietmoinhatban.com') {
+function json(data: unknown, status = 200, origin = 'https://thuocxitmuoi.com') {
   return new Response(JSON.stringify(data), {
     status,
     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': origin },

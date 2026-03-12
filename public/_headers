@@ -54,6 +54,6 @@
 /api/*
   Cache-Control: no-store, no-cache
   X-Robots-Tag: noindex, nofollow
-  Access-Control-Allow-Origin: https://thuocdietmoinhatban.com
+  Access-Control-Allow-Origin: https://thuocxitmuoi.com
   Access-Control-Allow-Methods: POST, OPTIONS
   Access-Control-Allow-Headers: Content-Type
