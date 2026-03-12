@@ -250,71 +250,71 @@ const ConfirmOrderModal = ({
         exit={{ opacity: 0, y: 40 }}
         transition={{ type: 'spring', stiffness: 360, damping: 32 }}
         onClick={e => e.stopPropagation()}
-        className="bg-white w-full sm:max-w-sm sm:mx-4 sm:rounded-3xl rounded-t-3xl shadow-2xl max-h-[92vh] overflow-y-auto"
+        className="bg-white w-full sm:max-w-md sm:mx-4 sm:rounded-3xl rounded-t-3xl shadow-2xl max-h-[92vh] overflow-y-auto"
       >
         {/* Header */}
         <div className="bg-white border-b-2 border-emerald-100 px-5 pt-5 pb-4 text-center">
-          <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-emerald-200">
-            <svg className="w-6 h-6" style={{ color: '#059669' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <div className="w-11 h-11 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-2 border-2 border-emerald-200">
+            <svg className="w-5 h-5" style={{ color: '#059669' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-black leading-tight" style={{ color: '#059669' }}>Xác nhận đặt hàng</h2>
-          <p className="text-slate-500 text-base mt-1.5 font-medium leading-snug">Đơn sẽ được xử lý ngay sau khi bạn xác nhận</p>
+          <h2 className="text-xl font-black leading-tight" style={{ color: '#059669' }}>Xác nhận đặt hàng</h2>
+          <p className="text-slate-500 text-sm mt-1 font-medium leading-snug">Đơn sẽ được xử lý ngay sau khi bạn xác nhận</p>
         </div>
 
         {/* Body */}
         <div className="px-4 pt-4 pb-5 space-y-3">
 
           {/* Phone – nổi bật nhất */}
-          <div className="bg-emerald-50 border-2 rounded-2xl px-4 py-4 text-center" style={{ borderColor: '#6EE7B7' }}>
-            <p className="text-base font-bold uppercase tracking-wide mb-2" style={{ color: '#059669' }}>Số điện thoại nhận cuộc gọi</p>
-            <p className="text-5xl font-black text-slate-900 tracking-wide tabular-nums leading-none">{data.phone}</p>
+          <div className="bg-emerald-50 border-2 rounded-2xl px-4 py-3.5 text-center" style={{ borderColor: '#6EE7B7' }}>
+            <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: '#059669' }}>Số điện thoại người nhận hàng</p>
+            <p className="text-3xl font-black text-slate-900 tracking-widest tabular-nums leading-none">{data.phone}</p>
           </div>
 
           {/* Cảnh báo nhân viên gọi lại – riêng, nổi bật */}
-          <div className="rounded-2xl border-2 px-4 py-3.5 text-center" style={{ borderColor: '#D4B17A', backgroundColor: '#FDF8F0' }}>
-            <p className="text-base font-black leading-snug" style={{ color: '#92400e' }}>
+          <div className="rounded-2xl border-2 px-4 py-3 text-center" style={{ borderColor: '#D4B17A', backgroundColor: '#FDF8F0' }}>
+            <p className="text-sm font-black leading-snug" style={{ color: '#92400e' }}>
               📞 Nhân viên sẽ gọi xác nhận trước khi gửi hàng.
             </p>
-            <p className="text-sm font-bold mt-1 leading-snug" style={{ color: '#b45309' }}>
+            <p className="text-xs font-bold mt-1 leading-snug" style={{ color: '#b45309' }}>
               Vui lòng nghe máy để đơn được giao sớm nhất.
             </p>
           </div>
 
           {/* Name + Address + Combo */}
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 space-y-3 text-base">
-            <div className="flex gap-2.5">
-              <span className="text-slate-600 w-20 flex-shrink-0 font-medium">Họ tên</span>
-              <span className="font-bold text-slate-800 flex-1">{data.name}</span>
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 space-y-2.5 text-sm">
+            <div className="flex gap-2.5 items-baseline">
+              <span className="text-slate-500 w-[72px] flex-shrink-0 font-medium">Họ tên</span>
+              <span className="font-bold text-slate-800 flex-1 min-w-0">{data.name}</span>
             </div>
-            <div className="flex gap-2.5">
-              <span className="text-slate-600 w-20 flex-shrink-0 font-medium">Địa chỉ</span>
-              <span className="font-semibold text-slate-700 flex-1 leading-snug">{data.address}</span>
+            <div className="flex gap-2.5 items-baseline">
+              <span className="text-slate-500 w-[72px] flex-shrink-0 font-medium">Địa chỉ</span>
+              <span className="font-semibold text-slate-700 flex-1 min-w-0 leading-snug">{data.address}</span>
             </div>
-            <div className="flex gap-2.5">
-              <span className="text-slate-600 w-20 flex-shrink-0 font-medium">Sản phẩm</span>
-              <span className="font-bold text-slate-800 flex-1">{comboLabel[data.combo] ?? data.combo}</span>
+            <div className="flex gap-2.5 items-baseline">
+              <span className="text-slate-500 w-[72px] flex-shrink-0 font-medium">Sản phẩm</span>
+              <span className="font-bold text-slate-800 flex-1 min-w-0">{comboLabel[data.combo] ?? data.combo}</span>
             </div>
           </div>
 
           {/* Nhắc chưa gửi */}
-          <p className="text-center text-base font-black leading-snug" style={{ color: '#EA580C' }}>⚠️ Bấm xác nhận để hoàn tất đơn hàng</p>
+          <p className="text-center text-sm font-black leading-snug" style={{ color: '#EA580C' }}>⚠️ Bấm xác nhận để hoàn tất đơn hàng</p>
 
           {/* Buttons */}
           <button
             onClick={onConfirm}
-            className="w-full py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black text-2xl hover:from-orange-600 hover:to-orange-700 active:scale-95 transition-all shadow-lg shadow-orange-200 flex items-center justify-center gap-2"
+            className="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black text-lg hover:from-orange-600 hover:to-orange-700 active:scale-95 transition-all shadow-lg shadow-orange-200 flex items-center justify-center gap-2"
           >
-            <ShoppingCart className="w-7 h-7 flex-shrink-0" />
+            <ShoppingCart className="w-5 h-5 flex-shrink-0" />
             Xác nhận đặt hàng
           </button>
 
           <button
             onClick={onEdit}
-            className="w-full py-4 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 font-bold text-xl hover:bg-slate-50 hover:border-slate-300 active:scale-95 transition-all flex items-center justify-center gap-2"
+            className="w-full py-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 font-bold text-base hover:bg-slate-50 hover:border-slate-300 active:scale-95 transition-all flex items-center justify-center gap-2"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
             </svg>
             Sửa lại thông tin
