@@ -99,56 +99,54 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center"
       style={{ backgroundColor: 'rgba(0,0,0,0.65)' }}
       onClick={onClose}
     >
-      {/* Wrapper cho phép scroll khi modal cao hơn màn hình */}
-      <div className="flex min-h-full items-center justify-center p-4">
       <motion.div
         key="success-modal-card"
-        initial={{ opacity: 0, scale: 0.88, y: 24 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.92, y: 16 }}
+        initial={{ opacity: 0, y: 48, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 32, scale: 0.96 }}
         transition={{ type: 'spring', stiffness: 340, damping: 30 }}
         onClick={e => e.stopPropagation()}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-sm flex flex-col max-h-[90vh]"
+        className="bg-white w-full sm:max-w-md sm:mx-4 rounded-t-3xl sm:rounded-3xl shadow-2xl flex flex-col max-h-[92vh] sm:max-h-[88vh]"
       >
         {/* Header xanh */}
-        <div className="bg-gradient-to-br from-green-500 to-green-600 px-6 pt-6 pb-5 text-center flex-shrink-0">
-          <div className="w-16 h-16 bg-white/25 rounded-full flex items-center justify-center mx-auto mb-3 border-4 border-white/40">
-            <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+        <div className="bg-gradient-to-br from-green-500 to-green-600 px-5 pt-5 pb-4 text-center flex-shrink-0 rounded-t-3xl sm:rounded-t-3xl">
+          <div className="w-14 h-14 bg-white/25 rounded-full flex items-center justify-center mx-auto mb-2.5 border-4 border-white/40">
+            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-2xl font-black text-white tracking-tight leading-tight">
+          <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight leading-tight">
             ĐẶT HÀNG THÀNH CÔNG!
           </h2>
           {customerName && (
-            <p className="text-green-100 text-sm font-medium mt-1">Cảm ơn <strong className="text-white">{customerName}</strong> đã tin tưởng Samurai 🙏</p>
+            <p className="text-green-100 text-sm font-medium mt-1">Cảm ơn <strong className="text-white">{customerName}</strong> đã tin tưởng PestShield 🙏</p>
           )}
         </div>
 
         {/* Body */}
-        <div className="px-5 pt-4 pb-5 space-y-3 overflow-y-auto flex-1">
+        <div className="px-4 sm:px-5 pt-3.5 pb-5 space-y-2.5 overflow-y-auto flex-1">
 
           {/* Combo info */}
           {selectedCombo && (() => {
             const detail = COMBO_SUCCESS_DETAILS[selectedCombo];
             if (!detail) return null;
             return (
-              <div className="bg-green-50 border-2 border-green-300 rounded-2xl p-4">
-                <p className="text-xs font-bold text-green-700 uppercase tracking-wide mb-3">✅ Sản phẩm đã đặt</p>
-                <div className="flex items-center gap-3 mb-3">
+              <div className="bg-green-50 border-2 border-green-300 rounded-2xl p-3.5">
+                <p className="text-xs font-bold text-green-700 uppercase tracking-wide mb-2">✅ Sản phẩm đã đặt</p>
+                <div className="flex items-center gap-3 mb-2.5">
                   <span className="text-3xl leading-none flex-shrink-0">{detail.emoji}</span>
                   <div className="flex-1 min-w-0">
-                    <p className="font-black text-slate-900 text-xl leading-tight">{detail.name}</p>
-                    <p className="text-slate-500 text-sm mt-1">{detail.quantity}</p>
+                    <p className="font-black text-slate-900 text-lg leading-tight">{detail.name}</p>
+                    <p className="text-slate-500 text-sm mt-0.5">{detail.quantity}</p>
                   </div>
                 </div>
-                <div className="border-t border-green-200 pt-3 flex items-end justify-between">
+                <div className="border-t border-green-200 pt-2.5 flex items-end justify-between">
                   <div>
-                    <p className="text-slate-500 text-sm mb-0.5">Thành tiền</p>
+                    <p className="text-slate-500 text-xs mb-0.5">Thành tiền</p>
                     <p className="text-2xl font-black text-green-700 leading-none">{detail.price}</p>
                     {detail.originalPrice && (
                       <p className="text-slate-400 text-sm mt-0.5 line-through">{detail.originalPrice}</p>
@@ -165,35 +163,35 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
           })()}
 
           {/* Thông báo 24h */}
-          <div className="bg-amber-50 border-l-4 border-amber-400 rounded-xl p-4 flex gap-3 items-start">
-            <span className="text-2xl leading-none flex-shrink-0 mt-0.5">⏰</span>
+          <div className="bg-amber-50 border-l-4 border-amber-400 rounded-xl px-3.5 py-3 flex gap-2.5 items-start">
+            <span className="text-xl leading-none flex-shrink-0 mt-0.5">⏰</span>
             <div>
-              <p className="font-black text-slate-800 text-lg leading-snug">
+              <p className="font-black text-slate-800 text-base leading-snug">
                 Nhân viên gọi xác nhận trong <span className="text-amber-600">24 giờ</span>
               </p>
-              <p className="text-slate-600 text-base mt-1 leading-snug">
-                Kèm thông báo thời gian giao hàng cụ thể đến tận nhà bạn.
+              <p className="text-slate-600 text-sm mt-0.5 leading-snug">
+                Kèm thông báo thời gian giao hàng đến tận nhà bạn.
               </p>
             </div>
           </div>
 
           {/* Chú ý điện thoại */}
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex gap-3 items-center">
-            <span className="text-2xl leading-none flex-shrink-0">📵</span>
-            <p className="font-bold text-red-700 text-base leading-snug">
+          <div className="bg-red-50 border border-red-200 rounded-xl px-3.5 py-3 flex gap-2.5 items-center">
+            <span className="text-xl leading-none flex-shrink-0">📵</span>
+            <p className="font-bold text-red-700 text-sm leading-snug">
               Vui lòng <span className="underline decoration-dotted">chú ý điện thoại</span> để không bỏ lỡ cuộc gọi xác nhận đơn hàng
             </p>
           </div>
 
-          {/* Nút Đóng - Primary (Nổi bật) */}
+          {/* Nút Đóng - Primary */}
           <button
             onClick={onClose}
-            className="w-full py-4 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 text-white font-black text-xl hover:from-slate-900 hover:to-slate-950 active:scale-95 transition-all shadow-lg shadow-slate-800/30"
+            className="w-full py-4 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 text-white font-black text-lg sm:text-xl hover:from-slate-900 hover:to-slate-950 active:scale-95 transition-all shadow-lg shadow-slate-800/30"
           >
             Đóng
           </button>
 
-          {/* Zalo Support - Secondary (Nhỏ, không nổi bật) */}
+          {/* Zalo Support */}
           <div className="text-center pt-0.5">
             <p className="text-slate-500 text-sm mb-1.5">Cần hỗ trợ?</p>
             <a
@@ -204,11 +202,10 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
             >
               💬 Nhắn Zalo hỗ trợ
             </a>
-            <p className="text-slate-500 text-sm mt-1.5">T2 - T7: 8h30 - 16h30</p>
+            <p className="text-slate-500 text-xs mt-1.5">T2 - T7: 8h30 - 16h30</p>
           </div>
         </div>
       </motion.div>
-      </div>
     </motion.div>
   );
 };
