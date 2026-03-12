@@ -982,7 +982,7 @@ export default function App() {
                       <span className="whitespace-nowrap">Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
                       <ChevronRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <p className="text-sm font-medium text-slate-500 text-center sm:text-left whitespace-nowrap">Tiết kiệm 120.000đ · Giao COD · Xịt 1 lần</p>
+                    <p className="text-sm font-semibold text-slate-600 text-center sm:text-left whitespace-nowrap">✅ Tiết kiệm 120.000đ · 🚚 Giao COD · ⚡ Xịt 1 lần</p>
                   </div>
                   <div className="flex items-center gap-3 px-4 py-2 justify-center">
                     <div className="flex -space-x-2">
@@ -1875,7 +1875,7 @@ export default function App() {
 
                 {/* Bước 1: Combo – compact 3-col selector */}
                 <div id="combo-step">
-                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Bước 1 — Chọn gói</p>
+                  <p className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Bước 1 — Chọn gói</p>
                   <div className="grid grid-cols-3 gap-2">
                     {[
                       { value: 'combo1', emoji: '🏠', name: '1 CHAI', sub: '1 chai · Nhà ≤50m²', price: '209.000đ' },
@@ -1883,7 +1883,7 @@ export default function App() {
                       { value: 'combo3', emoji: '🏢', name: 'COMBO 3 CHAI', sub: '3 chai · Nhà >100m²', price: '397.000đ' },
                     ].map((item) => (
                       <label key={item.value} className={cn(
-                        "relative flex flex-col items-center text-center p-3 rounded-2xl border-2 cursor-pointer transition-all select-none",
+                        "relative flex flex-col items-center text-center p-3.5 sm:p-3 rounded-2xl border-2 cursor-pointer transition-all select-none",
                         selectedCombo === item.value
                           ? "border-emerald-500 bg-emerald-50 shadow-md"
                           : "border-slate-200 bg-slate-50 hover:border-slate-300"
@@ -1910,12 +1910,12 @@ export default function App() {
                         {selectedCombo === item.value && (
                           <CheckCircle2 className="absolute top-2 right-2 w-3.5 h-3.5 text-emerald-500" />
                         )}
-                        <span className="text-xl mb-1">{item.emoji}</span>
-                        <span className={cn("text-[11px] font-black leading-tight mb-1", selectedCombo === item.value ? "text-emerald-700" : "text-slate-700")}>
+                        <span className="text-2xl mb-1">{item.emoji}</span>
+                        <span className={cn("text-xs font-black leading-tight mb-1", selectedCombo === item.value ? "text-emerald-700" : "text-slate-700")}>
                           {item.name}
                         </span>
                         <span className="text-xs text-slate-500 mb-1.5 leading-tight">{item.sub}</span>
-                        <span className={cn("text-sm font-black", selectedCombo === item.value ? "text-emerald-600" : "text-slate-800")}>
+                        <span className={cn("text-base font-black", selectedCombo === item.value ? "text-emerald-600" : "text-slate-800")}>
                           {item.price}
                         </span>
                       </label>
@@ -2093,6 +2093,7 @@ export default function App() {
                       {submitStatus === 'error' && (
                         <p className="text-red-600 text-sm font-semibold mt-2 text-center">⚠ {submitError}</p>
                       )}
+                      <p className="text-center text-xs text-slate-500 font-medium mt-1.5">🔍 Kiểm tra hàng trước khi trả tiền · 🔒 Bảo mật thông tin</p>
                     </>
                   )}
 
@@ -2286,10 +2287,10 @@ export default function App() {
       )}>
         <button
           onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-          className="flex flex-col items-center gap-1 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-4 rounded-2xl shadow-2xl shadow-orange-900/70 active:scale-95 transition-all font-black text-center min-w-max"
+          className="flex flex-col items-center gap-0.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-5 py-3.5 rounded-2xl shadow-2xl shadow-orange-300 active:scale-95 transition-all font-black text-center min-w-max"
         >
           <span className="text-base leading-tight">👉 Đặt Hàng Ngay</span>
-          <span className="text-sm text-amber-300 font-bold">Giá chỉ từ 209k – Free Ship toàn quốc</span>
+          <span className="text-xs text-amber-200 font-bold">⚡ Còn {stockRemaining} suất – Giao COD miễn phí</span>
         </button>
       </div>
 
