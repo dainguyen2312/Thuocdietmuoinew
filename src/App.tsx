@@ -218,9 +218,9 @@ const ConfirmOrderModal = ({
   }, []);
 
   const comboLabel: Record<string, string> = {
-    combo1: '🏠 Gói Nhà Nhỏ – 3 lọ – 249.000đ',
-    combo2: '👨‍👩‍👧 Gói Gia Đình – 6 lọ – 328.000đ',
-    combo3: '🏢 Gói Nhà Lớn – 9 lọ – 497.000đ',
+    combo1: '🏠 1 Chai PestShield – 209.000đ',
+    combo2: '👨‍👩‍👧 Combo 2 Chai PestShield – 298.000đ',
+    combo3: '🏢 Combo 3 Chai PestShield – 397.000đ',
   };
 
   return (
@@ -1798,7 +1798,7 @@ export default function App() {
             {/* Header */}
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-3">
-                🎁 TIẾT KIỆM 170.000Đ – CHỈ HÔM NAY
+                🎁 TIẾT KIỆM 120.000Đ – CHỈ HÔM NAY
               </div>
               <h2 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-2">
                 Đặt Hàng Ngay – Giao Tận Nhà
@@ -1823,7 +1823,7 @@ export default function App() {
                 <div className="flex justify-center my-2">
                   <img
                     src="/samuraingangmin.webp"
-                    alt="Samurai Diệt Mối - Combo 3 Lọ, Combo 6 Lọ, Combo 9 Lọ"
+                    alt="Chai xịt Muỗi &amp; Côn trùng PestShield - 1 Chai, Combo 2 Chai, Combo 3 Chai"
                     className="w-full max-w-xs md:max-w-md h-auto rounded-2xl shadow-xl border border-slate-100"
                     loading="lazy"
                     width={1376}
@@ -1836,9 +1836,9 @@ export default function App() {
                   <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Bước 1 — Chọn gói</p>
                   <div className="grid grid-cols-3 gap-2">
                     {[
-                      { value: 'combo1', emoji: '🏠', name: 'GÓI NHÀ NHỎ', sub: '3 lọ · ≤50m²', price: '249.000đ' },
-                      { value: 'combo2', emoji: '👨‍👩‍👧', name: 'GÓI GIA ĐÌNH', sub: '6 lọ · 50–100m²', price: '328.000đ', recommended: true },
-                      { value: 'combo3', emoji: '🏢', name: 'GÓI NHÀ LỚN', sub: '9 lọ · >100m²', price: '497.000đ' },
+                      { value: 'combo1', emoji: '🏠', name: '1 CHAI', sub: '1 chai · Nhà ≤50m²', price: '209.000đ' },
+                      { value: 'combo2', emoji: '🛡️', name: 'COMBO 2 CHAI', sub: '2 chai · Nhà 50–100m²', price: '298.000đ', recommended: true },
+                      { value: 'combo3', emoji: '🏢', name: 'COMBO 3 CHAI', sub: '3 chai · Nhà >100m²', price: '397.000đ' },
                     ].map((item) => (
                       <label key={item.value} className={cn(
                         "relative flex flex-col items-center text-center p-3 rounded-2xl border-2 cursor-pointer transition-all select-none",
@@ -1887,16 +1887,16 @@ export default function App() {
                       >
                         {/* Header */}
                         <div className="bg-amber-400 px-4 py-2 flex items-center gap-2">
-                          <span className="text-slate-900 text-sm font-black leading-snug">🔥 Khoan đã!</span>
-                          <span className="text-slate-800 text-xs font-bold leading-snug">Chỉ thêm <strong>79.000đ</strong> → nâng lên Gói Gia Đình</span>
+                          <span className="text-slate-900 text-sm font-black leading-snug">� Anh tính thêm 89.000đ</span>
+                          <span className="text-slate-800 text-xs font-bold leading-snug">→ có ngay Combo 2 Chai, bảo vệ trọn nhà cả năm</span>
                         </div>
                         {/* Body */}
                         <div className="bg-amber-50 px-4 py-3 space-y-2">
                           <ul className="space-y-1.5">
                             {[
-                              { icon: '📦', text: 'Gấp đôi số lọ (6 lọ) – xử lý cả nhà, dự phòng mối tái phát' },
-                              { icon: '🏠', text: 'Đủ cho nhà 50–100m² – không cần đặt lại lần 2' },
-                              { icon: '⚠️', text: `Còn ${stockRemaining} suất giá này – hết hôm nay không mở lại` },
+                              { icon: '🏠', text: '2 chai – xịt đủ nhà phố 2 tầng hoặc nhà 50–100m², không cần mua thêm' },
+                              { icon: '💰', text: 'Tiết kiệm 120.000đ so với mua lẻ – đặt 1 lần dùng cả năm, khỏi lo' },
+                              { icon: '⚡', text: `Còn ${stockRemaining} suất giá này hôm nay – hết là về giá gốc` },
                             ].map((r, i) => (
                               <li key={i} className="flex items-start gap-2 text-sm text-slate-700 leading-snug">
                                 <span className="text-base leading-none flex-shrink-0 mt-0.5">{r.icon}</span>
@@ -1913,14 +1913,14 @@ export default function App() {
                             }}
                             className="w-full mt-1 py-2.5 rounded-xl bg-orange-500 text-white font-black text-sm hover:bg-orange-600 active:scale-95 transition-all shadow-sm"
                           >
-                            ✅ Nâng lên Gói Gia Đình – 328.000đ
+                            ✅ Lấy Combo 2 Chai – 298.000đ · Tiết kiệm 120k
                           </button>
                           <button
                             type="button"
                             onClick={() => setTimeout(() => nameStepRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80)}
                             className="w-full py-1.5 text-slate-400 text-xs font-medium hover:text-slate-600 transition-colors"
                           >
-                            Không, giữ nguyên Gói Nhà Nhỏ
+                            Không, lấy 1 chai thôi
                           </button>
                         </div>
                       </motion.div>
@@ -1931,8 +1931,8 @@ export default function App() {
                   <AnimatePresence>
                     {(selectedCombo === 'combo2' || selectedCombo === 'combo3') && (() => {
                       const savingsMap: Record<string, { saved: string; original: string; current: string }> = {
-                        combo2: { saved: '170.000đ', original: '498.000đ', current: '328.000đ' },
-                        combo3: { saved: '250.000đ', original: '747.000đ', current: '497.000đ' },
+                        combo2: { saved: '120.000đ', original: '418.000đ', current: '298.000đ' },
+                        combo3: { saved: '230.000đ', original: '627.000đ', current: '397.000đ' },
                       };
                       const s = savingsMap[selectedCombo];
                       return (
@@ -2056,12 +2056,12 @@ export default function App() {
                         sub: 'Đặt ngay để nhận Miễn Phí Giao Hàng – giao tận nơi, trả tiền khi nhận',
                       },
                       combo2: {
-                        label: 'Giá khuyến mãi 328.000đ hết lúc 12:00 đêm nay',
-                        sub: 'Sau 12h đêm giá trở về 498.000đ – đang tiết kiệm 170.000đ',
+                        label: 'Giá khuyến mãi 298.000đ hết lúc 12:00 đêm nay',
+                        sub: 'Sau 12h đêm giá trở về 418.000đ – đang tiết kiệm 120.000đ',
                       },
                       combo3: {
-                        label: 'Giá khuyến mãi 497.000đ hết lúc 12:00 đêm nay',
-                        sub: 'Sau 12h đêm giá trở về 747.000đ – đang tiết kiệm 250.000đ',
+                        label: 'Giá khuyến mãi 397.000đ hết lúc 12:00 đêm nay',
+                        sub: 'Sau 12h đêm giá trở về 627.000đ – đang tiết kiệm 230.000đ',
                       },
                     };
                     const ctx = comboCtx[selectedCombo] ?? comboCtx.combo2;
@@ -2240,7 +2240,7 @@ export default function App() {
           className="flex flex-col items-center gap-1 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-4 rounded-2xl shadow-2xl shadow-orange-900/70 active:scale-95 transition-all font-black text-center min-w-max"
         >
           <span className="text-base leading-tight">👉 Đặt Hàng Ngay</span>
-          <span className="text-sm text-amber-300 font-bold">Giá khuyến mãi chỉ từ 249k</span>
+          <span className="text-sm text-amber-300 font-bold">Giá chỉ từ 209k – Free Ship toàn quốc</span>
         </button>
       </div>
 
