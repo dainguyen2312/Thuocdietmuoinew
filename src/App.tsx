@@ -1822,7 +1822,7 @@ export default function App() {
                 {/* Product Image */}
                 <div className="flex justify-center my-2">
                   <img
-                    src="/samuraingangmin.webp"
+                    src="/products2.webp"
                     alt="Chai xịt Muỗi &amp; Côn trùng PestShield - 1 Chai, Combo 2 Chai, Combo 3 Chai"
                     className="w-full max-w-xs md:max-w-md h-auto rounded-2xl shadow-xl border border-slate-100"
                     loading="lazy"
