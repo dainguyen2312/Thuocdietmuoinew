@@ -420,15 +420,15 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
 
 // ── Testimonials data (defined once, reused for mobile & desktop) ──
 const REVIEWS = [
-  { name: "Bác Hùng",  age: 62, loc: "Hà Nội",    combo: "Combo 2 Chai PestShield",  avatar: "/hungmin.webp",  rating: 5, photo: "/xm1min.webp", photoSmall: "/xm1minnew.webp", text: "Nhà tôi muỗi nhiều lắm, nhất là tối mùa hè. Từ ngày xịt PestShield vào góc tường và rèm cửa thấy im hẳn, ngủ ngon không cần bật quạt. Hiệu quả rõ chỉ sau 2 ngày!" },
-  { name: "Cô Lan",    age: 55, loc: "TP. HCM",   combo: "Combo 2 Chai PestShield",  avatar: "/colanmin.webp",   rating: 4, photo: "/xm2min.webp", photoSmall: "/xm2minnew.webp", text: "Không mùi hắc như thuốc xịt ngoài chợ, nhà có cháu nhỏ tôi vẫn yên tâm. Xịt xong 30 phút vào sinh hoạt bình thường. PestShield thật sự khác hẳn các loại khác." },
-  { name: "Anh Tuấn",  age: 45, loc: "Đà Nẵng",  combo: "1 Chai PestShield", avatar: "/anhtuanmin.webp",  rating: 5, photo: "/nhanhang3min.webp", text: "Giao hàng nhanh, đóng gói cẩn thận. Căn hộ 40m² dùng 1 chai là đủ, muỗi và kiến giảm hẳn sau 1 tuần. Dùng xong tôi giới thiệu ngay cho cả nhóm công ty." },
-  { name: "Bác Minh",  age: 58, loc: "Cần Thơ",   combo: "Combo 3 Chai PestShield",  avatar: "/bacminhmin.webp",  rating: 4, photo: "/xm4min.webp", text: "Nhà tôi 3 tầng, muỗi nhiều từ kênh rạch. Mua combo 3 chai xịt toàn bộ, hiệu quả kéo dài gần 6 tháng không cần xịt lại. Rất đáng tiền, hơn cả dịch vụ phun ngoài." },
-  { name: "Cô Hoa",    age: 51, loc: "Hải Phòng", combo: "Combo 2 Chai PestShield",  avatar: "/cohoamin.webp",   rating: 5, photo: "/xm5min.webp", text: "Lo nhất là ảnh hưởng cháu nội, nhưng PestShield an toàn thật — không mùi độc, xịt xong sinh hoạt bình thường. Muỗi và kiến biến mất gần hết. Tôi rất hài lòng!" },
-  { name: "Chú Thành", age: 64, loc: "Bình Dương",combo: "Combo 2 Chai PestShield",  avatar: "/chuthanhmin.webp", rating: 4, photo: "/xm6min.webp", photoSmall: "/xm6minnew.webp", text: "Trước hay gọi dịch vụ phun mỗi lần mấy trăm mà chỉ hiệu quả 1–2 tháng. PestShield tự xịt tại nhà được, hiệu lực 6 tháng, tiết kiệm hơn nhiều mà chủ động hơn hẳn." },
-  { name: "Chị Nga",   age: 47, loc: "Đồng Nai",  combo: "1 Chai PestShield", avatar: "/chingamin.webp",   rating: 5, photo: "/xm7min.webp", text: "Nhà có 2 con mèo nên tôi rất cẩn thận. Xịt PestShield xong cho mèo ra ngoài 30 phút rồi thả vô bình thường, mèo không sao cả. Muỗi trong phòng ngủ giảm rõ rệt." },
-  { name: "Bác Sơn",   age: 60, loc: "Quảng Nam", combo: "Combo 3 Chai PestShield",  avatar: "/bacsonmin.webp",   rating: 4, photo: "/xm8min.webp", text: "Nhà vườn rộng, muỗi từ bụi cây nhiều vô kể. Đặt combo 3 chai xịt cả trong lẫn ngoài hiên. Sau 1 tuần ngồi sân không cần kem chống muỗi nữa — tuyệt vời!" },
-  { name: "Cô Mai",    age: 53, loc: "Vũng Tàu",  combo: "Combo 2 Chai PestShield",  avatar: "/comaimin.webp",   rating: 5, photo: "/nhanhang4min.webp", text: "Mua về dùng thấy hiệu quả nên đặt thêm biếu hàng xóm. Ai cũng khen PestShield dễ xịt, không cần gọi thợ. Freeship tận nhà, trả tiền khi nhận, rất yên tâm." },
+  { name: "Bác Hùng",  age: 62, loc: "Hà Nội",    combo: "Combo 2 Chai PestShield",  avatar: "/hungmin.webp",  rating: 5, photo: "/rv1.webp", text: "Nhà tôi muỗi nhiều lắm, nhất là tối mùa hè. Từ ngày xịt PestShield vào góc tường và rèm cửa thấy im hẳn, ngủ ngon không cần bật quạt. Hiệu quả rõ chỉ sau 2 ngày!" },
+  { name: "Cô Lan",    age: 55, loc: "TP. HCM",   combo: "Combo 2 Chai PestShield",  avatar: "/colanmin.webp",   rating: 4, photo: "/rv2.webp", text: "Không mùi hắc như thuốc xịt ngoài chợ, nhà có cháu nhỏ tôi vẫn yên tâm. Xịt xong 30 phút vào sinh hoạt bình thường. PestShield thật sự khác hẳn các loại khác." },
+  { name: "Anh Tuấn",  age: 45, loc: "Đà Nẵng",  combo: "1 Chai PestShield", avatar: "/anhtuanmin.webp",  rating: 5, photo: "/rv3.webp", text: "Giao hàng nhanh, đóng gói cẩn thận. Căn hộ 40m² dùng 1 chai là đủ, muỗi và kiến giảm hẳn sau 1 tuần. Dùng xong tôi giới thiệu ngay cho cả nhóm công ty." },
+  { name: "Bác Minh",  age: 58, loc: "Cần Thơ",   combo: "Combo 3 Chai PestShield",  avatar: "/bacminhmin.webp",  rating: 4, photo: "/rv4.webp", text: "Nhà tôi 3 tầng, muỗi nhiều từ kênh rạch. Mua combo 3 chai xịt toàn bộ, hiệu quả kéo dài gần 6 tháng không cần xịt lại. Rất đáng tiền, hơn cả dịch vụ phun ngoài." },
+  { name: "Cô Hoa",    age: 51, loc: "Hải Phòng", combo: "Combo 2 Chai PestShield",  avatar: "/cohoamin.webp",   rating: 5, photo: "/rv5.webp", text: "Lo nhất là ảnh hưởng cháu nội, nhưng PestShield an toàn thật — không mùi độc, xịt xong sinh hoạt bình thường. Muỗi và kiến biến mất gần hết. Tôi rất hài lòng!" },
+  { name: "Chú Thành", age: 64, loc: "Bình Dương",combo: "Combo 2 Chai PestShield",  avatar: "/chuthanhmin.webp", rating: 4, photo: "/rv6.webp", text: "Trước hay gọi dịch vụ phun mỗi lần mấy trăm mà chỉ hiệu quả 1–2 tháng. PestShield tự xịt tại nhà được, hiệu lực 6 tháng, tiết kiệm hơn nhiều mà chủ động hơn hẳn." },
+  { name: "Chị Nga",   age: 47, loc: "Đồng Nai",  combo: "1 Chai PestShield", avatar: "/chingamin.webp",   rating: 5, photo: "/rv7.webp", text: "Nhà có 2 con mèo nên tôi rất cẩn thận. Xịt PestShield xong cho mèo ra ngoài 30 phút rồi thả vô bình thường, mèo không sao cả. Muỗi trong phòng ngủ giảm rõ rệt." },
+  { name: "Bác Sơn",   age: 60, loc: "Quảng Nam", combo: "Combo 3 Chai PestShield",  avatar: "/bacsonmin.webp",   rating: 4, photo: "/rv8.webp", text: "Nhà vườn rộng, muỗi từ bụi cây nhiều vô kể. Đặt combo 3 chai xịt cả trong lẫn ngoài hiên. Sau 1 tuần ngồi sân không cần kem chống muỗi nữa — tuyệt vời!" },
+  { name: "Cô Mai",    age: 53, loc: "Vũng Tàu",  combo: "Combo 2 Chai PestShield",  avatar: "/comaimin.webp",   rating: 5, photo: "/rv9.webp", text: "Mua về dùng thấy hiệu quả nên đặt thêm biếu hàng xóm. Ai cũng khen PestShield dễ xịt, không cần gọi thợ. Freeship tận nhà, trả tiền khi nhận, rất yên tâm." },
 ];
 
 // ── FAQ data (accordion) ──
@@ -1635,9 +1635,9 @@ export default function App() {
                 <div key={i} className="snap-start flex-shrink-0 w-[82vw] max-w-[310px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                   {/* Customer photo – square slot (1:1), replace photo: null → "url" when ready */}
                   {t.photo ? (
-                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng bột diệt mối Samurai tại nhà" className="w-full aspect-square object-cover object-center" loading="lazy" width={800} height={800} srcSet={t.photoSmall ? `${t.photoSmall} 400w, ${t.photo} 800w` : undefined} sizes="(max-width: 640px) 82vw, 310px" />
+                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full aspect-[4/3] object-cover object-top" loading="lazy" width={600} height={450} sizes="(max-width: 640px) 82vw, 310px" />
                   ) : (
-                    <div className="w-full aspect-square bg-slate-100" />
+                    <div className="w-full aspect-[4/3] bg-slate-100" />
                   )}
                   <div className="p-3.5">
                     {/* Avatar + Name + Stars */}
@@ -1702,9 +1702,9 @@ export default function App() {
                 <div key={i} className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                   {/* Customer photo – 100px slot, crops square image to landscape banner */}
                   {t.photo ? (
-                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng bột diệt mối Samurai tại nhà" className="w-full h-[100px] object-cover object-center" loading="lazy" width={800} height={800} srcSet={t.photoSmall ? `${t.photoSmall} 400w, ${t.photo} 800w` : undefined} sizes="(max-width: 640px) 100vw, 33vw" />
+                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full h-[180px] object-cover object-top" loading="lazy" width={600} height={450} sizes="33vw" />
                   ) : (
-                    <div className="w-full h-[100px] bg-slate-100" />
+                    <div className="w-full h-[180px] bg-slate-100" />
                   )}
                   <div className="p-4 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">
