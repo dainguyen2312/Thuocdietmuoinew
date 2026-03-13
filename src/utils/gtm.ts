@@ -62,21 +62,14 @@ async function hashPhone(raw: string): Promise<string> {
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-export async function trackPurchase(packageName: string, price: number, orderId: string, phone?: string): Promise<void> {
+export async function trackPurchase(phone: string): Promise<void> {
   window.dataLayer = window.dataLayer || [];
-  const hashedPhone = phone ? await hashPhone(phone) : undefined;
+  const hashedPhone = await hashPhone(phone);
   window.dataLayer.push({
     event: 'purchase',
-    package_name: packageName,
-    price,
-    order_id: orderId,
-    currency: 'VND',
-    // Enhanced Conversions – Google Ads
-    ...(hashedPhone && {
-      user_data: {
-        sha256_phone_number: hashedPhone,
-      },
-    }),
+    user_data: {
+      sha256_phone_number: hashedPhone,
+    },
   });
 }
 

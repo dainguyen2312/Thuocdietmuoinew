@@ -727,8 +727,7 @@ export default function App() {
       });
       const result = await res.json();
       if (result.ok) {
-        const comboPrice = { combo1: 209000, combo2: 298000, combo3: 397000 }[data.combo as string] ?? 0;
-        await trackPurchase(getComboName(data.combo), comboPrice, pendingOrderId ?? '', data.phone);
+        await trackPurchase(data.phone);
         setSubmitStatus('success');
         setOrderCustomerName(data.name || '');
         setShowSuccessModal(true);
