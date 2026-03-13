@@ -1159,17 +1159,17 @@ export default function App() {
                     {
                       icon: <Zap className="w-6 h-6 text-yellow-500" />,
                       title: "Không xịt trúng — vẫn hiệu quả",
-                      desc: "Xịt vào góc nhà, chân tường, cửa ra vào.\nMuỗi và côn trùng bò qua vùng xịt là tê liệt.\nKhông cần rượt theo từng con."
+                      desc: "Công nghệ NanoShieldX độc quyền từ Đức tạo lớp hạt siêu nhỏ bám kín bề mặt.\nMuỗi hay côn trùng chỉ cần tiếp xúc là tê liệt ngay — không cần rượt theo từng con."
                     },
                     {
                       icon: <ShieldCheck className="w-6 h-6 text-blue-500" />,
                       title: "Bám dính 6 tháng — không bay hơi như chai thường",
-                      desc: "Hoạt chất bám chắc vào bề mặt, không bốc hơi,\nkhông cần xịt lại. Mưa không trôi, quạt không bay."
+                      desc: "Hạt nano NanoShieldX bám chắc vào tường, sàn, cửa — không bốc hơi, không trôi theo mưa hay quạt gió.\nXịt 1 lần, bảo vệ liên tục suốt 6 tháng."
                     },
                     {
                       icon: <Leaf className="w-6 h-6 text-emerald-500" />,
                       title: "Thiên nhiên — không mùi sau 30 phút",
-                      desc: "Chiết xuất thực vật, khô hoàn toàn sau 30 phút.\nKhông độc, không mùi — trẻ bò sàn, thú cưng ở nhà bình thường."
+                      desc: "Hoạt chất NanoShieldX chiết xuất thực vật, khô hoàn toàn sau 30 phút.\nKhông độc, không mùi — trẻ bò sàn, thú cưng ở nhà bình thường."
                     }
                   ].map((feature, idx) => (
                     <div key={idx} className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
@@ -1186,7 +1186,7 @@ export default function App() {
                 <div className="mt-8 inline-flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-3.5 w-full lg:w-auto">
                   <span className="text-2xl flex-shrink-0">💡</span>
                   <p className="text-emerald-800 font-bold text-base md:text-lg leading-snug">
-                    Không phải xịt mạnh hơn — mà <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">xịt đúng cách hơn</span>.
+                    Không phải xịt mạnh hơn — mà <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">công nghệ NanoShieldX làm việc thay bạn</span>.
                   </p>
                 </div>
               </div>
