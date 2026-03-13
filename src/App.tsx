@@ -1391,7 +1391,7 @@ export default function App() {
             <div className="text-center mb-8 md:mb-12">
               <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Cách sử dụng</p>
               <h2 className="text-2xl md:text-3xl font-black mb-2 uppercase tracking-tight">Xịt 5 Phút — Bảo Vệ Cả Nhà 6 Tháng</h2>
-              <p className="text-slate-500 text-base">3 bước đơn giản — không cần kinh nghiệm</p>
+              <p className="text-slate-500 text-base">Chỉ 3 bước đơn giản - Tự làm tại nhà</p>
             </div>
 
             {/* Illustration image */}
@@ -1479,7 +1479,7 @@ export default function App() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">💡</span>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  <span className="font-bold text-slate-800">Mẹo:</span> Xịt lần 2 sau 2–3 tháng để tăng hoạt chất NanoShieldX bám dính, bảo vệ gia đình mạnh hơn. Xịt vào buổi tối hiệu quả hơn — côn trùng hoạt động nhiều về đêm, tiếp xúc hoạt chất nhanh hơn.
+                  <span className="font-bold text-slate-800">Mẹo:</span> Xịt lần 2 sau 2–3 tháng để tăng hoạt chất NanoShieldX bám dính, bảo vệ gia đình mạnh hơn.
                 </p>
               </div>
               <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-6 py-3 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
