@@ -901,9 +901,9 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-6 pb-8 lg:pt-24 lg:pb-32 bg-white">
+        <section className="relative overflow-hidden pt-6 pb-8 lg:pt-16 lg:pb-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Hero Text Block */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -1045,9 +1045,9 @@ export default function App() {
         </section>
 
         {/* Pain Points Section */}
-        <section id="benefits" className="py-10 md:py-20 bg-emerald-50/40">
+        <section id="benefits" className="py-8 md:py-14 bg-emerald-50/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
               <h2 className="text-2xl md:text-4xl font-black mb-3 md:mb-4">Muỗi, Gián, Kiến Trong Nhà — Tưởng Nhỏ, Hậu Quả Không Nhỏ</h2>
             </div>
 
@@ -1116,7 +1116,7 @@ export default function App() {
         </section>
 
         {/* Why Samurai Section */}
-        <section id="how-samurai" className="py-12 md:py-20 bg-white overflow-hidden">
+        <section id="how-samurai" className="py-8 md:py-14 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <div className="hidden lg:block order-1 relative">
@@ -1195,7 +1195,7 @@ export default function App() {
         </section>
 
         {/* Comparison Table */}
-        <section id="comparison" className="py-12 md:py-20 bg-slate-50">
+        <section id="comparison" className="py-8 md:py-14 bg-slate-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
@@ -1384,7 +1384,7 @@ export default function App() {
         </section>
 
         {/* 3-Step Guide */}
-        <section id="usage-guide" className="py-10 md:py-16 bg-white">
+        <section id="usage-guide" className="py-8 md:py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
@@ -1491,7 +1491,7 @@ export default function App() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-10 md:py-16 bg-slate-900 text-white overflow-hidden">
+        <section id="pricing" className="py-8 md:py-12 bg-slate-900 text-white overflow-hidden">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
@@ -1671,7 +1671,7 @@ export default function App() {
         </section>
 
         {/* Testimonials */}
-        <section id="testimonials" className="py-10 md:py-14 bg-white">
+        <section id="testimonials" className="py-8 md:py-12 bg-white">
           <div className="max-w-6xl mx-auto">
 
             {/* Header */}
@@ -1790,7 +1790,7 @@ export default function App() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-12 md:py-20 bg-teal-50">
+        <section id="faq" className="py-8 md:py-14 bg-teal-50">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 md:mb-10">
               <p className="text-sm font-bold text-emerald-700 uppercase tracking-widest mb-2">Giải đáp thắc mắc</p>
@@ -1851,7 +1851,7 @@ export default function App() {
         </section>
 
         {/* Order Form Section */}
-        <section id="order-section" className="py-8 md:py-14 bg-gradient-to-b from-emerald-50 to-teal-50 border-t-4 border-emerald-600">
+        <section id="order-section" className="py-8 md:py-10 bg-gradient-to-b from-emerald-50 to-teal-50 border-t-4 border-emerald-600">
           <div className="max-w-2xl mx-auto px-4 sm:px-6">
 
             {/* Header */}
