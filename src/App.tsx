@@ -2258,7 +2258,7 @@ export default function App() {
                 <div className="flex items-center gap-1 mb-0.5">
                   {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                 </div>
-                <p className="text-sm font-bold text-slate-800">Hơn 12.400+ khách hàng đã đặt thành công</p>
+                <p className="text-sm font-bold text-slate-800">14.800+ gia đình đã đặt thành công</p>
                 <p className="text-xs text-slate-500">Đánh giá trung bình 4.9/5 ⭐</p>
               </div>
             </div>
