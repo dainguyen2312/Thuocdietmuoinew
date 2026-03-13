@@ -960,7 +960,7 @@ export default function App() {
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Xịt 1 lần — hiệu lực 6 tháng, không làm lại</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">⚡ Xịt 1 lần sạch 6 tháng</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -1076,7 +1076,7 @@ export default function App() {
                   highlight: false
                 }
               ].map((item, idx) => (
-                <div key={idx} className={`rounded-2xl overflow-hidden shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
+                <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.4, delay: idx * 0.1 }} className={`rounded-2xl overflow-hidden shadow-md border group hover:shadow-xl transition-all flex flex-col h-full ${
                   item.highlight
                     ? 'bg-orange-50 border-orange-300 ring-2 ring-orange-400 ring-offset-2'
                     : 'bg-white border-slate-100'
@@ -1096,7 +1096,7 @@ export default function App() {
                       {item.line1}{item.mobileBreak ? <br className="sm:hidden" /> : <br />}{item.line2}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
             <p className="text-center mt-10 text-base md:text-lg font-semibold text-slate-700 max-w-2xl mx-auto">
@@ -1523,7 +1523,7 @@ export default function App() {
                       <span className="text-4xl font-black text-white">298.000đ</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-400 text-slate-900 text-xs font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
+                      <span className="bg-amber-400 text-slate-900 text-sm font-black px-2 py-0.5 rounded">TIẾT KIỆM 120K</span>
                     </div>
                   </div>
 
@@ -1694,7 +1694,7 @@ export default function App() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', paddingLeft: '1rem', paddingRight: '1rem' }}
             >
               {REVIEWS.map((t, i) => (
-                <div key={i} className="snap-start flex-shrink-0 w-[82vw] max-w-[310px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <div key={i} className="snap-start flex-shrink-0 w-[88vw] max-w-[340px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                   {/* Customer photo – square slot (1:1), replace photo: null → "url" when ready */}
                   {t.photo ? (
                     <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full aspect-[4/3] object-cover object-top" loading="lazy" width={600} height={450} sizes="(max-width: 640px) 82vw, 310px" />
