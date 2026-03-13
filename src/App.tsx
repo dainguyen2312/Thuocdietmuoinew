@@ -24,7 +24,6 @@ import {
   Star,
   Package,
   Leaf,
-  ArrowRight,
   Menu,
   X,
   ChevronRight,
@@ -216,7 +215,7 @@ const ConfirmOrderModal = ({
   onConfirm,
   onEdit,
 }: {
-  data: any;
+  data: OrderFormData;
   onConfirm: () => void;
   onEdit: () => void;
 }) => {
@@ -548,13 +547,22 @@ const FAQS = [
   },
 ];
 
+interface OrderFormData {
+  combo: 'combo1' | 'combo2' | 'combo3';
+  name: string;
+  phone: string;
+  address: string;
+  utm_source?: string;
+  utm_campaign?: string;
+}
+
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [submitError, setSubmitError] = useState('');
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [pendingOrderData, setPendingOrderData] = useState<any>(null);
+  const [pendingOrderData, setPendingOrderData] = useState<OrderFormData | null>(null);
   const [pendingOrderId, setPendingOrderId] = useState<string | null>(null);
   const [orderCustomerName, setOrderCustomerName] = useState('');
   const [selectedCombo, setSelectedCombo] = useState('combo2');
@@ -679,7 +687,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: OrderFormData) => {
 
     // Tạo đơn ngay với trạng thái Mới (status: 0) trước khi hiện modal
     setSubmitStatus('loading');
@@ -2074,7 +2082,7 @@ export default function App() {
                         errors.name && "border-red-400 bg-red-50"
                       )}
                     />
-                    {errors.name && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {(errors.name as any).message}</p>}
+                    {errors.name && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {errors.name?.message as string}</p>}
                   </div>
 
                   <div>
@@ -2091,7 +2099,7 @@ export default function App() {
                         errors.phone && "border-red-400 bg-red-50"
                       )}
                     />
-                    {errors.phone && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {(errors.phone as any).message}</p>}
+                    {errors.phone && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {errors.phone?.message as string}</p>}
                   </div>
 
                   <div>
@@ -2106,7 +2114,7 @@ export default function App() {
                         errors.address && "border-red-400 bg-red-50"
                       )}
                     />
-                    {errors.address && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {(errors.address as any).message}</p>}
+                    {errors.address && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {errors.address?.message as string}</p>}
                   </div>
                 </div>
 
@@ -2245,8 +2253,8 @@ export default function App() {
             <div className="mt-4 bg-white rounded-2xl border border-slate-200 px-5 py-4 flex items-center gap-4 shadow-sm">
               <div className="flex -space-x-2 flex-shrink-0">
                 {['/customers/1min.webp', '/customers/2min.webp', '/customers/3min.webp', '/customers/4min.webp'].map((img, i) => (
-                  <img key={i} src={img} alt={`Khách hàng ${i + 1}`} className="w-10 h-10 rounded-full border-2 border-white object-cover object-center flex-shrink-0" loading="lazy" width={40} height={40} onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
+                  <img key={i} src={img} alt={`Khách hàng ${i + 1}`} className="w-10 h-10 rounded-full border-2 border-white object-cover object-center flex-shrink-0 bg-slate-100" loading="lazy" width={40} height={40} onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Ccircle cx="20" cy="20" r="20" fill="%23e2e8f0"/%3E%3C/svg%3E';
                   }} />
                 ))}
               </div>

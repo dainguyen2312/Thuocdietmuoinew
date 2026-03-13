@@ -42,17 +42,6 @@ export function trackFormStart(): void {
   window.dataLayer.push({ event: 'form_start' });
 }
 
-export function trackFormSubmit(packageName: string, price: number, orderId: string): void {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: 'form_submit',
-    package_name: packageName,
-    price,
-    order_id: orderId,
-    currency: 'VND',
-  });
-}
-
 // Normalize VN phone → E.164 (+84xxxxxxxxx) rồi SHA-256 hash cho Enhanced Conversions
 async function hashPhone(raw: string): Promise<string> {
   // Chuẩn hoá: bỏ ký tự không phải số, đổi đầu 0 → +84
