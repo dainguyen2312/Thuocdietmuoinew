@@ -1186,7 +1186,7 @@ export default function App() {
                 <div className="mt-8 inline-flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-3.5 w-full lg:w-auto">
                   <span className="text-2xl flex-shrink-0">💡</span>
                   <p className="text-emerald-800 font-bold text-base md:text-lg leading-snug">
-                    Không phải xịt nhiều loại hơn — mà hãy dùng <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">PestShield NanoShieldX</span> thay bạn bảo vệ gia đình.
+                    1 lần xịt <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">PestShield NanoShieldX</span> — bảo vệ cả gia đình 6 tháng, không cần canh xịt.
                   </p>
                 </div>
               </div>
@@ -1395,7 +1395,7 @@ export default function App() {
             </div>
 
             {/* Illustration image */}
-            <div className="mb-8 md:mb-12 max-w-md mx-auto md:max-w-lg rounded-2xl overflow-hidden shadow-md border border-slate-100">
+            <div className="mb-8 md:mb-12 max-w-xs mx-auto md:max-w-sm rounded-2xl overflow-hidden shadow-md border border-slate-100">
               <img
                 src="/cachsudung.webp"
                 alt="Cách sử dụng chai xịt muỗi PestShield – 3 bước đơn giản"
