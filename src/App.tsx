@@ -1575,7 +1575,7 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-sm hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30 whitespace-nowrap"
+                    className="w-full py-3.5 rounded-xl bg-amber-400 text-slate-900 font-black text-base hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
                   >
                     ✔ Chọn Combo 2 — Bảo Vệ Cả Năm
                   </button>
