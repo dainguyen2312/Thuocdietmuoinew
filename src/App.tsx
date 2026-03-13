@@ -960,7 +960,7 @@ export default function App() {
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">⚡ Xịt 1 lần sạch 6 tháng</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Xịt 1 lần — hiệu lực 6 tháng, không làm lại</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -972,8 +972,8 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-10 justify-center lg:justify-start">
-                  <div className="flex flex-col items-center sm:items-start gap-1.5 w-full sm:w-auto">
+                <div className="flex flex-col gap-3 mb-6 md:mb-10">
+                  <div className="flex flex-col items-center lg:items-start gap-1.5">
                     <button
                       onClick={() => { trackCTAClick('Đặt Combo 2 Chai', 'hero'); scrollToOrder(); }}
                       className="group flex items-center justify-center gap-2.5 bg-orange-500 text-white px-6 py-4 rounded-2xl font-black text-lg hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full whitespace-nowrap"
@@ -982,9 +982,9 @@ export default function App() {
                       <span className="whitespace-nowrap">Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
                       <ChevronRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <p className="text-sm font-semibold text-slate-600 text-center sm:text-left whitespace-nowrap">✅ Tiết kiệm 120.000đ · 🚚 Giao COD · ⚡ Xịt 1 lần</p>
+                    <p className="text-sm font-semibold text-slate-600 text-center lg:text-left">✅ Tiết kiệm 120.000đ · 🚚 Miễn Phí Giao Hàng · ⚡ Hiệu Quả Kéo Dài</p>
                   </div>
-                  <div className="flex items-center gap-3 px-4 py-2 justify-center">
+                  <div className="flex items-center gap-3 justify-center lg:justify-start">
                     <div className="flex -space-x-2">
                       {[1,2,3,4].map(i => (
                         <img
