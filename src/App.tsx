@@ -1575,9 +1575,9 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-3.5 rounded-xl bg-amber-400 text-slate-900 font-black text-base hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
+                    className="w-full py-3.5 rounded-xl bg-orange-500 text-white font-black text-base hover:bg-orange-600 transition-all active:scale-95 shadow-lg shadow-orange-900/40"
                   >
-                    ✔ Chọn Combo 2 — Bảo Vệ Cả Năm
+                    ĐẶT COMBO 2 — 298.000Đ
                   </button>
                 </div>
               </div>
