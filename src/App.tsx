@@ -1696,9 +1696,9 @@ export default function App() {
                 <div key={i} className="snap-start flex-shrink-0 w-[88vw] max-w-[340px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                   {/* Customer photo – square slot (1:1), replace photo: null → "url" when ready */}
                   {t.photo ? (
-                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full aspect-[4/3] object-cover object-top" loading="lazy" width={600} height={450} sizes="(max-width: 640px) 82vw, 310px" />
+                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full aspect-[3/2] object-cover object-center" loading="lazy" width={600} height={450} sizes="(max-width: 640px) 88vw, 340px" />
                   ) : (
-                    <div className="w-full aspect-[4/3] bg-slate-100" />
+                    <div className="w-full aspect-[3/2] bg-slate-100" />
                   )}
                   <div className="p-3.5">
                     {/* Avatar + Name + Stars */}
@@ -1763,9 +1763,9 @@ export default function App() {
                 <div key={i} className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                   {/* Customer photo – 100px slot, crops square image to landscape banner */}
                   {t.photo ? (
-                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full h-[180px] object-cover object-top" loading="lazy" width={600} height={450} sizes="33vw" />
+                    <img src={t.photo} alt="Ảnh thực tế khách hàng dùng PestShield tại nhà" className="w-full h-[220px] object-cover object-center" loading="lazy" width={600} height={450} sizes="33vw" />
                   ) : (
-                    <div className="w-full h-[180px] bg-slate-100" />
+                    <div className="w-full h-[220px] bg-slate-100" />
                   )}
                   <div className="p-4 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">
