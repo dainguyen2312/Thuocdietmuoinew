@@ -1479,7 +1479,7 @@ export default function App() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">💡</span>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  <span className="font-bold text-slate-800">Mẹo:</span> Xịt vào buổi tối hiệu quả hơn — côn trùng hoạt động nhiều về đêm, tiếp xúc hoạt chất nhanh hơn.
+                  <span className="font-bold text-slate-800">Mẹo:</span> Xịt lần 2 sau 2–3 tháng để tăng hoạt chất NanoShieldX bám dính, bảo vệ gia đình mạnh hơn. Xịt vào buổi tối hiệu quả hơn — côn trùng hoạt động nhiều về đêm, tiếp xúc hoạt chất nhanh hơn.
                 </p>
               </div>
               <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-6 py-3 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
@@ -1575,7 +1575,7 @@ export default function App() {
 
                   <button
                     onClick={() => scrollToOrderWithCombo('combo2')}
-                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-base md:text-sm lg:text-base hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30"
+                    className="w-full py-4 rounded-xl bg-amber-400 text-slate-900 font-black text-sm hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-900/30 whitespace-nowrap"
                   >
                     ✔ Chọn Combo 2 — Bảo Vệ Cả Năm
                   </button>
