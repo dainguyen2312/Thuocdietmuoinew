@@ -921,7 +921,7 @@ export default function App() {
             </button>
             
             <div className="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
-              <button onClick={() => document.getElementById('how-samurai')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Ưu điểm</button>
+              <button onClick={() => document.getElementById('how-pestshield')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Ưu điểm</button>
               <button onClick={() => document.getElementById('usage-guide')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Cách Sử Dụng</button>
               <button onClick={() => document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">So Sánh Chi Phí</button>
               <button onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-emerald-600 transition-colors">Phản hồi</button>
@@ -953,7 +953,7 @@ export default function App() {
             className="md:hidden bg-white border-b border-slate-200 fixed top-16 left-0 right-0 z-40 shadow-xl"
           >
             <div className="px-4 pt-1 pb-4 space-y-0">
-              <button onClick={() => { document.getElementById('how-samurai')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Ưu điểm vượt trội</button>
+              <button onClick={() => { document.getElementById('how-pestshield')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Ưu điểm vượt trội</button>
               <button onClick={() => { document.getElementById('usage-guide')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Cách Sử Dụng</button>
               <button onClick={() => { document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">So Sánh Chi Phí</button>
               <button onClick={() => { document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }} className="block w-full text-left px-3 py-3.5 text-base font-medium border-b border-slate-100">Khách hàng nói gì?</button>
@@ -1185,8 +1185,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* Why Samurai Section */}
-        <section id="how-samurai" className="py-8 md:py-14 bg-white overflow-hidden">
+        {/* Why PestShield Section */}
+        <section id="how-pestshield" className="py-8 md:py-14 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               {/* Product image carousel – shared mobile & desktop */}
@@ -1279,37 +1279,37 @@ export default function App() {
                   {[
                     {
                       label: "Chi phí",
-                      samurai: "209.000đ — 1 chai",
+                      pestshield: "209.000đ — 1 chai",
                       service: "500k–1.5tr/lần",
                       normal: "200k/tháng",
                     },
                     {
                       label: "Hiệu lực",
-                      samurai: "6 tháng/lần xịt",
+                      pestshield: "6 tháng/lần xịt",
                       service: "1–2 tháng tái phát",
                       normal: "2–4 giờ hết tác dụng",
                     },
                     {
                       label: "Phải làm lại?",
-                      samurai: "Không — xịt 1 lần",
+                      pestshield: "Không — xịt 1 lần",
                       service: "Đặt lịch, chờ 3–7 ngày",
                       normal: "Xịt lại mỗi ngày",
                     },
                     {
                       label: "Mùi hóa chất",
-                      samurai: "Không mùi",
+                      pestshield: "Không mùi",
                       service: "Phải rời nhà 2–4 giờ",
                       normal: "Mùi khó chịu",
                     },
                     {
                       label: "An toàn trẻ em",
-                      samurai: "Thiên nhiên 100%",
+                      pestshield: "Thiên nhiên 100%",
                       service: "⚠️ Hóa chất công nghiệp",
                       normal: "⚠️ Không khuyến nghị",
                     },
                     {
                       label: "Chi phí 1 năm",
-                      samurai: "298.000đ",
+                      pestshield: "298.000đ",
                       service: "3–9 triệu",
                       normal: "2.4 triệu",
                       highlight: true,
@@ -1320,7 +1320,7 @@ export default function App() {
                       <td className="p-5 bg-emerald-50 border-x-2 border-emerald-100 text-center">
                         <div className="flex items-center justify-center gap-2 font-bold text-emerald-800">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                          {row.samurai}
+                          {row.pestshield}
                         </div>
                       </td>
                       <td className="p-5 text-center">
@@ -1382,11 +1382,11 @@ export default function App() {
                 </div>
 
                 {[
-                  { icon: "💸", label: "Chi phí", samurai: "209.000đ", bad: "200k/th–1.5tr" },
-                  { icon: "⏱️", label: "Hiệu lực", samurai: "6 tháng", bad: "Vài ngày–tháng" },
-                  { icon: "🔁", label: "Làm lại?", samurai: "Không cần", bad: "Liên tục" },
-                  { icon: "🌿", label: "An toàn", samurai: "Thiên nhiên", bad: "Hóa chất" },
-                  { icon: "💰", label: "1 năm", samurai: "~209.000đ", bad: "2.4–9 triệu", highlight: true },
+                  { icon: "💸", label: "Chi phí", pestshield:"209.000đ", bad: "200k/th–1.5tr" },
+                  { icon: "⏱️", label: "Hiệu lực", pestshield:"6 tháng", bad: "Vài ngày–tháng" },
+                  { icon: "🔁", label: "Làm lại?", pestshield:"Không cần", bad: "Liên tục" },
+                  { icon: "🌿", label: "An toàn", pestshield:"Thiên nhiên", bad: "Hóa chất" },
+                  { icon: "💰", label: "1 năm", pestshield:"~209.000đ", bad: "2.4–9 triệu", highlight: true },
                 ].map((row, i) => (
                   <div key={i} className={cn("grid grid-cols-[90px_1fr_1fr] border-t border-slate-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-slate-50/40")}>
                     <div className="p-3 flex flex-col justify-center bg-slate-50 border-r border-slate-100">
@@ -1395,7 +1395,7 @@ export default function App() {
                     </div>
                     <div className={cn("p-3 flex flex-col items-center justify-center border-r border-slate-100", row.highlight ? "bg-emerald-50" : "bg-emerald-50/30")}>
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 mb-1 flex-shrink-0" />
-                      <p className="font-black text-emerald-800 text-sm text-center leading-tight">{row.samurai}</p>
+                      <p className="font-black text-emerald-800 text-sm text-center leading-tight">{row.pestshield}</p>
                     </div>
                     <div className="p-3 flex flex-col items-center justify-center">
                       <XCircle className="w-4 h-4 text-orange-400 mb-1 flex-shrink-0" />
