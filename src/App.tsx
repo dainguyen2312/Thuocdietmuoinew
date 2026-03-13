@@ -438,24 +438,38 @@ const PRODUCT_IMGS = [
 
 const ProductCarousel: React.FC = () => {
   const [idx, setIdx] = React.useState(0);
-  const prev = () => setIdx((i: number) => (i - 1 + PRODUCT_IMGS.length) % PRODUCT_IMGS.length);
-  const next = () => setIdx((i: number) => (i + 1) % PRODUCT_IMGS.length);
+  const [dir, setDir] = React.useState(1); // 1 = next, -1 = prev
+  const prev = () => { setDir(-1); setIdx((i: number) => (i - 1 + PRODUCT_IMGS.length) % PRODUCT_IMGS.length); };
+  const next = () => { setDir(1);  setIdx((i: number) => (i + 1) % PRODUCT_IMGS.length); };
+  const goTo = (i: number) => { setDir(i > idx ? 1 : -1); setIdx(i); };
   const img = PRODUCT_IMGS[idx];
   return (
-    <div className="relative rounded-3xl shadow-2xl overflow-hidden w-full max-w-md mx-auto select-none">
-      <img
-        key={idx}
-        src={img.src}
-        alt={img.alt}
-        className="w-full h-auto block"
-        loading="lazy"
-        width={1200}
-        height={1200}
-      />
+    <div className="relative rounded-3xl shadow-2xl overflow-hidden w-full max-w-md mx-auto select-none bg-slate-100" style={{ aspectRatio: '1/1' }}>
+      <AnimatePresence initial={false} custom={dir} mode="popLayout">
+        <motion.img
+          key={idx}
+          src={img.src}
+          alt={img.alt}
+          custom={dir}
+          variants={{
+            enter: (d: number) => ({ x: d * 60, opacity: 0 }),
+            center: { x: 0, opacity: 1 },
+            exit:  (d: number) => ({ x: d * -60, opacity: 0 }),
+          }}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.28, ease: [0.32, 0, 0.67, 0] }}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          width={1200}
+          height={1200}
+        />
+      </AnimatePresence>
       {/* Prev */}
       <button
         onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
         aria-label="Ảnh trước"
       >
         <ChevronLeft className="w-5 h-5" />
@@ -463,17 +477,17 @@ const ProductCarousel: React.FC = () => {
       {/* Next */}
       <button
         onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
         aria-label="Ảnh tiếp"
       >
         <ChevronRight className="w-5 h-5" />
       </button>
       {/* Dots */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
         {PRODUCT_IMGS.map((_, i) => (
           <button
             key={i}
-            onClick={() => setIdx(i)}
+            onClick={() => goTo(i)}
             aria-label={`Ảnh ${i + 1}`}
             className={cn(
               "rounded-full transition-all duration-200",
@@ -1186,10 +1200,6 @@ export default function App() {
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-3 lg:mb-4 text-center lg:text-left">Tại Sao Xịt 1 Lần Mà Hiệu Lực 6 Tháng?</h2>
-                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5 mb-5 lg:mb-6 text-sm font-semibold text-emerald-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  14.800+ gia đình đã dùng · Đánh giá 4.9/5
-                </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4 md:gap-6">
                   {[
