@@ -2185,7 +2185,7 @@ export default function App() {
                 {/* Trust icons */}
                 <div className="grid grid-cols-3 gap-3 pt-2 border-t border-slate-100">
                   {[
-                    { icon: <Package className="w-5 h-5 text-green-600" />, text: 'Miễn phí giao hàng' },
+                    { icon: <Package className="w-5 h-5 text-green-600" />, text: 'Thanh toán khi nhận hàng' },
                     { icon: <CheckCircle2 className="w-5 h-5 text-green-600" />, text: 'Kiểm hàng trước khi trả tiền' },
                     { icon: <ShieldCheck className="w-5 h-5 text-green-600" />, text: 'Đổi Trả Miễn Phí' },
                   ].map((item, i) => (
@@ -2201,8 +2201,8 @@ export default function App() {
             {/* Trust badges */}
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
-                { emoji: '🚚', title: 'Freeship toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
-                { emoji: '🛡️', title: 'An toàn cho người & thú cưng', sub: 'Không độc hại, không mùi khó chịu' },
+                { emoji: '🚚', title: 'Giao hàng nhanh toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
+                { emoji: '🌿', title: 'An toàn cho người & thú cưng', sub: 'Không độc hại, không mùi khó chịu' },
                 { emoji: '⚡', title: 'Xịt 1 lần, hiệu lực 6 tháng', sub: 'Không cần gọi dịch vụ phun lại' },
                 { emoji: '🇪🇺', title: 'Công Nghệ Đức - Tiêu Chuẩn Châu Âu', sub: 'Hoạt chất thiên nhiên chiết xuất từ Hoa Cúc' },
               ].map((b, i) => (
