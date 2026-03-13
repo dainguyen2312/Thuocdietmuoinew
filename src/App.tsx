@@ -1956,22 +1956,22 @@ export default function App() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -8, scale: 0.98 }}
                         transition={{ duration: 0.22 }}
-                        className="mt-3 rounded-2xl overflow-hidden border-2 border-emerald-400 shadow-lg"
+                        className="mt-3 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-lg"
                       >
                         {/* Header */}
-                        <div className="bg-emerald-500 px-4 py-2.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                          <span className="text-white text-sm font-black leading-snug">🔥 Khoan đã!</span>
-                          <span className="text-emerald-50 text-xs font-bold leading-snug">Chỉ thêm <strong className="text-white">89.000đ</strong> → nâng lên Combo 2 Chai – Bảo vệ cả nhà 1 năm</span>
+                        <div className="bg-amber-400 px-4 py-2.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                          <span className="text-amber-900 text-sm font-black leading-snug">🔥 Khoan đã!</span>
+                          <span className="text-amber-800 text-xs font-bold leading-snug">Chỉ thêm <strong className="text-amber-900">89.000đ</strong> → nâng lên Combo 2 Chai – Bảo vệ cả nhà 1 năm</span>
                         </div>
                         {/* Body */}
-                        <div className="bg-emerald-50 px-4 py-3 space-y-2">
+                        <div className="bg-amber-50 px-4 py-3 space-y-2">
                           <ul className="space-y-1.5">
                             {[
                               { icon: '🏡', text: '2 chai – xịt đủ nhà phố 2 tầng hoặc nhà 50–100m², không cần mua thêm' },
                               { icon: '💰', text: 'Tiết kiệm 120.000đ so với mua lẻ – đặt 1 lần dùng cả năm, khỏi lo' },
                               { icon: '⚡', text: `Còn ${stockRemaining} suất giá này hôm nay – hết là về giá gốc` },
                             ].map((r, i) => (
-                              <li key={i} className="flex items-start gap-2 text-sm text-emerald-900 leading-snug">
+                              <li key={i} className="flex items-start gap-2 text-sm text-amber-900 leading-snug">
                                 <span className="text-base leading-none flex-shrink-0 mt-0.5">{r.icon}</span>
                                 <span>{r.text}</span>
                               </li>
@@ -1984,7 +1984,7 @@ export default function App() {
                               setValue('combo', 'combo2');
                               setUpsellApplied(true);
                             }}
-                            className="w-full mt-1 py-2.5 rounded-xl bg-emerald-600 text-white font-black text-sm hover:bg-emerald-700 active:scale-95 transition-all shadow-sm"
+                            className="w-full mt-1 py-2.5 rounded-xl bg-orange-500 text-white font-black text-sm hover:bg-orange-600 active:scale-95 transition-all shadow-sm"
                           >
                             ✅ Lấy Combo 2 Chai – 298.000đ · Tiết kiệm 120k
                           </button>
@@ -2177,7 +2177,7 @@ export default function App() {
                   })()}
                   {submitStatus !== 'success' && (
                     <p className="text-center text-slate-500 text-xs mt-2 leading-snug">
-                      ✓ Nhân viên gọi lại <strong className="text-slate-700">sớm nhất</strong> · Chú ý để chuông ☎️
+                      ✓ Nhân viên sẽ liên hệ xác nhận đơn trong <strong className="text-slate-700">24h</strong>
                     </p>
                   )}
                 </div>
