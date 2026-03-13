@@ -29,6 +29,7 @@ import {
   Menu,
   X,
   ChevronRight,
+  ChevronLeft,
   XCircle,
   MapPin,
   Mail
@@ -422,6 +423,65 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
           <button onClick={onClose} className="w-full md:w-auto bg-slate-900 text-white px-8 py-3 rounded-full font-bold text-sm">ĐÃ HIỂU</button>
         </div>
       </motion.div>
+    </div>
+  );
+};
+
+// ── Product image carousel for "Why 6 months" section ──
+const PRODUCT_IMGS = [
+  { src: "/6thangtuduc.webp", alt: "PestShield – hoạt chất bám dính bề mặt 6 tháng" },
+  { src: "/product1.webp",    alt: "PestShield – ảnh sản phẩm 1" },
+  { src: "/product2.webp",    alt: "PestShield – ảnh sản phẩm 2" },
+  { src: "/product3.webp",    alt: "PestShield – ảnh sản phẩm 3" },
+  { src: "/product4.webp",    alt: "PestShield – ảnh sản phẩm 4" },
+];
+
+const ProductCarousel: React.FC = () => {
+  const [idx, setIdx] = React.useState(0);
+  const prev = () => setIdx((i: number) => (i - 1 + PRODUCT_IMGS.length) % PRODUCT_IMGS.length);
+  const next = () => setIdx((i: number) => (i + 1) % PRODUCT_IMGS.length);
+  const img = PRODUCT_IMGS[idx];
+  return (
+    <div className="relative rounded-3xl shadow-2xl overflow-hidden w-full max-w-md mx-auto select-none">
+      <img
+        key={idx}
+        src={img.src}
+        alt={img.alt}
+        className="w-full h-auto block"
+        loading="lazy"
+        width={1200}
+        height={1200}
+      />
+      {/* Prev */}
+      <button
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
+        aria-label="Ảnh trước"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      {/* Next */}
+      <button
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
+        aria-label="Ảnh tiếp"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+      {/* Dots */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {PRODUCT_IMGS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIdx(i)}
+            aria-label={`Ảnh ${i + 1}`}
+            className={cn(
+              "rounded-full transition-all duration-200",
+              i === idx ? "w-5 h-1.5 bg-white" : "w-1.5 h-1.5 bg-white/50"
+            )}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -1119,39 +1179,16 @@ export default function App() {
         <section id="how-samurai" className="py-8 md:py-14 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-              <div className="hidden lg:block order-1 relative">
-                <div className="absolute -inset-4 bg-emerald-100 rounded-[40px] blur-2xl opacity-50"></div>
-                <div className="relative rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
-                  <img
-                    src="/6thangtuduc.webp"
-                    alt="Tại sao PestShield xịt 1 lần hiệu lực 6 tháng – hoạt chất bám dính bề mặt"
-                    className="w-full h-auto block"
-                    loading="lazy"
-                    width={1500}
-                    height={1500}
-                  />
-                </div>
+              {/* Product image carousel – shared mobile & desktop */}
+              <div className="order-1 relative">
+                <div className="absolute -inset-4 bg-emerald-100 rounded-[40px] blur-2xl opacity-50 pointer-events-none"></div>
+                <ProductCarousel />
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-3 lg:mb-4 text-center lg:text-left">Tại Sao Xịt 1 Lần Mà Hiệu Lực 6 Tháng?</h2>
                 <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5 mb-5 lg:mb-6 text-sm font-semibold text-emerald-800">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                   14.800+ gia đình đã dùng · Đánh giá 4.9/5
-                </div>
-
-                {/* Mobile Image - Product Showcase */}
-                <div className="lg:hidden mb-6 relative">
-                  <div className="absolute -inset-3 bg-emerald-100 rounded-3xl blur-2xl opacity-40"></div>
-                  <div className="relative rounded-3xl shadow-xl w-full max-w-sm mx-auto overflow-hidden">
-                    <img
-                      src="/6thangtuduc.webp"
-                      alt="Tại sao PestShield xịt 1 lần hiệu lực 6 tháng – hoạt chất bám dính bề mặt"
-                      className="w-full h-auto block"
-                      loading="lazy"
-                      width={1500}
-                      height={1500}
-                    />
-                  </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4 md:gap-6">
