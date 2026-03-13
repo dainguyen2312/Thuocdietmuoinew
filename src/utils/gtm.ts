@@ -2,7 +2,6 @@
 declare global {
   interface Window {
     dataLayer: Record<string, unknown>[];
-    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -63,14 +62,11 @@ async function hashPhone(raw: string): Promise<string> {
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-// CONVERSION_ID và CONVERSION_LABEL lấy từ Google Ads → Goals → Conversions
-const CONVERSION_ID    = 'AW-XXXXXXXXX';      // ← thay bằng ID thực
-const CONVERSION_LABEL = 'XXXXXXXXXXXX';       // ← thay bằng Label thực
-
 export async function trackPurchase(phone: string): Promise<void> {
+  window.dataLayer = window.dataLayer || [];
   const hashedPhone = await hashPhone(phone);
-  window.gtag('event', 'conversion', {
-    send_to: `${CONVERSION_ID}/${CONVERSION_LABEL}`,
+  window.dataLayer.push({
+    event: 'purchase',
     user_data: {
       sha256_phone_number: hashedPhone,
     },
