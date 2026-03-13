@@ -1496,9 +1496,8 @@ export default function App() {
 
             {/* Header */}
             <div className="text-center mb-10 md:mb-12">
-              <p className="text-amber-400 font-bold uppercase tracking-widest text-sm mb-3">📦 Giao hàng toàn quốc · COD tận nơi</p>
+              <p className="text-amber-400 font-bold uppercase tracking-widest text-sm mb-3">📦 Giao hàng toàn quốc · Kiểm tra hàng trước khi thanh toán · COD tận nơi</p>
               <h2 className="text-2xl md:text-4xl font-black mb-3 leading-tight">Chọn Gói Phù Hợp — Xịt 1 Lần, Không Lo Cả Năm</h2>
-              <p className="text-slate-400 text-sm md:text-base">Miễn phí giao hàng · Kiểm tra hàng trước khi thanh toán · COD toàn quốc</p>
             </div>
 
             {/* Cards grid */}
