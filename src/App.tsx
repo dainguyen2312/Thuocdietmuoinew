@@ -1862,27 +1862,10 @@ export default function App() {
               <h2 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-2">
                 Đặt Hàng Ngay – Giao Tận Nhà
               </h2>
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-                ⚠️ <strong className="text-slate-800">Nhân viên gọi lại SỚM NHẤT</strong> – Vui lòng cung cấp <strong className="text-emerald-600">số điện thoại chính xác</strong>
-              </p>
             </div>
 
             {/* Form Card */}
             <div className="bg-white rounded-3xl shadow-2xl border border-emerald-100 overflow-hidden">
-
-              {/* Trust bar */}
-              <div className="bg-green-600 px-4 py-3 grid grid-cols-3 gap-1 text-white text-xs font-bold">
-                {[
-                  { icon: '🔍', text: 'Xem trước khi nhận' },
-                  { icon: '💰', text: 'Trả tiền sau' },
-                  { icon: '🚚', text: 'Ship miễn phí' },
-                ].map((item, i) => (
-                  <div key={i} className="flex flex-col items-center gap-1 text-center">
-                    <span className="text-base leading-none">{item.icon}</span>
-                    <span className="leading-tight">{item.text}</span>
-                  </div>
-                ))}
-              </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="p-5 md:p-7 space-y-5">
 
