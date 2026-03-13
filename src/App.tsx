@@ -10,7 +10,6 @@ import {
   trackCTAClick,
   trackSelectPackage,
   trackFormStart,
-  trackFormSubmit,
   trackPurchase,
   trackScrollDepth,
   trackBotDetection,
@@ -693,8 +692,6 @@ export default function App() {
       });
       const result = await res.json();
       if (result.ok) {
-        const comboPrice = { combo1: 209000, combo2: 298000, combo3: 397000 }[data.combo as string] ?? 0;
-        trackFormSubmit(getComboName(data.combo), comboPrice, result.orderId ?? '');
         setPendingOrderData(data);
         setPendingOrderId(result.orderId);
         setSubmitStatus('idle');
@@ -731,7 +728,7 @@ export default function App() {
       const result = await res.json();
       if (result.ok) {
         const comboPrice = { combo1: 209000, combo2: 298000, combo3: 397000 }[data.combo as string] ?? 0;
-        trackPurchase(getComboName(data.combo), comboPrice, pendingOrderId ?? '');
+        await trackPurchase(getComboName(data.combo), comboPrice, pendingOrderId ?? '', data.phone);
         setSubmitStatus('success');
         setOrderCustomerName(data.name || '');
         setShowSuccessModal(true);
