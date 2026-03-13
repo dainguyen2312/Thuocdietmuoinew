@@ -1159,17 +1159,17 @@ export default function App() {
                     {
                       icon: <Zap className="w-6 h-6 text-yellow-500" />,
                       title: "Không xịt trúng — vẫn hiệu quả",
-                      desc: "Công nghệ NanoShieldX độc quyền từ Đức tạo lớp hạt siêu nhỏ bám kín bề mặt.\nMuỗi hay côn trùng chỉ cần tiếp xúc là tê liệt ngay — không cần rượt theo từng con."
+                      desc: <span>Công nghệ <strong>NanoShieldX</strong> độc quyền từ <strong>Đức</strong> tạo lớp hạt siêu nhỏ bám kín bề mặt.<br />Muỗi hay côn trùng chỉ cần tiếp xúc là tê liệt ngay — không cần rượt theo từng con.</span>
                     },
                     {
                       icon: <ShieldCheck className="w-6 h-6 text-blue-500" />,
                       title: "Bám dính 6 tháng — không bay hơi như chai thường",
-                      desc: "Hạt nano NanoShieldX bám chắc vào tường, sàn, cửa — không bốc hơi, không trôi theo mưa hay quạt gió.\nXịt 1 lần, bảo vệ liên tục suốt 6 tháng."
+                      desc: <span>Hạt nano bám chắc vào tường, sàn, cửa — không bốc hơi, không trôi theo mưa hay quạt gió.<br />Xịt 1 lần, bảo vệ liên tục suốt 6 tháng.</span>
                     },
                     {
                       icon: <Leaf className="w-6 h-6 text-emerald-500" />,
                       title: "Thiên nhiên — không mùi sau 30 phút",
-                      desc: "Hoạt chất NanoShieldX chiết xuất thực vật, khô hoàn toàn sau 30 phút.\nKhông độc, không mùi — trẻ bò sàn, thú cưng ở nhà bình thường."
+                      desc: <span>Hoạt chất chiết xuất thực vật, khô hoàn toàn sau 30 phút.<br />Không độc, không mùi — trẻ bò sàn, thú cưng ở nhà bình thường.</span>
                     }
                   ].map((feature, idx) => (
                     <div key={idx} className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
@@ -1178,7 +1178,7 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
-                        <p className="text-slate-600 text-base leading-relaxed whitespace-pre-line">{feature.desc}</p>
+                        <p className="text-slate-600 text-base leading-relaxed">{feature.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -1186,7 +1186,7 @@ export default function App() {
                 <div className="mt-8 inline-flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-3.5 w-full lg:w-auto">
                   <span className="text-2xl flex-shrink-0">💡</span>
                   <p className="text-emerald-800 font-bold text-base md:text-lg leading-snug">
-                    Không phải xịt mạnh hơn — mà <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">công nghệ NanoShieldX làm việc thay bạn</span>.
+                    Không phải xịt nhiều loại hơn — mà hãy dùng <span className="text-emerald-600 underline underline-offset-4 decoration-emerald-400">PestShield NanoShieldX</span> thay bạn bảo vệ gia đình.
                   </p>
                 </div>
               </div>
