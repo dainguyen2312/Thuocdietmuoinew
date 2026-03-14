@@ -322,7 +322,8 @@ const ConfirmOrderModal = ({
 };
 
 const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) => {
-  const content: any = {
+  type PolicyContent = { title: string; body: React.ReactNode };
+  const content: Record<string, PolicyContent> = {
     privacy: {
       title: "Chính sách bảo mật thông tin",
       body: (
@@ -831,7 +832,8 @@ export default function App() {
   };
 
   // Social Proof Notifications
-  const [currentNotification, setCurrentNotification] = useState<any>(null);
+  type Notification = { name: string; loc: string; combo: string; time: string };
+  const [currentNotification, setCurrentNotification] = useState<Notification | null>(null);
   const notifications = [
     { name: "Anh Thanh", loc: "Hà Nội", combo: "Combo 2 Chai PestShield", time: "5 phút trước" },
     { name: "Chị Lan", loc: "TP. Hồ Chí Minh", combo: "1 Chai PestShield", time: "15 phút trước" },
@@ -1414,7 +1416,7 @@ export default function App() {
                   <div key={i} className={cn("grid grid-cols-[90px_1fr_1fr] border-t border-slate-100", row.highlight ? "bg-yellow-50" : i % 2 === 0 ? "bg-white" : "bg-slate-50/40")}>
                     <div className="p-3 flex flex-col justify-center bg-slate-50 border-r border-slate-100">
                       <span className="text-lg leading-none mb-1">{row.icon}</span>
-                      <span className="text-[11px] font-bold text-slate-600 leading-tight">{row.label}</span>
+                      <span className="text-xs font-bold text-slate-600 leading-tight">{row.label}</span>
                     </div>
                     <div className={cn("p-3 flex flex-col items-center justify-center border-r border-slate-100", row.highlight ? "bg-emerald-50" : "bg-emerald-50/30")}>
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 mb-1 flex-shrink-0" />
@@ -1976,7 +1978,7 @@ export default function App() {
                           className="sr-only"
                         />
                         {item.recommended && (
-                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[11px] font-black px-2 py-0.5 rounded-full whitespace-nowrap tracking-wide">
+                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap tracking-wide">
                             NÊN CHỌN
                           </span>
                         )}
@@ -2093,7 +2095,7 @@ export default function App() {
                       onFocus={trackFormStart}
 
                       className={cn(
-                        "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
+                        "w-full px-5 py-5 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.name && "border-red-400 bg-red-50"
                       )}
                     />
@@ -2110,7 +2112,7 @@ export default function App() {
                       autoComplete="tel"
                       name="phone"
                       className={cn(
-                        "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
+                        "w-full px-5 py-5 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.phone && "border-red-400 bg-red-50"
                       )}
                     />
@@ -2125,7 +2127,7 @@ export default function App() {
                       autoComplete="street-address"
                       name="address"
                       className={cn(
-                        "w-full px-5 py-4 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
+                        "w-full px-5 py-5 text-lg rounded-2xl bg-slate-50 border-2 border-slate-200 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all",
                         errors.address && "border-red-400 bg-red-50"
                       )}
                     />
@@ -2192,7 +2194,7 @@ export default function App() {
                       <div className="mt-4 rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
                         {/* Compact header row */}
                         <div className="bg-slate-800 px-3 py-1.5 flex items-center justify-between gap-2">
-                          <span className="text-white text-[11px] font-bold flex items-center gap-1.5 leading-tight">
+                          <span className="text-white text-xs font-bold flex items-center gap-1.5 leading-tight">
                             <span className="relative flex h-1.5 w-1.5 flex-shrink-0">
                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-300"></span>
@@ -2213,7 +2215,7 @@ export default function App() {
                                   <div className="bg-slate-900 text-white font-black text-base w-10 h-10 rounded-lg flex items-center justify-center tabular-nums tracking-tight shadow-sm">
                                     {seg.val}
                                   </div>
-                                  <span className="text-slate-500 text-[11px] font-bold mt-0.5">{seg.label}</span>
+                                  <span className="text-slate-500 text-xs font-bold mt-0.5">{seg.label}</span>
                                 </div>
                                 {i < 2 && <span className="text-slate-400 font-black text-base mb-3 select-none">:</span>}
                               </React.Fragment>
