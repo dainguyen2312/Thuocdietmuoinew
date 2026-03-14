@@ -876,7 +876,7 @@ export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-emerald-100">
+    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-emerald-100 overflow-x-hidden">
       {/* Success Modal */}
       <AnimatePresence>
         {showSuccessModal && (
@@ -1014,7 +1014,7 @@ export default function App() {
                 </h1>
                 {/* Hero Image chỉ hiện dưới tiêu đề trên mobile, ẩn trên desktop */}
                 <div className="block lg:hidden mb-6">
-                  <div className="relative">
+                  <div className="relative overflow-hidden rounded-3xl">
                     <div className="absolute -inset-4 rounded-[40px] blur-3xl" style={{ backgroundColor: 'rgba(76, 175, 80, 0.1)' }}></div>
                     <img
                       src="/heromobile.webp"
@@ -1213,7 +1213,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               {/* Product image carousel – shared mobile & desktop */}
-              <div className="order-1 relative">
+              <div className="order-1 relative overflow-hidden rounded-3xl">
                 <div className="absolute -inset-4 bg-emerald-100 rounded-[40px] blur-2xl opacity-50 pointer-events-none"></div>
                 <ProductCarousel />
               </div>
@@ -1284,7 +1284,7 @@ export default function App() {
                   <tr>
                     <th className="p-5 font-bold bg-slate-900 text-white text-base w-[22%]">So sánh</th>
                     <th className="p-5 font-black text-center bg-emerald-700 text-white text-base w-[26%] relative overflow-hidden">
-                      <div className="absolute top-0 right-0 bg-yellow-400 text-emerald-800 text-xs px-2 py-0.5 font-bold uppercase -rotate-45 translate-x-4 translate-y-2">✓ Nên chọn</div>
+                      <div className="absolute top-0 right-0 bg-yellow-400 text-emerald-800 text-xs px-2 py-0.5 font-bold uppercase -rotate-45 translate-y-2">✓ Nên chọn</div>
                       🛡️ PESTSHIELD
                       <div className="text-white/70 font-normal text-xs mt-1">209.000đ — 1 chai</div>
                     </th>
