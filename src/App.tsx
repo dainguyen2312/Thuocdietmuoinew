@@ -873,7 +873,7 @@ export default function App() {
   }, []);
 
   const [activeModal, setActiveModal] = useState<string | null>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-emerald-100">
@@ -2282,28 +2282,29 @@ export default function App() {
               </div>
             </div>
 
-            {/* Chứng Nhận An Toàn Hoá Chất Châu Âu */}
-            <div className="mt-10">
-              <h3 className="text-center text-lg sm:text-xl font-extrabold text-slate-800 mb-5 tracking-tight">
-                🇪🇺 Chứng Nhận An Toàn Hoá Chất Châu Âu
-              </h3>
-              <div className="flex justify-center px-4">
-                <img
-                  src="/chungnhan.webp"
-                  alt="Chứng nhận an toàn hoá chất Châu Âu"
-                  className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-lg border border-slate-200 object-contain"
-                  loading="lazy"
-                  width={480}
-                  height={679}
-                />
-              </div>
-            </div>
-
             </div>{/* end right col */}
             </div>{/* end desktop grid */}
 
           </div>
         </section>
+
+        {/* Chứng Nhận An Toàn Hoá Chất Châu Âu */}
+        <section className="py-8 md:py-10 bg-gradient-to-b from-teal-50 to-emerald-50 border-t border-emerald-100">
+          <div className="max-w-sm mx-auto px-4 text-center">
+            <h3 className="text-lg sm:text-xl font-extrabold text-slate-800 mb-5 tracking-tight">
+              🇪🇺 Chứng Nhận An Toàn Hoá Chất Châu Âu
+            </h3>
+            <img
+              src="/chungnhan.webp"
+              alt="Chứng nhận an toàn hoá chất Châu Âu"
+              className="w-full rounded-2xl shadow-lg border border-slate-200 object-contain mx-auto"
+              loading="lazy"
+              width={480}
+              height={679}
+            />
+          </div>
+        </section>
+
       </main>
 
       {/* Footer */}
