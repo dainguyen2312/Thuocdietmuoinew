@@ -1436,9 +1436,9 @@ export default function App() {
               <div className="flex flex-col items-center gap-2 pt-2">
                 <button
                   onClick={scrollToPricing}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base px-6 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-sm px-4 py-3.5 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200"
                 >
-                  <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
+                  <ShieldCheck className="w-4 h-4 flex-shrink-0 text-yellow-300" />
                   <span>Đặt Ngay — Rẻ Hơn Thuê Dịch Vụ, Dùng Cả Năm</span>
                 </button>
                 <span className="text-xs text-slate-500 font-medium text-center">298.000đ · 2 chai · Bảo vệ cả nhà suốt 12 tháng+</span>
@@ -1871,9 +1871,9 @@ export default function App() {
             <div className="mt-8 flex flex-col items-center gap-2">
               <button
                 onClick={scrollToOrder}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-black text-lg px-8 py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-black text-sm sm:text-lg px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all"
               >
-                <ShoppingCart className="w-5 h-5 flex-shrink-0" />
+                <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                 Đặt Hàng Ngay — Giao COD Toàn Quốc
               </button>
               <span className="text-xs text-slate-500 font-medium">Miễn phí giao hàng · Kiểm tra hàng trước khi trả tiền</span>
