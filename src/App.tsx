@@ -441,8 +441,23 @@ const ProductCarousel: React.FC = () => {
   const next = () => { setDir(1);  setIdx((i: number) => (i + 1) % PRODUCT_IMGS.length); };
   const goTo = (i: number) => { setDir(i > idx ? 1 : -1); setIdx(i); };
   const img = PRODUCT_IMGS[idx];
+
+  const touchStartX = React.useRef<number | null>(null);
+  const handleTouchStart = (e: React.TouchEvent) => { touchStartX.current = e.touches[0].clientX; };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) { delta > 0 ? next() : prev(); }
+    touchStartX.current = null;
+  };
+
   return (
-    <div className="relative rounded-3xl shadow-2xl overflow-hidden w-full max-w-md mx-auto select-none bg-slate-100" style={{ aspectRatio: '1/1' }}>
+    <div
+      className="relative rounded-3xl shadow-2xl overflow-hidden w-full max-w-md mx-auto select-none bg-slate-100"
+      style={{ aspectRatio: '1/1' }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <AnimatePresence initial={false} custom={dir} mode="popLayout">
         <motion.img
           key={idx}
