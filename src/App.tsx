@@ -1464,11 +1464,11 @@ export default function App() {
             <div className="md:grid md:grid-cols-[auto_1fr] md:gap-8 md:items-center">
 
               {/* Image */}
-              <div className="mb-6 md:mb-0 max-w-[180px] mx-auto md:mx-0 md:w-44 rounded-2xl overflow-hidden shadow-md border border-slate-100 flex-shrink-0">
+              <div className="mb-6 md:mb-0 w-full md:w-64 md:flex-shrink-0 rounded-2xl overflow-hidden shadow-md border border-slate-100 aspect-square">
                 <img
                   src="/cachsudung.webp"
                   alt="Cách sử dụng chai xịt muỗi PestShield – 3 bước đơn giản"
-                  className="w-full h-auto block"
+                  className="w-full h-full object-cover block"
                   loading="lazy"
                   width={1024}
                   height={1024}
