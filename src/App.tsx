@@ -2290,10 +2290,10 @@ export default function App() {
 
         {/* Chứng Nhận An Toàn Hoá Chất Châu Âu */}
         <section className="py-8 md:py-10 bg-gradient-to-b from-teal-50 to-emerald-50 border-t border-emerald-100">
-          <div className="max-w-sm mx-auto px-4 text-center">
-            <h3 className="text-lg sm:text-xl font-extrabold text-slate-800 mb-5 tracking-tight">
+          <div className="max-w-lg mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-5 whitespace-nowrap">
               🇪🇺 Chứng Nhận An Toàn Hoá Chất Châu Âu
-            </h3>
+            </h2>
             <img
               src="/chungnhan.webp"
               alt="Chứng nhận an toàn hoá chất Châu Âu"
