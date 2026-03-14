@@ -1917,7 +1917,7 @@ export default function App() {
 
         {/* Order Form Section */}
         <section id="order-section" className="py-8 md:py-10 bg-gradient-to-b from-emerald-50 to-teal-50 border-t-4 border-emerald-600">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <div className="max-w-2xl md:max-w-5xl mx-auto px-4 sm:px-6">
 
             {/* Header */}
             <div className="text-center mb-6">
@@ -1929,17 +1929,51 @@ export default function App() {
               </h2>
             </div>
 
+            {/* Desktop 2-col layout */}
+            <div className="md:grid md:grid-cols-[1fr_1.1fr] md:gap-8 md:items-start">
+
+            {/* LEFT COL – desktop only: ảnh + trust badges */}
+            <div className="hidden md:flex md:flex-col md:gap-5">
+              <img
+                src="/products2.webp"
+                alt="Chai xịt Muỗi &amp; Côn trùng PestShield - 1 Chai, Combo 2 Chai, Combo 3 Chai"
+                className="w-full h-auto rounded-2xl shadow-xl border border-slate-100"
+                loading="lazy"
+                width={1376}
+                height={768}
+              />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { emoji: '🚚', title: 'Giao hàng nhanh toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
+                  { emoji: '🌿', title: 'An toàn cho người & thú cưng', sub: 'Không độc hại, không mùi khó chịu' },
+                  { emoji: '⚡', title: 'Xịt 1 lần, hiệu lực 6 tháng', sub: 'Không cần gọi dịch vụ phun lại' },
+                  { emoji: '🇪🇺', title: 'Công Nghệ Đức - Tiêu Chuẩn Châu Âu', sub: 'Hoạt chất thiên nhiên chiết xuất từ Hoa Cúc' },
+                ].map((b, i) => (
+                  <div key={i} className="bg-white rounded-2xl border border-slate-200 px-3 py-2.5 flex items-start gap-2.5 shadow-sm">
+                    <span className="text-xl leading-none mt-0.5">{b.emoji}</span>
+                    <div>
+                      <p className="text-xs font-bold text-slate-800 leading-snug">{b.title}</p>
+                      <p className="text-xs text-slate-500 mt-0.5">{b.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT COL (mobile: full width, desktop: right col) */}
+            <div>
+
             {/* Form Card */}
             <div className="bg-white rounded-3xl shadow-2xl border border-emerald-100 overflow-hidden">
 
-              <form onSubmit={handleSubmit(onSubmit)} className="p-5 md:p-7 space-y-5">
+              <form onSubmit={handleSubmit(onSubmit)} className="p-5 md:p-5 space-y-4">
 
-                {/* Product Image */}
-                <div className="flex justify-center my-2">
+                {/* Product Image – mobile only */}
+                <div className="flex justify-center my-2 md:hidden">
                   <img
                     src="/products2.webp"
                     alt="Chai xịt Muỗi &amp; Côn trùng PestShield - 1 Chai, Combo 2 Chai, Combo 3 Chai"
-                    className="w-full max-w-xs md:max-w-md h-auto rounded-2xl shadow-xl border border-slate-100"
+                    className="w-full max-w-xs h-auto rounded-2xl shadow-xl border border-slate-100"
                     loading="lazy"
                     width={1376}
                     height={768}
@@ -2246,8 +2280,8 @@ export default function App() {
               </form>
             </div>
 
-            {/* Trust badges */}
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            {/* Trust badges – mobile only (desktop shows in left col) */}
+            <div className="mt-6 grid grid-cols-2 gap-3 md:hidden">
               {[
                 { emoji: '🚚', title: 'Giao hàng nhanh toàn quốc', sub: 'Nhận hàng – xem hàng – mới trả tiền' },
                 { emoji: '🌿', title: 'An toàn cho người & thú cưng', sub: 'Không độc hại, không mùi khó chịu' },
@@ -2298,6 +2332,9 @@ export default function App() {
                 />
               </div>
             </div>
+
+            </div>{/* end right col */}
+            </div>{/* end desktop grid */}
 
           </div>
         </section>
