@@ -1450,107 +1450,73 @@ export default function App() {
         </section>
 
         {/* 3-Step Guide */}
-        <section id="usage-guide" className="py-8 md:py-12 bg-white">
+        <section id="usage-guide" className="py-8 md:py-10 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
-            <div className="text-center mb-8 md:mb-12">
+            <div className="text-center mb-6">
               <p className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Cách sử dụng</p>
-              <h2 className="text-2xl md:text-3xl font-black mb-2 uppercase tracking-tight">Xịt 5 Phút — Bảo Vệ Cả Nhà 6 Tháng</h2>
-              <p className="text-slate-500 text-base">Chỉ 3 bước đơn giản - Tự làm tại nhà</p>
+              <h2 className="text-2xl md:text-3xl font-black mb-1 uppercase tracking-tight">Xịt 5 Phút — Bảo Vệ Cả Nhà 6 Tháng</h2>
+              <p className="text-slate-500 text-sm">Chỉ 3 bước đơn giản - Tự làm tại nhà</p>
             </div>
 
-            {/* Illustration image */}
-            <div className="mb-8 md:mb-12 max-w-xs mx-auto md:max-w-sm rounded-2xl overflow-hidden shadow-md border border-slate-100">
-              <img
-                src="/cachsudung.webp"
-                alt="Cách sử dụng chai xịt muỗi PestShield – 3 bước đơn giản"
-                className="w-full h-auto block"
-                loading="lazy"
-                width={1024}
-                height={1024}
-              />
-            </div>
+            {/* Desktop: 2 col — image left, steps right | Mobile: image top, steps below */}
+            <div className="md:grid md:grid-cols-[auto_1fr] md:gap-8 md:items-center">
 
-            {/* Steps - Mobile: vertical / Desktop: horizontal */}
-            <div className="flex flex-col md:flex-row md:items-stretch gap-0 md:gap-0">
-              {[
-                {
-                  num: "1",
-                  time: "2 phút",
-                  title: "Xác định điểm xịt",
-                  desc: "Chân tường, góc nhà, gầm bếp, cửa ra vào — nơi Muỗi và côn trùng hay xuất hiện.",
-                  icon: "🔍",
-                },
-                {
-                  num: "2",
-                  time: "3 phút",
-                  title: "Xịt đều vào các điểm",
-                  desc: "Giữ chai cách bề mặt 20cm, xịt 1 lượt mỏng. Không cần xịt nhiều.",
-                  icon: '💦',
-                },
-                {
-                  num: "3",
-                  time: "Xong. Để khô 30 phút",
-                  title: "Ra ngoài — về sinh hoạt bình thường",
-                  desc: "Ra ngoài 30 phút cho khô. Về nhà sinh hoạt bình thường — hiệu lực giữ nguyên 6 tháng.",
-                  icon: "✅",
-                },
-              ].map((item, idx) => (
-                <div key={idx} className="flex md:flex-col md:flex-1 relative">
-
-                  {/* Mobile: horizontal number + content */}
-                  <div className="flex md:hidden items-start gap-4 pb-8 relative">
-                    {/* Left: number + line */}
-                    <div className="flex flex-col items-center flex-shrink-0">
-                      <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-black text-xl flex items-center justify-center shadow-md shadow-emerald-100">
-                        {item.num}
-                      </div>
-                      {idx < 2 && <div className="w-0.5 flex-1 bg-emerald-100 mt-2 min-h-[2rem]"></div>}
-                    </div>
-                    {/* Right: content */}
-                    <div className="flex-1 pt-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xl">{item.icon}</span>
-                        <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">{item.time}</span>
-                      </div>
-                      <h4 className="text-lg font-black text-slate-900 mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-
-                  {/* Desktop: vertical card */}
-                  <div className="hidden md:flex flex-col items-center text-center flex-1 px-6">
-                    <div className="w-16 h-16 rounded-2xl bg-emerald-600 text-white font-black text-2xl flex items-center justify-center shadow-lg shadow-emerald-100 mb-4">
-                      {item.num}
-                    </div>
-                    <span className="text-2xl mb-3">{item.icon}</span>
-                    <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full mb-3">{item.time}</span>
-                    <h4 className="text-lg font-black text-slate-900 mb-2">{item.title}</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-
-                  {/* Desktop arrow between steps */}
-                  {idx < 2 && (
-                    <div className="hidden md:flex items-center justify-center flex-shrink-0 mt-8">
-                      <ChevronRight className="w-6 h-6 text-emerald-300" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {/* Bottom note + CTA */}
-            <div className="mt-6 md:mt-10 bg-slate-50 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-100">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl flex-shrink-0">💡</span>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  <span className="font-bold text-slate-800">Mẹo:</span> Xịt lần 2 sau 2–3 tháng để tăng hoạt chất NanoShieldX bám dính, bảo vệ gia đình mạnh hơn.
-                </p>
+              {/* Image */}
+              <div className="mb-6 md:mb-0 max-w-[180px] mx-auto md:mx-0 md:w-44 rounded-2xl overflow-hidden shadow-md border border-slate-100 flex-shrink-0">
+                <img
+                  src="/cachsudung.webp"
+                  alt="Cách sử dụng chai xịt muỗi PestShield – 3 bước đơn giản"
+                  className="w-full h-auto block"
+                  loading="lazy"
+                  width={1024}
+                  height={1024}
+                />
               </div>
-              <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-6 py-3 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
-                ĐẶT MUA NGAY
-              </button>
+
+              {/* Steps + note + CTA */}
+              <div>
+                {/* Steps */}
+                <div className="flex flex-col gap-0">
+                  {[
+                    { num: "1", time: "2 phút",            title: "Xác định điểm xịt",                  desc: "Chân tường, góc nhà, gầm bếp, cửa ra vào — nơi Muỗi và côn trùng hay xuất hiện.", icon: "🔍" },
+                    { num: "2", time: "3 phút",            title: "Xịt đều vào các điểm",               desc: "Giữ chai cách bề mặt 20cm, xịt 1 lượt mỏng. Không cần xịt nhiều.", icon: "💦" },
+                    { num: "3", time: "Để khô 30 phút",   title: "Ra ngoài — về sinh hoạt bình thường", desc: "Ra ngoài 30 phút cho khô. Về nhà sinh hoạt bình thường — hiệu lực giữ nguyên 6 tháng.", icon: "✅" },
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4 pb-5 relative">
+                      <div className="flex flex-col items-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white font-black text-base flex items-center justify-center shadow-md shadow-emerald-100">
+                          {item.num}
+                        </div>
+                        {idx < 2 && <div className="w-0.5 flex-1 bg-emerald-100 mt-2 min-h-[1.5rem]"></div>}
+                      </div>
+                      <div className="flex-1 pt-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-lg">{item.icon}</span>
+                          <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">{item.time}</span>
+                        </div>
+                        <h4 className="text-base font-black text-slate-900 mb-0.5">{item.title}</h4>
+                        <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom note + CTA */}
+                <div className="bg-slate-50 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 border border-slate-100">
+                  <div className="flex items-start gap-2">
+                    <span className="text-lg flex-shrink-0">💡</span>
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      <span className="font-bold text-slate-800">Mẹo:</span> Xịt lần 2 sau 2–3 tháng để tăng hoạt chất NanoShieldX bám dính, bảo vệ gia đình mạnh hơn.
+                    </p>
+                  </div>
+                  <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-5 py-2.5 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
+                    ĐẶT MUA NGAY
+                  </button>
+                </div>
+              </div>
+
             </div>
 
           </div>
