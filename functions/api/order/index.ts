@@ -115,7 +115,8 @@ async function submitToPancake(
       received_at_shop: false,
       is_free_shipping: false,
       shipping_fee: 0,
-      cash: comboInfo.price,
+      cash: 0,           // COD – chưa thu tiền, ĐVVC sẽ thu khi giao
+      cod_amount: comboInfo.price, // số tiền ĐVVC cần thu hộ
       note: order.utm.source
         ? `[${order.utm.source}] ${comboInfo.label}${order.utm.campaign ? ` / ${order.utm.campaign}` : ''}`
         : `[Landing page] ${comboInfo.label}`,
