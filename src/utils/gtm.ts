@@ -42,23 +42,12 @@ export function trackFormStart(): void {
   window.dataLayer.push({ event: 'form_start' });
 }
 
-// Normalize VN phone → E.164 (+84xxxxxxxxx) rồi SHA-256 hash cho Enhanced Conversions
-async function hashPhone(raw: string): Promise<string> {
-  // Chuẩn hoá: bỏ ký tự không phải số, đổi đầu 0 → +84
-  const digits = raw.replace(/\D/g, '');
-  const e164 = digits.startsWith('0') ? '+84' + digits.slice(1) : '+' + digits;
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(e164));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-export async function trackPurchase(phone: string): Promise<void> {
+export function trackPurchase(phone: string): void {
   window.dataLayer = window.dataLayer || [];
-  const hashedPhone = await hashPhone(phone);
+  const rawPhone = phone.replace(/[\s.\-()]/g, '').replace(/^0/, '+84');
   window.dataLayer.push({
     event: 'purchase',
-    user_data: {
-      sha256_phone_number: hashedPhone,
-    },
+    user_data: { phone_number: rawPhone },
   });
 }
 

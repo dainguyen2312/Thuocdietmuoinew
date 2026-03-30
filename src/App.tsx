@@ -751,7 +751,7 @@ export default function App() {
       });
       const result = await res.json();
       if (result.ok) {
-        await trackPurchase(data.phone);
+        trackPurchase(data.phone);
         setSubmitStatus('success');
         setOrderCustomerName(data.name || '');
         setShowSuccessModal(true);
