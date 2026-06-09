@@ -2383,7 +2383,7 @@ export default function App() {
               <p className="text-xs text-emerald-400 font-semibold leading-tight">Còn {stockRemaining} suất · Giao hàng miễn phí</p>
             </div>
           </div>
-          <span className="text-xs font-black bg-emerald-500 text-white px-3 py-1.5 rounded-full whitespace-nowrap flex-shrink-0">Chọn ngay →</span>
+          <span className="text-xs font-black bg-orange-500 text-white px-3 py-1.5 rounded-full whitespace-nowrap flex-shrink-0">Chọn ngay →</span>
         </button>
       </div>
 
