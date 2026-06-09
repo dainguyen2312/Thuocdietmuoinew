@@ -1033,7 +1033,7 @@ export default function App() {
                     {/* Badge trên – góc trên trái */}
                     <div className="absolute top-3 left-3 bg-white px-3 py-2 rounded-2xl shadow-xl border-l-4 border-emerald-500 z-10">
                       <p className="font-black text-sm leading-tight text-emerald-700">🛡️ Thiên Nhiên 100%</p>
-                      <p className="font-medium text-xs text-slate-500 leading-tight">An toàn cho trẻ em &amp; thú cưng</p>
+                      <p className="font-medium text-sm text-slate-500 leading-tight">An toàn cho trẻ em &amp; thú cưng</p>
                     </div>
                     {/* Badge dưới – góc dưới phải */}
                     <div className="absolute bottom-3 right-3 bg-orange-500 px-3 py-2 rounded-2xl shadow-xl z-10">
@@ -1077,7 +1077,10 @@ export default function App() {
                       <span>Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
                       <ChevronRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <p className="text-sm font-semibold text-slate-600 text-center lg:text-left">✅ Tiết kiệm 120.000đ · 🚚 Miễn Phí Giao Hàng · ⚡ Hiệu Quả Kéo Dài</p>
+                    <p className="text-sm font-semibold text-slate-600 text-center lg:text-left">
+                      ✅ Tiết kiệm 120.000đ · 🚚 Miễn Phí Giao Hàng<br className="sm:hidden" />
+                      <span className="sm:inline hidden"> · </span>⚡ Hiệu Quả Kéo Dài
+                    </p>
                   </div>
                   <div className="flex items-center gap-3 justify-center lg:justify-start">
                     <div className="flex -space-x-2">
@@ -1188,7 +1191,7 @@ export default function App() {
                       {item.title}
                     </h3>
                     <p className="text-slate-600 text-base leading-relaxed flex-grow">
-                      {item.line1}{item.mobileBreak ? <br className="sm:hidden" /> : <br />}{item.line2}
+                      {item.line1}{item.mobileBreak ? <br className="sm:hidden" /> : ' '}{item.line2}
                     </p>
                   </div>
                 </motion.div>
@@ -1424,7 +1427,7 @@ export default function App() {
                     </div>
                     <div className="p-3 flex flex-col items-center justify-center">
                       <XCircle className="w-4 h-4 text-orange-400 mb-1 flex-shrink-0" />
-                      <p className="text-sm text-slate-500 italic text-center leading-tight">{row.bad}</p>
+                      <p className="text-sm text-slate-500 text-center leading-tight">{row.bad}</p>
                     </div>
                   </div>
                 ))}
@@ -1585,7 +1588,7 @@ export default function App() {
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-100"></span>
                         </span>
-                        <span className="text-white text-xs font-black uppercase tracking-wide truncate">⚡ Hàng có hạn trong ngày</span>
+                        <span className="text-white text-xs font-black uppercase tracking-wide">⚡ Hàng có hạn trong ngày</span>
                       </div>
                       <span className="bg-white text-red-600 text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0 shadow-sm">Còn {stockRemaining} suất</span>
                     </div>
@@ -1690,7 +1693,7 @@ export default function App() {
             <div className="mt-6 grid grid-cols-3 gap-3 text-center pt-2">
               {[
                 { icon: "🚚", text: "Miễn phí giao hàng" },
-                { icon: "🔍", text: "Kiểm tra hàng trước khi nhận" },
+                { icon: "🔍", text: "Xem hàng trước khi nhận" },
                 { icon: "🔄", text: "Miễn phí đổi trả" },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center gap-1 bg-slate-800/50 rounded-xl py-2.5 px-2">
@@ -1718,6 +1721,7 @@ export default function App() {
             </div>
 
             {/* ── MOBILE: Auto-scroll carousel ── */}
+            <p className="md:hidden text-center text-xs text-slate-400 font-medium mb-2">← Vuốt để xem thêm →</p>
             <div
               ref={carouselRef}
               onTouchStart={handleCarouselTouchStart}
@@ -2123,7 +2127,7 @@ export default function App() {
                     <label className="block text-base font-bold text-slate-800 mb-2">Địa chỉ nhận hàng <span className="text-red-500">*</span></label>
                     <input
                       {...register("address", { required: "Vui lòng nhập địa chỉ nhận hàng" })}
-                      placeholder="Ví dụ: 123 Nguyễn Văn A, Phường 5, Quận Bình Thạnh, TP.HCM"
+                      placeholder="123 Trần Hưng Đạo, P.1, Q.5, TP.HCM"
                       autoComplete="street-address"
                       name="address"
                       className={cn(
@@ -2348,11 +2352,11 @@ export default function App() {
             </div>
             <div>
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Chính sách</h4>
-              <ul className="space-y-4 text-sm">
-                <li><button onClick={() => setActiveModal('privacy')} className="hover:text-white transition-colors text-left">Chính sách bảo mật thông tin</button></li>
-                <li><button onClick={() => setActiveModal('terms')} className="hover:text-white transition-colors text-left">Điều khoản dịch vụ</button></li>
-                <li><button onClick={() => setActiveModal('warranty')} className="hover:text-white transition-colors text-left">Cam kết chất lượng & Đổi trả</button></li>
-                <li><button onClick={() => setActiveModal('shipping')} className="hover:text-white transition-colors text-left">Chính sách vận chuyển</button></li>
+              <ul className="space-y-1 text-sm">
+                <li><button onClick={() => setActiveModal('privacy')} className="hover:text-white transition-colors text-left py-2 block w-full">Chính sách bảo mật thông tin</button></li>
+                <li><button onClick={() => setActiveModal('terms')} className="hover:text-white transition-colors text-left py-2 block w-full">Điều khoản dịch vụ</button></li>
+                <li><button onClick={() => setActiveModal('warranty')} className="hover:text-white transition-colors text-left py-2 block w-full">Cam kết chất lượng & Đổi trả</button></li>
+                <li><button onClick={() => setActiveModal('shipping')} className="hover:text-white transition-colors text-left py-2 block w-full">Chính sách vận chuyển</button></li>
               </ul>
             </div>
           </div>
@@ -2362,14 +2366,15 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating CTA Button – mobile only, show when pricing section is out of viewport */}
+      {/* Floating CTA Bar – mobile only, show when pricing section is out of viewport */}
       <div className={cn(
-        "md:hidden fixed bottom-5 right-4 z-50 transition-all duration-300 ease-in-out",
-        showFloatingCTA ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-20 pointer-events-none"
+        "md:hidden fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
+        showFloatingCTA ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-full pointer-events-none"
       )}>
         <button
           onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-          className="flex flex-col items-center gap-0.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-5 py-3.5 rounded-2xl shadow-2xl shadow-orange-300 active:scale-95 transition-all font-black text-center min-w-max"
+          className="w-full flex flex-col items-center gap-0.5 bg-orange-500 active:bg-orange-700 text-white px-5 py-3.5 shadow-2xl shadow-orange-300 active:scale-[0.99] transition-all font-black text-center"
+          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 14px)' }}
         >
           <span className="text-base leading-tight">👉 Đặt Hàng Ngay</span>
           <span className="text-xs text-amber-200 font-bold">⚡ Còn {stockRemaining} suất – Giao COD miễn phí</span>
