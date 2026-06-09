@@ -1051,7 +1051,7 @@ export default function App() {
                 <div className="flex flex-col gap-2.5 max-w-md mx-auto lg:mx-0 mb-6">
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Tiếp xúc bị tiêu diệt ngay - Không cần xịt trúng</p>
+                    <p className="text-sm sm:text-base font-bold text-slate-800 leading-snug">Diệt ngay – không cần xịt trúng vào muỗi</p>
                   </div>
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-3 py-2.5">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -1074,7 +1074,7 @@ export default function App() {
                       className="group flex items-center justify-center gap-2.5 bg-orange-500 text-white px-5 py-4 rounded-2xl font-black text-sm sm:text-lg hover:bg-orange-600 transition-all shadow-2xl shadow-orange-200 hover:scale-105 active:scale-95 w-full"
                     >
                       <ShoppingCart className="w-5 h-5 flex-shrink-0" />
-                      <span>Đặt Combo 2 Chai — Bảo Vệ Cả Năm</span>
+                      <span>Đặt Ngay — Bảo Vệ Cả Năm</span>
                       <ChevronRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <p className="text-sm font-semibold text-slate-600 text-center lg:text-left">
@@ -1444,7 +1444,7 @@ export default function App() {
                   className="w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-sm px-4 py-3.5 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200"
                 >
                   <ShieldCheck className="w-4 h-4 flex-shrink-0 text-yellow-300" />
-                  <span>Đặt Ngay — Rẻ Hơn Thuê Dịch Vụ, Dùng Cả Năm</span>
+                  <span>Đặt Ngay – Tiết Kiệm 10 Lần</span>
                 </button>
                 <span className="text-xs text-slate-500 font-medium text-center">298.000đ · 2 chai · Bảo vệ cả nhà suốt 12 tháng+</span>
               </div>
@@ -2373,11 +2373,17 @@ export default function App() {
       )}>
         <button
           onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-          className="w-full flex flex-col items-center gap-0.5 bg-orange-500 active:bg-orange-700 text-white px-5 py-3.5 shadow-2xl shadow-orange-300 active:scale-[0.99] transition-all font-black text-center"
-          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 14px)' }}
+          className="w-full flex items-center justify-between gap-3 bg-slate-900 active:bg-slate-800 text-white px-5 transition-all border-t-2 border-emerald-500"
+          style={{ paddingTop: '10px', paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 10px)' }}
         >
-          <span className="text-base leading-tight">👉 Đặt Hàng Ngay</span>
-          <span className="text-xs text-amber-200 font-bold">⚡ Còn {stockRemaining} suất – Giao COD miễn phí</span>
+          <div className="flex items-center gap-2.5">
+            <ShoppingCart className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+            <div className="text-left">
+              <p className="text-sm font-black leading-tight text-white">Đặt Hàng Ngay</p>
+              <p className="text-xs text-emerald-400 font-semibold leading-tight">Còn {stockRemaining} suất · Giao COD miễn phí</p>
+            </div>
+          </div>
+          <span className="text-xs font-black bg-emerald-500 text-white px-3 py-1.5 rounded-full whitespace-nowrap flex-shrink-0">Chọn ngay →</span>
         </button>
       </div>
 
