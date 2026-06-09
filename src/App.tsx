@@ -2123,7 +2123,7 @@ export default function App() {
                     <label className="block text-base font-bold text-slate-800 mb-2">Địa chỉ nhận hàng <span className="text-red-500">*</span></label>
                     <input
                       {...register("address", { required: "Vui lòng nhập địa chỉ nhận hàng" })}
-                      placeholder="Số nhà, đường, phường, quận, tỉnh/thành"
+                      placeholder="Ví dụ: 123 Nguyễn Văn A, Phường 5, Quận Bình Thạnh, TP.HCM"
                       autoComplete="street-address"
                       name="address"
                       className={cn(
@@ -2131,6 +2131,9 @@ export default function App() {
                         errors.address && "border-red-400 bg-red-50"
                       )}
                     />
+                    <p className="mt-2 text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 leading-snug">
+                      ⚠️ Vui lòng điền <strong>địa chỉ cũ trước sáp nhập</strong> (tên phường/xã, quận/huyện cũ). Đơn vị vận chuyển chỉ giao theo địa chỉ cũ.
+                    </p>
                     {errors.address && <p className="text-red-500 text-sm font-semibold mt-1.5 flex items-center gap-1">⚠ {errors.address?.message as string}</p>}
                   </div>
                 </div>
