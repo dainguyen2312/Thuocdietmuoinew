@@ -1008,7 +1008,7 @@ export default function App() {
               >
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-semibold mb-5 bg-emerald-50 border-emerald-400 text-emerald-800">
                   <span className="flex h-2 w-2 rounded-full animate-pulse bg-emerald-500"></span>
-                  Chiết xuất thiên nhiên — an toàn cho trẻ em &amp; thú cưng
+                  14.800+ gia đình đã tin dùng trên toàn quốc
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.2] mb-3 tracking-tight">
                   Xịt Hoài Vẫn Còn Muỗi?<br />
@@ -2380,7 +2380,7 @@ export default function App() {
             <ShoppingCart className="w-5 h-5 text-emerald-400 flex-shrink-0" />
             <div className="text-left">
               <p className="text-sm font-black leading-tight text-white">Đặt Hàng Ngay</p>
-              <p className="text-xs text-emerald-400 font-semibold leading-tight">Còn {stockRemaining} suất · Giao COD miễn phí</p>
+              <p className="text-xs text-emerald-400 font-semibold leading-tight">Còn {stockRemaining} suất · Giao hàng miễn phí</p>
             </div>
           </div>
           <span className="text-xs font-black bg-emerald-500 text-white px-3 py-1.5 rounded-full whitespace-nowrap flex-shrink-0">Chọn ngay →</span>
