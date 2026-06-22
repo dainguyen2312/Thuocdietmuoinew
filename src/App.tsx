@@ -383,8 +383,8 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
           <p>Áp dụng <strong>Miễn phí vận chuyển (Free Ship)</strong> cho tất cả đơn hàng PestShield trên toàn quốc. Không phụ thu thêm bất kỳ khoản nào.</p>
           <h5 className="font-bold text-slate-900">4. Hình thức thanh toán</h5>
           <p>Thanh toán khi nhận hàng (<strong>COD</strong>) — kiểm tra hàng trước, hài lòng mới trả tiền.</p>
-          <h5 className="font-bold text-slate-900">5. Theo dõi đơn hàng</h5>
-          <p>Sau khi đơn được gửi đi, nhân viên sẽ nhắn mã vận đơn qua Zalo/SMS để bạn tra cứu trạng thái giao hàng trực tiếp trên app của đơn vị vận chuyển.</p>
+          <h5 className="font-bold text-slate-900">5. Xác nhận đơn hàng</h5>
+          <p>Sau khi đặt hàng, nhân viên sẽ gọi điện xác nhận đơn và thông báo thời gian giao hàng dự kiến.</p>
         </div>
       )
     }
