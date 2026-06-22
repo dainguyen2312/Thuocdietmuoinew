@@ -2338,9 +2338,7 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <a href="https://zalo.me/0978380508" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    Hotline/Zalo: 0978 38 05 08
-                  </a>
+                  <span>Hotline: 0819 838 068</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-emerald-500 shrink-0" />
