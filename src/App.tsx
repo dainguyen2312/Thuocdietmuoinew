@@ -190,17 +190,12 @@ const SuccessModal = ({ customerName, onClose, selectedCombo }: { customerName: 
             Đóng
           </button>
 
-          {/* Zalo Support */}
+          {/* Phone Support */}
           <div className="text-center pt-0.5">
             <p className="text-slate-500 text-sm mb-1.5">Cần hỗ trợ?</p>
-            <a
-              href="https://zalo.me/0978380508"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 w-full py-3 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 active:scale-95 transition-all text-slate-600 font-semibold text-base"
-            >
-              💬 Nhắn Zalo hỗ trợ
-            </a>
+            <div className="flex items-center justify-center gap-1.5 w-full py-3 px-3 rounded-xl bg-slate-100 text-slate-600 font-semibold text-base">
+              📞 Hotline: 0819 838 068
+            </div>
             <p className="text-slate-500 text-xs mt-1.5">T2 - T7: 8h30 - 16h30</p>
           </div>
         </div>
@@ -369,7 +364,7 @@ const PolicyModal = ({ type, onClose }: { type: string, onClose: () => void }) =
             <li>Không hỗ trợ đổi trả nếu sản phẩm đã qua sử dụng và không có lỗi từ nhà sản xuất.</li>
           </ul>
           <h5 className="font-bold text-slate-900">3. Hỗ trợ sau mua</h5>
-          <p>Đội ngũ hỗ trợ của Thuocxitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline/Zalo <strong>0978 38 05 08</strong> hoặc email <strong>lienhe@thuocxitmuoi.com</strong>.</p>
+          <p>Đội ngũ hỗ trợ của Thuocxitmuoi.com luôn sẵn sàng tư vấn cách xịt đúng kỹ thuật để đạt hiệu quả tối đa. Liên hệ Hotline <strong>0819 838 068</strong> hoặc email <strong>lienhe@thuocxitmuoi.com</strong>.</p>
         </div>
       )
     },
