@@ -13,6 +13,7 @@ import {
   trackPurchase,
   trackScrollDepth,
   trackBotDetection,
+  trackViewPricing,
 } from './utils/gtm';
 import { 
   CheckCircle2, 
@@ -590,9 +591,9 @@ export default function App() {
     // Bot detection sau 5 giây
     const botTimer = setTimeout(trackBotDetection, 5000);
 
-    // Scroll depth 25/50/75/90%
+    // Scroll depth 25/50/75/100%
     const fired = new Set<number>();
-    const thresholds = [25, 50, 75, 90] as const;
+    const thresholds = [25, 50, 75, 100] as const;
     const onScroll = () => {
       const scrolled = window.scrollY + window.innerHeight;
       const total = document.documentElement.scrollHeight;
@@ -606,9 +607,23 @@ export default function App() {
     };
     window.addEventListener('scroll', onScroll, { passive: true });
 
+    // View pricing – bắn 1 lần khi section #pricing vào viewport
+    let pricingObserver: IntersectionObserver | undefined;
+    const pricingEl = document.getElementById('pricing');
+    if (pricingEl) {
+      pricingObserver = new IntersectionObserver((entries) => {
+        if (entries[0]?.isIntersecting) {
+          trackViewPricing();
+          pricingObserver?.disconnect();
+        }
+      }, { threshold: 0.3 });
+      pricingObserver.observe(pricingEl);
+    }
+
     return () => {
       clearTimeout(botTimer);
       window.removeEventListener('scroll', onScroll);
+      pricingObserver?.disconnect();
     };
   }, []);
 
@@ -767,6 +782,9 @@ export default function App() {
   const scrollToOrderWithCombo = (comboValue: string) => {
     setSelectedCombo(comboValue);
     setValue('combo', comboValue);
+    const price = { combo1: 209000, combo2: 298000, combo3: 397000 }[comboValue] ?? 0;
+    trackCTAClick(getComboName(comboValue), 'pricing');
+    trackSelectPackage(getComboName(comboValue), price);
     setTimeout(() => {
       document.getElementById('combo-step')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 50);
@@ -1197,7 +1215,7 @@ export default function App() {
             </p>
             <div className="flex flex-col items-center mt-6 gap-2">
               <button
-                onClick={scrollToPricing}
+                onClick={() => { trackCTAClick('Xử Lý Ngay Hôm Nay', 'problem'); scrollToPricing(); }}
                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-base md:text-lg px-7 py-3 rounded-xl shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all duration-200"
               >
                 <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
@@ -1371,7 +1389,7 @@ export default function App() {
                 <span className="text-emerald-600">hiệu quả gấp 20+ lần chai xịt thường.</span>
               </p>
               <button
-                onClick={scrollToPricing}
+                onClick={() => { trackCTAClick('Đặt Ngay — Rẻ Hơn Thuê Dịch Vụ, Dùng Cả Năm', 'comparison-desktop'); scrollToPricing(); }}
                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all duration-200"
               >
                 <ShieldCheck className="w-5 h-5 flex-shrink-0 text-yellow-300" />
@@ -1435,7 +1453,7 @@ export default function App() {
               {/* Mobile CTA */}
               <div className="flex flex-col items-center gap-2 pt-2">
                 <button
-                  onClick={scrollToPricing}
+                  onClick={() => { trackCTAClick('Đặt Ngay – Tiết Kiệm 10 Lần', 'comparison-mobile'); scrollToPricing(); }}
                   className="w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-sm px-4 py-3.5 rounded-2xl shadow-lg shadow-orange-200 transition-all duration-200"
                 >
                   <ShieldCheck className="w-4 h-4 flex-shrink-0 text-yellow-300" />
@@ -1511,7 +1529,7 @@ export default function App() {
                       <span className="font-bold text-slate-800">Mẹo:</span> Xịt lần 2 sau 2–3 tháng để tăng hoạt chất NanoShieldX bám dính, bảo vệ gia đình mạnh hơn.
                     </p>
                   </div>
-                  <button onClick={scrollToPricing} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-5 py-2.5 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
+                  <button onClick={() => { trackCTAClick('Đặt Mua Ngay', 'usage-guide'); scrollToPricing(); }} className="flex-shrink-0 bg-orange-500 text-white font-black text-sm px-5 py-2.5 rounded-xl hover:bg-orange-600 transition-all whitespace-nowrap shadow-md shadow-orange-100">
                     ĐẶT MUA NGAY
                   </button>
                 </div>
@@ -1871,7 +1889,7 @@ export default function App() {
             {/* CTA sau FAQ */}
             <div className="mt-8 flex flex-col items-center gap-2">
               <button
-                onClick={scrollToOrder}
+                onClick={() => { trackCTAClick('Đặt Hàng Ngay — Giao COD Toàn Quốc', 'faq'); scrollToOrder(); }}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-black text-sm sm:text-lg px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl shadow-lg shadow-orange-200 transition-all"
               >
                 <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
@@ -2365,7 +2383,7 @@ export default function App() {
         showFloatingCTA ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-full pointer-events-none"
       )}>
         <button
-          onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
+          onClick={() => { trackCTAClick('Chọn Ngay', 'floating-cta'); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
           className="w-full flex items-center justify-between gap-3 bg-slate-900 active:bg-slate-800 text-white px-5 transition-all border-t-2 border-emerald-500"
           style={{ paddingTop: '10px', paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 10px)' }}
         >

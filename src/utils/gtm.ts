@@ -51,12 +51,17 @@ export function trackPurchase(phone: string): void {
   });
 }
 
-export function trackScrollDepth(percent: 25 | 50 | 75 | 90): void {
+export function trackScrollDepth(percent: 25 | 50 | 75 | 100): void {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: 'scroll_depth',
     scroll_percent: percent,
   });
+}
+
+export function trackViewPricing(): void {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'view_pricing' });
 }
 
 export function trackBotDetection(): void {
