@@ -18,7 +18,13 @@ export function trackPageView(): void {
   });
 }
 
+// Event chuyển đổi (cta_click, select_package, form_start, purchase) chỉ cần
+// bắn 1 lần/phiên cho mục đích chạy ads — tránh đếm trùng khi user click/focus lại nhiều lần.
+const firedOnce = new Set<string>();
+
 export function trackCTAClick(buttonText: string, section: string): void {
+  if (firedOnce.has('cta_click')) return;
+  firedOnce.add('cta_click');
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: 'cta_click',
@@ -28,6 +34,8 @@ export function trackCTAClick(buttonText: string, section: string): void {
 }
 
 export function trackSelectPackage(packageName: string, price: number): void {
+  if (firedOnce.has('select_package')) return;
+  firedOnce.add('select_package');
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: 'select_package',
@@ -38,11 +46,15 @@ export function trackSelectPackage(packageName: string, price: number): void {
 }
 
 export function trackFormStart(): void {
+  if (firedOnce.has('form_start')) return;
+  firedOnce.add('form_start');
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: 'form_start' });
 }
 
 export function trackPurchase(phone: string): void {
+  if (firedOnce.has('purchase')) return;
+  firedOnce.add('purchase');
   window.dataLayer = window.dataLayer || [];
   const rawPhone = phone.replace(/[\s.\-()]/g, '').replace(/^0/, '+84');
   window.dataLayer.push({
